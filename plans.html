@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plans & Pricing | Traible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #83a9d2;
+      margin-bottom: 40px;
+    }
+
+    .pricing-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .plan-card {
+      background-color: #111;
+      border: 2px solid #83a9d2;
+      border-radius: 12px;
+      padding: 30px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .plan-card h2 {
+      color: #83a9d2;
+      margin-bottom: 15px;
+    }
+
+    .plan-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    .plan-card ul li::before {
+      content: "✓ ";
+      color: #83a9d2;
+    }
+
+    .plan-card .btn {
+      margin-top: 20px;
+      background-color: transparent;
+      border: 2px solid #83a9d2;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .plan-card .btn:hover {
+      background-color: #83a9d2;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Choose Your Traible Plan</h1>
+
+    <div class="pricing-row">
+      
+      <!-- Standard Plan -->
+      <div class="plan-card">
+        <h2>Standard</h2>
+        <ul>
+          <li>AI Platform Access</li>
+          <li>Customer Support: Zoom + Email</li>
+          <li>Document Upload: 100 Docs</li>
+          <li>Wearable Kit: ✗</li>
+          <li>AI Transcription: ✗</li>
+          <li>Workflow Integration: ✗</li>
+          <li>Account Manager: ✗</li>
+          <li>On-site Support: ✗</li>
+          <li>SME Interview: ✗</li>
+          <li>24/6 Support: ✗</li>
+          <li>Add-ons: Available</li>
+        </ul>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="plan-card">
+        <h2>Premium</h2>
+        <ul>
+          <li>AI Platform Access</li>
+          <li>Customer Support: Calls + Zoom</li>
+          <li>Document Upload: 500 Docs</li>
+          <li>Wearable Kit: ✓</li>
+          <li>AI Transcription: ✓</li>
+          <li>Workflow Integration: ✓</li>
+          <li>Account Manager: ✗</li>
+          <li>On-site Support: ✗</li>
+          <li>SME Interview: ✗</li>
+          <li>24/6 Support: ✗</li>
+          <li>Add-ons: Available</li>
+        </ul>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+
+      <!-- Business Plan -->
+      <div class="plan-card">
+        <h2>Business</h2>
+        <ul>
+          <li>AI Platform Access</li>
+          <li>Customer Support: 24/7 + Onsite</li>
+          <li>Document Upload: Unlimited</li>
+          <li>Wearable Kit: ✓</li>
+          <li>AI Transcription: ✓</li>
+          <li>Workflow Integration: ✓</li>
+          <li>Account Manager: ✓</li>
+          <li>On-site Support: ✓</li>
+          <li>SME Interview: ✓</li>
+          <li>24/6 Support: ✓</li>
+          <li>Add-ons: Available</li>
+        </ul>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

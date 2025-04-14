@@ -185,6 +185,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#section-3">Meet the Team</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="plans.html">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>                      
                 </ul>
             </div>
         </div>
@@ -419,30 +425,34 @@
         </div>
     </div>
 
-    <!-- Section: Traible Logo -->
-    <div class="container-fluid section section-5">
-        <div class="container text-center">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <img src="img/logo.png" alt="Centered Image" class="img-fluid mb-4" width="40%" height="40%">
-            <br>
-            <br>
-            <br>
-            <!--
-            <h2 class="display-4"></h2>
-            <h4 class="text-wrap"> 
-            </h4>-->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
+  <!-- FAQ Section -->
+<div class="container-fluid section section-4">
+    <div class="container py-5 text-center">
+      <h2 class="display-4" style="color: #83a9d2;">Frequently Asked Questions</h2>
+      <br>
+  
+      <div class="faq-item">
+        <button class="faq-question">Why should I use Traible over the growing list of alternatives?</button>
+        <div class="faq-answer">
+          <p>Traible is a platform for troubleshooting your company problems. It is tailored to your company and your problems to be a unique solution.</p>
         </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">How do you specialize your AI to my company?</button>
+        <div class="faq-answer">
+          <p>We will train the model to know your manuals, procedures, and relevant textbooks, but also will utilize "boots to the ground" where we will shadow and interview your veteran employees that have your knowledge that leads your company to success.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">My company uses machines that can be dangerous if used wrong. How can I trust your output?</button>
+        <div class="faq-answer">
+          <p>We implement guardrails and anti-hallucination methods to ensure the model delivers accurate, verified outputs. Traible prioritizes safety, so we build these protections into your customized solution.</p>
+        </div>
+      </div>
     </div>
+  </div>  
     
     <!-- Footer -->
     <footer class="footer">
@@ -481,6 +491,24 @@
             }
         });
         });
-    </script>
+
+<!-- FAQ script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(function (q) {
+      q.addEventListener("click", function () {
+        const answer = q.nextElementSibling;
+        if (answer.style.display === "block") {
+          answer.style.display = "none";
+        } else {
+          answer.style.display = "block";
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
