@@ -21,153 +21,151 @@
     <link rel="stylesheet" href="CSS/styles.css">
 
     <style>
-        /* General Styles */
         html {
             scroll-behavior: smooth;
         }
-
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
         .navbar {
             background-color: #000;
-            box-shadow: 0 4px 8px rgb(131, 169, 210);
-            padding: 1.5rem;
-            font-size: 1.25rem;
+            box-shadow: 0 4px 8px rgba(131, 169, 210, 0.5);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
         }
+        
         .navbar-brand img {
             width: 50px;
             height: 50px;
         }
+        
         .section {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-        }        
-        .section-1 {
-            background-color: black;
-            
-            color: white;
-            height: 100vh;
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 4rem 2rem;
+        }
+        
+        .section-1 {
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
             padding-top: 100px;
         }
-        .section-2 {
+        
+        .section-2, .section-4 {
             background-color: #343a40;
-            color: rgb(255, 255, 255);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            color: #fff;
         }
-        .section-3 {
-            background-color: black;
+        
+        .section-3, .section-5 {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .scroll-indicator {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+            opacity: 0.7;
+        }
+        
+        .card {
+            background-color: #1c1c1c;
+            border: none;
             color: white;
+            box-shadow: 0 4px 8px rgba(131, 169, 210, 0.2);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
         }
-        .section-4 {
-            background-color: #343a40;
-            color: rgb(255, 255, 255);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        
+        .card:hover {
+            transform: translateY(-5px);
         }
-        .section-5 {
-            background-color: #000000;
-            
-            color: rgb(255, 255, 255);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 30px;
-            padding-bottom: 30px;
+        
+        .card-body h5 {
+            color: #83a9d2;
         }
+        
+        ul.list-unstyled li h4 {
+            margin-bottom: 1rem;
+        }
+        
         .btn-link {
             color: white;
+            text-decoration: underline;
         }
+        
         .btn-link:hover {
             color: lightgray;
+            text-decoration: none;
         }
-        .scrollable {
-            overflow-y: auto; /* Enables vertical scrolling */
-            flex-grow: 1; /* Allows the container to grow and take up available space */
-        }
-        .text-outline {
-            color: rgb(255, 255, 255); /* Text color */
-            text-shadow:
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000; /* Outline color and thickness */
-        }
-        .section-2-col {
-            position: relative;
-            padding: 20px;
-        }
-
-        .section-2-col:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            width: 3px;
-            height: 50%; /* Adjust the height as needed */
+        
+        .hr-divider {
+            border: none;
+            height: 2px;
             background-color: #83a9d2;
+            width: 60%;
+            margin: 2rem auto;
         }
-
+        
+        .sub-navbar .nav-link {
+            color: #aaa;
+            font-weight: 500;
+            padding: 0.75rem 1rem;
+            transition: color 0.3s;
+        }
+        
+        .sub-navbar .nav-link.active {
+            color: #83a9d2;
+            border-bottom: 2px solid #83a9d2;
+        }
+        
+        .card-img-top {
+            object-fit: cover;
+            max-height: 300px;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        
         .footer {
             background-color: #343a40;
             color: #ffffff;
             padding: 20px 0;
         }
+        
         .footer a {
             color: #ffffff;
             text-decoration: none;
         }
+        
         .footer a:hover {
             color: #83a9d2;
-        }
-
-        .scroll-indicator {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #ffffff;
-        }
-
-        .card-img-top {
-            object-fit: cover; /* Adjust how images are displayed within the card */
-            max-height: 500px; /* Optional: Define a maximum height */
-        }
-
-        .card-body {
-            padding: 1rem;
-            justify-content: start;
-        }
-
-        .sub-navbar .nav-link {
-            color: #555;
-            font-weight: 500;
-            padding: 0.75rem 1rem;
-            transition: color 0.3s;
-        }
-
-        .sub-navbar .nav-link.active {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
         }
 
         #changing-knowledge.section {
             display: block !important;
         }
         
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+            }
+        
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+        
+        
     </style>
 </head>
-<body> 
+<body>
     <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
@@ -254,17 +252,38 @@
     </div>
 
     <!-- Section: Benefits Beyond Onboarding -->
-    <div id="benefits" class="container-fluid section section-2" style="padding-top: 50px; padding-bottom: 50px;">
+    <div id="benefits" class="container-fluid section section-2">
         <div class="container text-center">
-            <h2 class="display-4"><strong>Benefits Beyond Onboarding</strong></h2>
-            <br>
-            <ul class="list-unstyled">
-                <li><h4>• Knowledge Retention: As seasoned employees retire or transition, their expertise stays within the organization, accessible to everyone.</h4></li>
-                <li><h4>• Enhanced Productivity: Close skill gaps and speed up problem resolution with instant access to specialized knowledge.</h4></li>
-                <li><h4>• Accelerated Onboarding: Blend digital training with real-world scenarios, cutting down on onboarding time and boosting confidence for new hires.</h4></li>
-            </ul>
+            <h2 class="display-4 mb-5"><strong>Benefits Beyond Onboarding</strong></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Knowledge Retention</h5>
+                            <p class="card-text">As seasoned employees retire or transition, their expertise stays within the organization, accessible to everyone.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Enhanced Productivity</h5>
+                            <p class="card-text">Close skill gaps and speed up problem resolution with instant access to specialized knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Accelerated Onboarding</h5>
+                            <p class="card-text">Blend digital training with real-world scenarios to reduce onboarding time and boost new hire confidence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 
     <!-- Divider -->
     <div class="container-fluid section section-2 text-center">
@@ -428,32 +447,32 @@
         </div>
     </div>
 
-  <!-- FAQ Section -->
-    <div id="faq-section"class="container-fluid section section-4">
+    <!-- FAQ Section -->
+    <div id="faq-section"class="container-fluid section section-5">
         <div class="container py-5 text-center">
-        <h2 class="display-4" style="color: #83a9d2;">Frequently Asked Questions</h2>
-        <br>
-    
-        <div class="faq-item">
-            <button class="faq-question">Why should I use Traible over the growing list of alternatives?</button>
-            <div class="faq-answer">
-            <p>Traible is a platform for troubleshooting your company problems. It is tailored to your company and your problems to be a unique solution.</p>
+            <h2 class="display-4" style="color: #83a9d2;">Frequently Asked Questions</h2>
+            <br>
+        
+            <div class="faq-item">
+                <button class="faq-question">Why should I use Traible over the growing list of alternatives?</button>
+                <div class="faq-answer">
+                <p>Traible is a platform for troubleshooting your company problems. It is tailored to your company and your problems to be a unique solution.</p>
+                </div>
             </div>
-        </div>
-    
-        <div class="faq-item">
-            <button class="faq-question">How do you specialize your AI to my company?</button>
-            <div class="faq-answer">
-            <p>We will train the model to know your manuals, procedures, and relevant textbooks, but also will utilize "boots to the ground" where we will shadow and interview your veteran employees that have your knowledge that leads your company to success.</p>
+        
+            <div class="faq-item">
+                <button class="faq-question">How do you specialize your AI to my company?</button>
+                <div class="faq-answer">
+                <p>We will train the model to know your manuals, procedures, and relevant textbooks, but also will utilize "boots to the ground" where we will shadow and interview your veteran employees that have your knowledge that leads your company to success.</p>
+                </div>
             </div>
-        </div>
-    
-        <div class="faq-item">
-            <button class="faq-question">My company uses machines that can be dangerous if used wrong. How can I trust your output?</button>
-            <div class="faq-answer">
-            <p>We implement guardrails and anti-hallucination methods to ensure the model delivers accurate, verified outputs. Traible prioritizes safety, so we build these protections into your customized solution.</p>
+        
+            <div class="faq-item">
+                <button class="faq-question">My company uses machines that can be dangerous if used wrong. How can I trust your output?</button>
+                <div class="faq-answer">
+                <p>We implement guardrails and anti-hallucination methods to ensure the model delivers accurate, verified outputs. Traible prioritizes safety, so we build these protections into your customized solution.</p>
+                </div>
             </div>
-        </div>
         </div>
     </div>  
     
@@ -479,37 +498,41 @@
         const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
     
         window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
-            }
-        });
-    
-        navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-            }
-        });
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                current = section.getAttribute("id");
+                }
+            });
+        
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+                }
+            });
         });
 
-    // FAQ script
-    document.addEventListener("DOMContentLoaded", function () {
-        const questions = document.querySelectorAll(".faq-question");
+        // FAQ script
+        document.addEventListener("DOMContentLoaded", function () {
+            const questions = document.querySelectorAll(".faq-question");
 
-        questions.forEach(function (q) {
-        q.addEventListener("click", function () {
-            const answer = q.nextElementSibling;
-            if (answer.style.display === "block") {
-            answer.style.display = "none";
-            } else {
-            answer.style.display = "block";
-            }
+            questions.forEach(function (q) {
+                const answer = q.nextElementSibling;
+                // Hide the answer initially
+                answer.style.display = "none";
+
+                q.addEventListener("click", function () {
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                    } else {
+                        answer.style.display = "block";
+                    }
+                });
+            });
         });
-        });
-    });
+
     </script>
 
 </body>
