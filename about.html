@@ -26,11 +26,15 @@
         }
 
         .nav-link {
-            color: white !important;
+            color: #aaa;
+            font-weight: 500;
+            padding: 0.75rem 1rem;
+            transition: color 0.3s;
         }
-
-        .nav-link:hover {
-            color: #83a9d2 !important;
+        
+        .nav-link.active {
+            color: #83a9d2;
+            border-bottom: 2px solid #83a9d2;
         }
 
         /* General Layout */
@@ -115,10 +119,12 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- Brand Area: logo + traible.png -->
             <div class="d-flex align-items-center">
-                <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Logo" style="height: 40px;">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="Logo" style="height: 40px;">
                 </a>
-                <img src="img/traible.png" alt="Traible Text Logo" style="height: 32px; margin-left: 10px;">
+                <a href="index.html">
+                    <img src="img/traible.png" alt="Traible Text Logo" style="height: 32px; margin-left: 10px;">
+                </a>
             </div>
         
             <!-- Toggler Button -->
@@ -132,9 +138,6 @@
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Overview</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="plans.html">Plans</a>
                 </li>
                 </ul>
             </div>
