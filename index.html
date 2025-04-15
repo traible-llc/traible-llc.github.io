@@ -212,12 +212,77 @@
             font-style: italic;
             animation: bounce 2s infinite;
             color: #5c8bbd;
-          }
+        }
           
-          @keyframes bounce {
+        @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(5px); }
-          }
+        }
+
+        /* Pricing Section */
+        #plans {
+            background-color: #000;
+            padding: 80px 20px;
+        }
+        
+        #plans h1 {
+            color: #83a9d2;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .plan-card {
+            background-color: #111;
+            border: 2px solid #83a9d2;
+            border-radius: 12px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .plan-card h2 {
+            color: #83a9d2;
+            margin-bottom: 15px;
+        }
+        
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            line-height: 1.8;
+        }
+        
+        .plan-card ul.features-list li::before {
+            content: "✓ ";
+            color: #83a9d2;
+        }
+        
+        .plan-card .btn {
+            margin-top: 20px;
+            background-color: transparent;
+            border: 2px solid #83a9d2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .plan-card .btn:hover {
+            background-color: #83a9d2;
+            color: black;
+        }
+  
           
 
     </style>
@@ -225,21 +290,27 @@
 <body>
     <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <!-- Brand Area: logo + traible.png -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Logo" style="height: 40px;">
+                </a>
+                <img src="img/traible.png" alt="Traible Text Logo" style="height: 32px; margin-left: 10px;">
+            </div>
+        
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+    
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="plans.html">Plans</a>
-                    </li>                     
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
                 </ul>
             </div>
         </div>
@@ -252,9 +323,8 @@
                 
                 <!-- Left Column: Text -->
                 <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                    <img src="img/traible.png" alt="Traible Logo" class="img-fluid mb-3" style="max-width: 60%;">
-                    <p class="fs-4" style="font-family: Arial, sans-serif;">Know your tribe.</p>
-                    <h2 class="text" style="color: #83a9d2;">Unlock Your Organization's Expert Knowledge</h2>
+                    <h2 class="text" style="color: #83a9d2;">Don’t Let Expertise Walk Out the Door.</h2>
+                    <p class="fs-4" style="font-family: Arial, sans-serif;">Preserve institutional knowledge and make it accessible to everyone.</p>
             
                     <!-- CTA Button -->
                     <a href="#contact" class="btn btn-primary px-4 py-2 mt-3" style="background-color: #5c8bbd; border: none; font-size: 1.1em;">
@@ -300,6 +370,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#fou-section">FOU</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#plans-section">Plans</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#faq-section">FAQ</a>
@@ -409,10 +482,75 @@
             </div>
         </div>
     </div>
-    <!-- Divider -->
-    <div class="container-fluid section section-2 text-center slide-in">
-        <h4>_______________________________</h4>
+
+    <!-- Section: Plans -->
+<div id="plans-section" class="container-fluid section section-5">
+    <div class="container">
+      <h1>Choose Your Traible Plan</h1>
+  
+      <div class="pricing-row">
+        
+        <!-- Standard Plan -->
+        <div class="plan-card">
+          <h2>Standard</h2>
+          <ul class="features-list">
+            <li>AI Platform Access</li>
+            <li>Customer Support: Zoom + Email</li>
+            <li>Document Upload: 100 Docs</li>
+            <li>Wearable Kit: ✗</li>
+            <li>AI Transcription: ✗</li>
+            <li>Workflow Integration: ✗</li>
+            <li>Account Manager: ✗</li>
+            <li>On-site Support: ✗</li>
+            <li>SME Interview: ✗</li>
+            <li>24/6 Support: ✗</li>
+            <li>Add-ons: Available</li>
+          </ul>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+  
+        <!-- Premium Plan -->
+        <div class="plan-card">
+          <h2>Premium</h2>
+          <ul class="features-list">
+            <li>AI Platform Access</li>
+            <li>Customer Support: Calls + Zoom</li>
+            <li>Document Upload: 500 Docs</li>
+            <li>Wearable Kit: ✓</li>
+            <li>AI Transcription: ✓</li>
+            <li>Workflow Integration: ✓</li>
+            <li>Account Manager: ✗</li>
+            <li>On-site Support: ✗</li>
+            <li>SME Interview: ✗</li>
+            <li>24/6 Support: ✗</li>
+            <li>Add-ons: Available</li>
+          </ul>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+  
+        <!-- Business Plan -->
+        <div class="plan-card">
+          <h2>Business</h2>
+          <ul class="features-list">
+            <li>AI Platform Access</li>
+            <li>Customer Support: 24/7 + Onsite</li>
+            <li>Document Upload: Unlimited</li>
+            <li>Wearable Kit: ✓</li>
+            <li>AI Transcription: ✓</li>
+            <li>Workflow Integration: ✓</li>
+            <li>Account Manager: ✓</li>
+            <li>On-site Support: ✓</li>
+            <li>SME Interview: ✓</li>
+            <li>24/6 Support: ✓</li>
+            <li>Add-ons: Available</li>
+          </ul>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+  
+      </div>
     </div>
+  </div>
+  
 
     <!-- FAQ Section -->
     <section id="faq-section" class="container-fluid section section-2 py-5 slide-in">
