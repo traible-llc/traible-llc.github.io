@@ -134,21 +134,6 @@
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
         }
-        
-        .footer {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-        
-        .footer a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            color: #83a9d2;
-        }
 
         #changing-knowledge.section {
             display: block !important;
@@ -211,7 +196,17 @@
         .card-title {
             color: #83a9d2;
         }
-  
+
+        .fou-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 400px; /* or any fixed size you want */
+            height: auto; /* maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 10px;
+        }
 
     </style>
 </head>
@@ -351,51 +346,49 @@
     </div>          
 
     <!-- Section: Function, Operation, and Use -->
-<div id="fou-section" class="container-fluid section section-4 slide-in">
-    <div class="container text-center">
-        <h2 class="display-4 mb-5"><strong>Function • Operation • Use</strong></h2>
-        <div class="row">
-            <!-- Function -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Function</h5>
-                        <p class="card-text">
-                            Traible captures and delivers critical on-the-job knowledge, making it accessible to both new hires and seasoned professionals—ensuring expertise is never lost, only shared.
-                        </p>
+    <div id="fou-section" class="container-fluid section section-4 slide-in">
+        <div class="container text-center">
+            <h2 class="display-4 mb-5"><strong>Function • Operation • Use</strong></h2>
+            <div class="row">
+                <!-- Function -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title top">Function</h5>
+                            <p class="card-text">
+                                Traible captures and delivers critical on-the-job knowledge, making it accessible to both new hires and seasoned professionals—ensuring expertise is never lost, only shared.
+                            </p>
+                        </div>
+                        <img src="img/book.jpg" alt="Centered Image" class="fou-img">
                     </div>
-                    <img src="img/book.jpg" alt="Centered Image" class="card-img-bottom mb-4 rounded" width="45%" height="45%">
                 </div>
-            </div>
-            <!-- Operation -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Operation</h5>
-                        <p class="card-text">
-                            Traible instantly delivers tailored, company-specific guidance—transforming problems into solutions in seconds.
-                        </p>
+                <!-- Operation -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title top">Operation</h5>
+                            <p class="card-text">
+                                Traible instantly delivers tailored, company-specific guidance—transforming problems into solutions in seconds.
+                            </p>
+                        </div>
+                        <img src="img/aichatbot.jpg" alt="Centered Image" class="fou-img">
                     </div>
-                    <img src="img/aichatbot.jpg" alt="Centered Image" class="card-img-bottom mb-4 rounded" width="45%" height="45%">
                 </div>
-            </div>
-            <!-- Use -->
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Use</h5>
-                        <p class="card-text">
-                            Traible supports every level of knowledge transfer—from technicians troubleshooting on the floor to consultants analyzing historical data.
-                        </p>
+                <!-- Use -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title top">Use</h5>
+                            <p class="card-text">
+                                Traible supports every level of knowledge transfer—from technicians troubleshooting on the floor to consultants analyzing historical data.
+                            </p>
+                        </div>
+                        <img src="img/worktablet.jpg" alt="Centered Image" class="fou-img">
                     </div>
-                    <img src="img/worktablet.jpg" alt="Centered Image" class="card-img-bottom mb-4 rounded" width="45%" height="45%">
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
     <!-- Divider -->
     <div class="container-fluid section section-2 text-center slide-in">
         <h4>_______________________________</h4>
@@ -505,23 +498,23 @@
         const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
         const OFFSET = 80; // Adjust based on your navbar height
 
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            const targetId = this.getAttribute("href").slice(1);
-            const targetEl = document.getElementById(targetId);
-            if (targetEl) {
-                e.preventDefault(); // Prevent default jump
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (e) {
+                const targetId = this.getAttribute("href").slice(1);
+                const targetEl = document.getElementById(targetId);
+                if (targetEl) {
+                    e.preventDefault(); // Prevent default jump
 
-                const elementPosition = targetEl.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.scrollY - OFFSET;
+                    const elementPosition = targetEl.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - OFFSET;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
         });
-    });
 
     
         function getTargetSections() {
