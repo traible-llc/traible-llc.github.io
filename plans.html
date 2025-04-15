@@ -56,10 +56,10 @@
       line-height: 1.8;
     }
 
-    .plan-card ul li::before {
+    .plan-card ul.features-list li::before {
       content: "✓ ";
       color: #83a9d2;
-    }
+    }    
 
     .plan-card .btn {
       margin-top: 20px;
@@ -77,9 +77,68 @@
       background-color: #83a9d2;
       color: black;
     }
+
+    .navbar {
+      background-color: #000;
+      box-shadow: 0 4px 8px rgba(131, 169, 210, 0.5);
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+    }
+    
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    .navbar-brand img {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+      margin-left: auto;
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .nav-item {
+      list-style: none;
+    }
+    
+    .nav-link {
+      color: white !important;
+      text-decoration: none;
+    }
+    
+    .nav-link:hover {
+      color: #83a9d2 !important;
+    }
+    
+    
   </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid navbar-inner">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Logo">
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
 
   <div class="container">
     <h1>Choose Your Traible Plan</h1>
@@ -89,7 +148,7 @@
       <!-- Standard Plan -->
       <div class="plan-card">
         <h2>Standard</h2>
-        <ul>
+        <ul class="features-list">
           <li>AI Platform Access</li>
           <li>Customer Support: Zoom + Email</li>
           <li>Document Upload: 100 Docs</li>
@@ -108,7 +167,7 @@
       <!-- Premium Plan -->
       <div class="plan-card">
         <h2>Premium</h2>
-        <ul>
+        <ul class="features-list">
           <li>AI Platform Access</li>
           <li>Customer Support: Calls + Zoom</li>
           <li>Document Upload: 500 Docs</li>
@@ -127,7 +186,7 @@
       <!-- Business Plan -->
       <div class="plan-card">
         <h2>Business</h2>
-        <ul>
+        <ul class="features-list">
           <li>AI Platform Access</li>
           <li>Customer Support: 24/7 + Onsite</li>
           <li>Document Upload: Unlimited</li>
