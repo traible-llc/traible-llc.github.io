@@ -447,34 +447,96 @@
         </div>
     </div>
 
+    <!-- Divider -->
+    <div class="container-fluid section section-2 text-center">
+        <h4>_______________________________</h4>
+    </div>
+
     <!-- FAQ Section -->
-    <div id="faq-section"class="container-fluid section section-5">
-        <div class="container py-5 text-center">
-            <h2 class="display-4" style="color: #83a9d2;">Frequently Asked Questions</h2>
-            <br>
-        
-            <div class="faq-item">
-                <button class="faq-question">Why should I use Traible over the growing list of alternatives?</button>
-                <div class="faq-answer">
-                <p>Traible is a platform for troubleshooting your company problems. It is tailored to your company and your problems to be a unique solution.</p>
+    <section id="faq-section" class="container-fluid section section-2 py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                
+                <div class="card bg-dark text-white border-0 mb-3">
+                    <div class="card-header" id="faqHeading1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                What is Traible and how does it work?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="faq1" class="collapse" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Traible is an AI-powered platform that captures and organizes internal organizational knowledge, making it easily searchable and accessible. It ensures that critical expertise doesn't leave when experienced employees do.
+                        </div>
+                    </div>
                 </div>
-            </div>
-        
-            <div class="faq-item">
-                <button class="faq-question">How do you specialize your AI to my company?</button>
-                <div class="faq-answer">
-                <p>We will train the model to know your manuals, procedures, and relevant textbooks, but also will utilize "boots to the ground" where we will shadow and interview your veteran employees that have your knowledge that leads your company to success.</p>
+
+                <div class="card bg-dark text-white border-0 mb-3">
+                    <div class="card-header" id="faqHeading2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Who can benefit from using Traible?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="faq2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Any organization looking to retain knowledge, improve onboarding, and reduce downtime. Whether you're in tech, manufacturing, healthcare, or education — Traible helps preserve expert insights.
+                        </div>
+                    </div>
                 </div>
-            </div>
-        
-            <div class="faq-item">
-                <button class="faq-question">My company uses machines that can be dangerous if used wrong. How can I trust your output?</button>
-                <div class="faq-answer">
-                <p>We implement guardrails and anti-hallucination methods to ensure the model delivers accurate, verified outputs. Traible prioritizes safety, so we build these protections into your customized solution.</p>
+
+                <div class="card bg-dark text-white border-0 mb-3">
+                    <div class="card-header" id="faqHeading3">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Is my company's data secure on Traible?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="faq3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes. Security is our top priority. Traible uses industry-standard encryption and best practices to keep your data safe, private, and accessible only to your team.
+                        </div>
+                    </div>
                 </div>
+
+                <div class="card bg-dark text-white border-0 mb-3">
+                    <div class="card-header" id="faqHeading4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                How do I get started with Traible?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="faq4" class="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            You can request a demo or sign up for an onboarding session. We’ll guide you through setting up your knowledge base and training your team to get the most out of Traible.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-dark text-white border-0 mb-3">
+                    <div class="card-header" id="faqHeading5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                Can Traible integrate with our existing tools?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="faq5" class="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Absolutely. We offer integrations with popular collaboration platforms, databases, and file storage services. Custom integrations can also be developed based on your needs.
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>  
+    </section>
+
     
     <!-- Footer -->
     <footer class="footer">
@@ -511,25 +573,6 @@
                 if (link.getAttribute("href").includes(current)) {
                 link.classList.add("active");
                 }
-            });
-        });
-
-        // FAQ script
-        document.addEventListener("DOMContentLoaded", function () {
-            const questions = document.querySelectorAll(".faq-question");
-
-            questions.forEach(function (q) {
-                const answer = q.nextElementSibling;
-                // Hide the answer initially
-                answer.style.display = "none";
-
-                q.addEventListener("click", function () {
-                    if (answer.style.display === "block") {
-                        answer.style.display = "none";
-                    } else {
-                        answer.style.display = "block";
-                    }
-                });
             });
         });
 
