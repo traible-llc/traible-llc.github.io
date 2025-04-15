@@ -37,6 +37,15 @@ ul.list-unstyled li h4 {
     padding: 1rem 2rem;
     font-size: 1.2rem;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc; /* Default text color */
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    transition: color 0.3s;
+}
+.navbar-dark .navbar-nav .nav-link:hover  {
+    color: #83a9d2; /* Change this to whatever color you want on hover */
+}
 .navbar-brand img {
     width: 50px;
     height: 50px;
@@ -97,7 +106,6 @@ ul.list-unstyled li h4 {
     text-align: left;
 }
 
-
 /* ========== Scroll Slide-In ========== */
 .scroll-indicator {
     margin-top: 20px;
@@ -114,7 +122,6 @@ ul.list-unstyled li h4 {
     opacity: 1;
     transform: translateY(0);
 }
-  
 
 /* ========== Responsive Styles ========== */
 @media (max-width: 768px) {
@@ -124,4 +131,18 @@ ul.list-unstyled li h4 {
     .section {
         padding: 2rem 1rem;
     }
+}
+
+/* ========== Footer ========== */
+.footer {
+    background-color: #000;
+    color: #ffffff;
+    padding: 20px 0;
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #83a9d2;
 }
