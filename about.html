@@ -73,11 +73,24 @@
             margin: 10px 0 5px;
             color: #83a9d2;
         }
+
+        /* ========== Cards & Content Blocks ========== */
+        .card-team {
+            background-color: #111;
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
+            transition: transform 0.2s ease-in-out;
+            margin-bottom: 1.5rem;
+        }
         
         .team-card p {
             margin: 0;
             color: #ccc;
             font-size: 0.95em;
+        }
+        .card-title,.card-text {
+            text-align: center;
         }
   
     </style>
@@ -116,7 +129,7 @@
     <!-- Section: About Us -->
     <section id="about-us" class="about-container slide-in">
         <div class="about-text">
-            <h2 class="display-4 mb-4"style="color: #83a9d2;"><strong>About Us</strong></h2>
+            <h2 class="display-4 mb-4"><strong>About Us</strong></h2>
             <p class="lead mb-4">
                 At <strong>Traible</strong>, we’re on a mission to revolutionize the way organizations capture, manage, and share internal knowledge.
             </p>
@@ -140,7 +153,7 @@
                 
                 <!-- Card 1 -->
                 <div class="team-card">
-                    <div class="card h-100 bg-dark text-white">
+                    <div class="card-team h-100 bg-dark text-white">
                         <img src="img/sam.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Samuel Anyakwu">
                         <div class="card-body">
                             <h5 class="card-title">Samuel Anyakwu</h5>
@@ -152,7 +165,19 @@
 
                 <!-- Card 2 -->
                 <div class="team-card">
-                    <div class="card h-100 bg-dark text-white">
+                    <div class="card-team h-100 bg-dark text-white">
+                        <img src="img/michael.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Michael Gruver">
+                        <div class="card-body">
+                            <h5 class="team-title">Michael Gruver</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">COO & ML Engineer</h6>
+                            <p class="team-text">Michael is a co-founder and COO of Traible. He holds a degree in Industrial & Systems Engineering from Texas A&M and is pursuing a Master’s in Analytics. Passionate about data science and machine learning, he spends his free time reading, traveling, working out, and enjoying life with his wife.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="team-card">
+                    <div class="card-team h-100 bg-dark text-white">
                         <img src="img/brian.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Brian Paniagua">
                         <div class="card-body">
                             <h5 class="card-title">Brian Paniagua</h5>
@@ -162,21 +187,9 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="team-card">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/michael.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Michael Gruver">
-                        <div class="card-body">
-                            <h5 class="card-title">Michael Gruver</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">COO & ML Engineer</h6>
-                            <p class="card-text">Michael is a co-founder and COO of Traible. He holds a degree in Industrial & Systems Engineering from Texas A&M and is pursuing a Master’s in Analytics. Passionate about data science and machine learning, he spends his free time reading, traveling, working out, and enjoying life with his wife.</p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Card 4 -->
                 <div class="team-card">
-                    <div class="card h-100 bg-dark text-white">
+                    <div class="card-team h-100 bg-dark text-white">
                         <img src="img/nathaniel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Nathaniel Candelaria">
                         <div class="card-body">
                             <h5 class="card-title">Nathaniel Candelaria</h5>
@@ -188,7 +201,7 @@
 
                 <!-- Card 5 -->
                 <div class="team-card">
-                    <div class="card h-100 bg-dark text-white">
+                    <div class="card-team h-100 bg-dark text-white">
                         <img src="img/logan.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Logan O'Neil">
                         <div class="card-body">
                             <h5 class="card-title">Logan O'Neil</h5>
@@ -200,7 +213,7 @@
 
                 <!-- Card 6 -->
                 <div class="team-card">
-                    <div class="card h-100 bg-dark text-white">
+                    <div class="card-team h-100 bg-dark text-white">
                         <img src="img/sammy.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Samuel Vasquez">
                         <div class="card-body">
                             <h5 class="card-title">Samuel Vasquez</h5>
@@ -212,7 +225,7 @@
     
                 <!-- Card 7 -->
                 <div class="team-card">
-                    <div class="card h-100 bg-dark text-white">
+                    <div class="card-team h-100 bg-dark text-white">
                         <img src="img/miguel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Miguel Avilés">
                         <div class="card-body">
                             <h5 class="card-title">Miguel Avilés</h5>
