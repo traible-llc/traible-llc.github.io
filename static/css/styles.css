@@ -4,14 +4,14 @@ html {
 }
 body {
     background-color: #000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #fff;
 }
 
 /* ========== Typography ========== */
 h1, h2, h5 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #83a9d2;
 }
 .card-body h5,
