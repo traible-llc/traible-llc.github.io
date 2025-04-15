@@ -18,7 +18,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
 
     <style>
         html {
@@ -210,18 +210,6 @@
           
         .card-title {
             color: #83a9d2;
-        }
-
-        /* Slide-in animation */
-        .slide-in {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-out;
-        }
-        
-        .slide-in-visible {
-            opacity: 1;
-            transform: translateY(0);
         }
   
 
@@ -567,25 +555,8 @@
                 });
             }
         });
-    
-        // Trigger once on load
-        window.dispatchEvent(new Event("scroll"));
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const elements = document.querySelectorAll('.slide-in');
-        
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('slide-in-visible');
-                        observer.unobserve(entry.target); // Only animate once
-                    }
-                });
-            }, { threshold: 0.1 });
-        
-            elements.forEach(el => observer.observe(el));
-        });
-            
     </script>
+    <!-- Link to External JavaScript File -->
+    <script src="static/js/app.js"></script>
 </body>
 </html>
