@@ -160,9 +160,7 @@
             .section {
                 padding: 2rem 1rem;
             }
-        }
-        
-        
+        }  
     </style>
 </head>
 <body>
@@ -201,7 +199,7 @@
             <div class="container">
                 <p style="font-size: 1.5em; font-family: Arial, sans-serif;">Know your tribe.</p>
                 <br><br><br><br>
-                <h2>Unlock Your Organization's Expert Knowledge</h2>
+                <h2 style="color: #83a9d2;">Unlock Your Organization's Expert Knowledge</h2>
                 <p style="font-size: 1.5em; font-family: Arial, sans-serif;">Transform undocumented expertise into a powerful, accessible asset for your entire team.</p>
                 <br>
                 <div class="scroll-indicator">
@@ -212,7 +210,7 @@
     </div>
 
     <!-- Sticky Sub-Navbar -->
-    <nav id="sub-navbar" class="navbar navbar-expand-lg navbar-light bg-light sub-navbar sticky-top shadow-sm">
+    <nav id="sub-navbar" class="navbar navbar-expand-lg sub-navbar sticky-top shadow-sm" style="background-color: #000;">
         <div class="container justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -291,132 +289,117 @@
     </div>
 
     <!-- Section: About Us -->
-    <div id="about-us" class="container-fluid section section-2" style="padding-top: 50px; padding-bottom: 100px;">
+    <section id="about-us" class="container-fluid section section-2 py-5 bg-dark text-white">
         <div class="container text-center">
-            <h2 class="display-4"><strong>About Us</strong></h2>
-            <br>
-            <h4 class="text-wrap">
-                Welcome to Traible, where we are dedicated to transforming the way businesses manage and share knowledge. Our mission is simple yet powerful:
-                to help organizations save time and boost productivity by capturing the invaluable expertise of experienced employees and making it accessible to everyone within the company.
-            </h4>
-            <h4 class="text-wrap">
-                At Traible, we understand that training new employees doesn't always prepare them for the myriad of challenges they might face in their daily roles. 
-                Often, tasks that seasoned employees can resolve quickly become time-consuming hurdles for newcomers due to a lack of experience.
-                That's where our innovative software comes in.
-                </h4>
+            <h2 class="display-4 mb-4"><strong>About Us</strong></h2>
+            <p class="lead mb-4">
+                At <strong>Traible</strong>, we’re on a mission to revolutionize the way organizations capture, manage, and share internal knowledge.
+            </p>
+            <p class="h5 font-weight-normal mb-3">
+                Our platform is built to preserve the insights and problem-solving skills of experienced employees — ensuring that critical know-how never walks out the door.
+            </p>
+            <p class="h5 font-weight-normal mb-3">
+                Whether you’re onboarding new team members or optimizing workflows, Traible empowers your workforce by making expertise instantly searchable and accessible.
+            </p>
+            <p class="h5 font-weight-normal mb-0">
+                We believe in smarter work, fewer roadblocks, and faster resolutions — all backed by AI and powered by the people who know your company best.
+            </p>
         </div>
-    </div>
+    </section>
 
     <!-- Section: Meet the Team -->
-    <div id="section-3" class="container-fluid section-3 full-height d-flex flex-column">
-        <div class="container py-3">
-            <br>
-            <br>
-            <br> 
-            <h1 class="text-center mb-4">Meet the Team</h1>
-            <br>
-        </div>
-        <div class="container-fluid scrollable">
-            <div class="container py-2">
-                <div class="row">
-                    <!-- Card 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 bg-dark text-white">
-                            <img src="img/sam.jpeg" class="card-img-top">
-                            <div class="card-body">
+    <div id="section-3" class="container-fluid section-3 full-height d-flex flex-column bg-dark text-white">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Meet the Team</h1>
+            <div class="row">
+                
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/sam.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Samuel Anyakwu">
+                        <div class="card-body">
                             <h5 class="card-title">Samuel Anyakwu</h5>
-                            <h6 class="card-subtitle mb-2">CEO</h6>
-                            <p class="card-text">Samuel is a co-founder of Traible. He is a mechnical engineer and currently works at Pepsi as a warehouse supervisor. 
-                                In his free time, he enjoys reading his Bible, playing disc golf, basketball, guitar, and working on Traible.</p>
-                            </div>
+                            <h6 class="card-subtitle mb-2 text-muted">CEO</h6>
+                            <p class="card-text">Samuel is a co-founder of Traible and currently works as a warehouse supervisor at Pepsi. With a background in mechanical engineering, he brings structure and leadership to the team. Outside of work, he enjoys reading his Bible, playing disc golf, basketball, guitar, and contributing to Traible’s growth.</p>
                         </div>
                     </div>
-            
-                    <!-- Card 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 bg-dark text-white">
-                            <img src="img/brian.jpeg" class="card-img-top">
-                            <div class="card-body">
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/brian.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Brian Paniagua">
+                        <div class="card-body">
                             <h5 class="card-title">Brian Paniagua</h5>
-                            <h6 class="card-subtitle mb-2">Lead Software Engineer</h6>
-                            <p class="card-text">Brian is a co-founder of Traible. A recent graduate 
-                                of UTSA with a bachelors degree in physics with a minor in computer science and a data analytics certificate. 
-                                In his free time he enjoys to reading, video games and music.</p>
-                            </div>
+                            <h6 class="card-subtitle mb-2 text-muted">Lead Software Engineer</h6>
+                            <p class="card-text">Brian is a co-founder of Traible and a recent graduate from UTSA with a Bachelor's in Physics, a minor in Computer Science, and a certificate in Data Analytics. He leads our software development efforts and enjoys reading, video games, and music in his free time.</p>
                         </div>
                     </div>
-            
-                    <!-- Card 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 bg-dark text-white">
-                            <img src="img/michael.jpeg" class="card-img-top">
-                            <div class="card-body">
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/michael.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Michael Gruver">
+                        <div class="card-body">
                             <h5 class="card-title">Michael Gruver</h5>
-                            <h6 class="card-subtitle mb-2">COO + ML Engineer</h6>
-                            <p class="card-text">Michael is a co-founder and COO of Traible with an Industrial & Systems 
-                                Engineering degree from Texas A&M and is pursuing a Masters of Analytics to continue his 
-                                interest in data science and ML. In his free time he enjoys reading, hanging out with his wife, traveling, 
-                                and working out.</p>
-                            </div>
+                            <h6 class="card-subtitle mb-2 text-muted">COO & ML Engineer</h6>
+                            <p class="card-text">Michael is a co-founder and COO of Traible. He holds a degree in Industrial & Systems Engineering from Texas A&M and is pursuing a Master’s in Analytics. Passionate about data science and machine learning, he spends his free time reading, traveling, working out, and enjoying life with his wife.</p>
                         </div>
                     </div>
-            
-                    <!-- Card 4 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 bg-dark text-white">
-                            <img src="img/nathaniel.jpeg" class="card-img-top">
-                            <div class="card-body">
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/nathaniel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Nathaniel Candelaria">
+                        <div class="card-body">
                             <h5 class="card-title">Nathaniel Candelaria</h5>
-                            <h6 class="card-subtitle mb-2">Administrator</h6>
-                            <p class="card-text">Nathaniel works part time for Traible. He is a graduate of UTSA with a bachelors in English, and he is currently pursuing a 
-                                master’s with a focus on renaissance literature.</p>
-                            </div>
+                            <h6 class="card-subtitle mb-2 text-muted">Administrator</h6>
+                            <p class="card-text">Nathaniel supports Traible in a part-time role while pursuing his Master’s in English with a focus on Renaissance literature. He holds a Bachelor’s degree in English from UTSA and brings thoughtful insight and organization to our operations.</p>
                         </div>
                     </div>
-            
-                    <!-- Card 5 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 bg-dark text-white">
-                            <img src="img/logan.jpeg" class="card-img-top">
-                            <div class="card-body">
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/logan.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Logan O'Neil">
+                        <div class="card-body">
                             <h5 class="card-title">Logan O'Neil</h5>
-                            <h6 class="card-subtitle mb-2">CSO</h6>
-                            <p class="card-text">Logan is co-founder for Traible. He is pursueing a BBA in Information Systems and Cybersecurity. This past summer he was an intern at The University of Texas at San Antonio's Security Operations Center.
-                            In his free time, he enjoys playing a variety of instruments, such as the euphonium and harmonica, as well as playing board games, and reading novels.</p>
-                            </div>
+                            <h6 class="card-subtitle mb-2 text-muted">CSO</h6>
+                            <p class="card-text">Logan is a co-founder of Traible and is pursuing a BBA in Information Systems and Cybersecurity. He previously interned at UTSA's Security Operations Center. In his free time, he enjoys playing instruments like the euphonium and harmonica, board games, and reading novels.</p>
                         </div>
                     </div>
-            
-                    <!-- Card 6 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 bg-dark text-white">
-                            <img src="img/sammy.jpeg" class="card-img-top">
-                            <div class="card-body">
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/sammy.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Samuel Vasquez">
+                        <div class="card-body">
                             <h5 class="card-title">Samuel Vasquez</h5>
-                            <h6 class="card-subtitle mb-2">Full-stack developer</h6>
-                            <p class="card-text">Samuel is a co-founder of Traible who graduated with a degree in 
-                                Computer Science from the University of Texas at San Antonio. He currently works full-time at Traible and in 
-                                IT. In his free time he enjoys reading his Bible, collecting board games, and getting better at ping pong.</p>
-                            </div>
+                            <h6 class="card-subtitle mb-2 text-muted">Full-Stack Developer</h6>
+                            <p class="card-text">Samuel is a co-founder and full-stack developer at Traible. He holds a degree in Computer Science from UTSA and currently works full-time in IT. He enjoys reading his Bible, collecting board games, and refining his ping pong skills.</p>
                         </div>
                     </div>
-            
-                    <!-- Card 5 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 bg-dark text-white">
-                            <img src="img/miguel.jpeg" class="card-img-top">
-                            <div class="card-body">
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/miguel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Miguel Avilés">
+                        <div class="card-body">
                             <h5 class="card-title">Miguel Avilés</h5>
-                            <h6 class="card-subtitle mb-2">Marketing Lead</h6>
-                            <p class="card-text">Miguel is a co-founder of Traible and currently works as the head of marketing. He also works as a data analyst.
-                                In his free time, he enjoys dancing salsa, hiking, and competing in ping pong against Sam, Traible’s CEO.</p>
-                            </div>
+                            <h6 class="card-subtitle mb-2 text-muted">Marketing Lead</h6>
+                            <p class="card-text">Miguel is a co-founder of Traible and serves as the head of marketing. He also works as a data analyst. In his downtime, he enjoys salsa dancing, hiking, and challenging Sam, our CEO, to intense ping pong matches.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Section: FOU -->
     <div class="container-fluid section section-4">
@@ -532,12 +515,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-    
+ 
     <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
@@ -555,28 +536,42 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        // Activate scrollspy manually
-        const sections = document.querySelectorAll("div[id]");
         const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
     
+        function getTargetSections() {
+            return Array.from(navLinks)
+                .map(link => {
+                    const id = link.getAttribute("href").slice(1);
+                    return document.getElementById(id);
+                })
+                .filter(section => section !== null);
+        }
+    
         window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (pageYOffset >= sectionTop) {
-                current = section.getAttribute("id");
+            const sections = getTargetSections();
+            let currentSectionId = null;
+    
+            for (const section of sections) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 120 && rect.bottom >= 120) {
+                    currentSectionId = section.id;
+                    break;
                 }
-            });
-        
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href").includes(current)) {
-                link.classList.add("active");
-                }
-            });
+            }
+    
+            // Only update nav if we have a matched section
+            if (currentSectionId) {
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").slice(1) === currentSectionId) {
+                        link.classList.add("active");
+                    }
+                });
+            }
         });
-
+    
+        // Trigger once on load
+        window.dispatchEvent(new Event("scroll"));
     </script>
-
 </body>
 </html>
