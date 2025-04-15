@@ -47,6 +47,10 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
             text-align: left;
+            transition: transform 0.2s ease-in-out;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
         }
 
         /* ========== Plans Section ========== */
@@ -65,11 +69,15 @@
             border: 2px solid #83a9d2;
             border-radius: 12px;
             padding: 30px;
-            width: 300px;
+            width: 350px;
             box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.2s ease-in-out;
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
         }
         .plan-card ul {
             list-style: none;
@@ -77,9 +85,21 @@
             text-align: left;
             line-height: 1.8;
         }
-        .plan-card ul.features-list li::before {
-            content: "✓ ";
+        .plan-card ul.features-list li {
+            padding-left: 24px;
+            position: relative;
+        }
+        .plan-card ul.features-list li.feature-yes::before {
+            content: "✓";
             color: #83a9d2;
+            position: absolute;
+            left: 0;
+        }
+        .plan-card ul.features-list li.feature-no::before {
+            content: "✗";
+            color: #e57373; /* soft red */
+            position: absolute;
+            left: 0;
         }
         .plan-card .btn {
             margin-top: 20px;
@@ -143,9 +163,8 @@
             <div class="row align-items-center justify-content-between">
                 <!-- Left Column: Text -->
                 <div class="col-lg-5 mb-5 mb-lg-0" style="margin-left: 4rem; margin-right: auto;">
-                    <h1 class="fw-bold display-5" style="color: #83a9d2; font-family: 'Segoe UI', sans-serif;">
-                        Capture Knowledge. Empower Teams.
-                    </h1>
+                    <h1 class="fw-bold display-5"> Capture Knowledge.</h1>
+                    <h1 class="fw-bold display-5"> Empower Teams.</h1>
                     <p class="fs-4 mt-3" style="font-family: 'Segoe UI', sans-serif; color: #aaa;">
                         Don’t let critical expertise fade—transform experience into accessible insight for every employee, anytime.
                     </p>
@@ -191,7 +210,7 @@
     <!-- Section: Benefits Beyond Onboarding -->
     <div id="benefits" class="container-fluid section section-2 slide-in">
         <div class="container text-center">
-            <h2 class="display-4 mb-5"><strong>Benefits Beyond Onboarding</strong></h2>
+            <h2 class="display-4 mb-5">Benefits Beyond Onboarding</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card h-100">
@@ -220,9 +239,10 @@
             </div>
         </div>
     </div>
+    
     <!-- Section: Features-->
     <div id="feat-section" class="features-container slide-in">
-        <h2 class="display-4 mb-5" style="color: #83a9d2;"><strong>Key Features</strong></h2>
+        <h2 class="display-4 mb-5">Key Features</h2>
         <div class="feature">
             <h2>Privacy and Security</h2>
             <p>Traible keeps your tribal knowledge safe and we offer to install a local model on your network.</p>
@@ -243,7 +263,7 @@
     <!-- Section: Function, Operation, and Use -->
     <div id="fou-section" class="container-fluid section section-4 slide-in">
         <div class="container text-center">
-            <h2 class="display-4 mb-5"><strong>Function • Operation • Use</strong></h2>
+            <h2 class="display-4 mb-5">Function • Operation • Use</h2>
             <div class="row">
                 <!-- Function -->
                 <div class="col-md-4">
@@ -284,26 +304,27 @@
             </div>
         </div>
     </div>
+
     <!-- Section: Plans -->
     <div id="plans-section" class="container-fluid section section-5">
         <div class="container">
-            <h1 class="text-center mb-5 display-4" style="color: #83a9d2;">Choose Your Traible Plan</h1>
+            <h2 class="text-center mb-5 display-4">Choose Your Traible Plan</h2>
             <div class="pricing-row">
                 <!-- Standard Plan -->
                 <div class="plan-card">
                     <h2>Standard</h2>
                     <ul class="features-list">
-                        <li>AI Platform Access</li>
-                        <li>Customer Support: Zoom + Email</li>
-                        <li>Document Upload: 100 Docs</li>
-                        <li>Wearable Kit: ✗</li>
-                        <li>AI Transcription: ✗</li>
-                        <li>Workflow Integration: ✗</li>
-                        <li>Account Manager: ✗</li>
-                        <li>On-site Support: ✗</li>
-                        <li>SME Interview: ✗</li>
-                        <li>24/6 Support: ✗</li>
-                        <li>Add-ons: Available</li>
+                        <li class="feature-yes">AI Platform Access</li>
+                        <li class="feature-yes">Customer Support: Zoom + Email</li>
+                        <li class="feature-yes">Document Upload: 100 Docs</li>
+                        <li class="feature-yes">Add-ons</li>
+                        <li class="feature-no">Wearable Kit</li>
+                        <li class="feature-no">AI Transcription</li>
+                        <li class="feature-no">Workflow Integration</li>
+                        <li class="feature-no">Account Manager</li>
+                        <li class="feature-no">On-site Support</li>
+                        <li class="feature-no">SME Interview</li>
+                        <li class="feature-no">24/6 Support</li>
                     </ul>
                     <a href="#" class="btn">Buy Now</a>
                 </div>
@@ -311,17 +332,17 @@
                 <div class="plan-card">
                     <h2>Premium</h2>
                     <ul class="features-list">
-                        <li>AI Platform Access</li>
-                        <li>Customer Support: Calls + Zoom</li>
-                        <li>Document Upload: 500 Docs</li>
-                        <li>Wearable Kit: ✓</li>
-                        <li>AI Transcription: ✓</li>
-                        <li>Workflow Integration: ✓</li>
-                        <li>Account Manager: ✗</li>
-                        <li>On-site Support: ✗</li>
-                        <li>SME Interview: ✗</li>
-                        <li>24/6 Support: ✗</li>
-                        <li>Add-ons: Available</li>
+                        <li class="feature-yes">AI Platform Access</li>
+                        <li class="feature-yes">Customer Support: Calls + Zoom</li>
+                        <li class="feature-yes">Document Upload: 500 Docs</li>
+                        <li class="feature-yes">Add-ons</li>
+                        <li class="feature-yes">Wearable Kit</li>
+                        <li class="feature-yes">AI Transcription</li>
+                        <li class="feature-yes">Workflow Integration</li>
+                        <li class="feature-no">Account Manager</li>
+                        <li class="feature-no">On-site Support</li>
+                        <li class="feature-no">SME Interview</li>
+                        <li class="feature-no">24/6 Support</li>
                     </ul>
                     <a href="#" class="btn">Buy Now</a>
                 </div>
@@ -329,23 +350,24 @@
                 <div class="plan-card">
                     <h2>Business</h2>
                     <ul class="features-list">
-                        <li>AI Platform Access</li>
-                        <li>Customer Support: 24/7 + Onsite</li>
-                        <li>Document Upload: Unlimited</li>
-                        <li>Wearable Kit: ✓</li>
-                        <li>AI Transcription: ✓</li>
-                        <li>Workflow Integration: ✓</li>
-                        <li>Account Manager: ✓</li>
-                        <li>On-site Support: ✓</li>
-                        <li>SME Interview: ✓</li>
-                        <li>24/6 Support: ✓</li>
-                        <li>Add-ons: Available</li>
+                        <li class="feature-yes">AI Platform Access</li>
+                        <li class="feature-yes">Customer Support: 24/7 + Onsite</li>
+                        <li class="feature-yes">Document Upload: Unlimited</li>
+                        <li class="feature-yes">Add-ons</li>
+                        <li class="feature-yes">Wearable Kit</li>
+                        <li class="feature-yes">AI Transcription</li>
+                        <li class="feature-yes">Workflow Integration</li>
+                        <li class="feature-yes">Account Manager</li>
+                        <li class="feature-yes">On-site Support</li>
+                        <li class="feature-yes">SME Interview</li>
+                        <li class="feature-yes">24/6 Support</li>
                     </ul>
                     <a href="#" class="btn">Buy Now</a>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- FAQ Section -->
     <section id="faq-section" class="container-fluid section section-2 py-5 slide-in">
         <div class="container">
