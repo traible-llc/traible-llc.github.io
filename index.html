@@ -161,6 +161,55 @@
                 padding: 2rem 1rem;
             }
         }  
+
+        .features-container {  
+            margin: 0 auto;
+            padding: 60px 20px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+        }
+          
+        .features-container h1 {
+            color: #83a9d2;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+          
+        .feature {
+            max-width: 900px;  
+            margin: auto;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #111;
+            border-left: 5px solid #83a9d2;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
+            text-align: left;
+        }
+        
+        .feature h2 {
+            margin-top: 0;
+            color: #83a9d2;
+        }
+
+        .card {
+            background-color: #111;
+            color: white;
+            border-radius: 12px;
+            border-left: 4px solid #83a9d2;
+            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+          
+        .card:hover {
+            transform: translateY(-5px);
+        }
+          
+        .card-title {
+            color: #83a9d2;
+        }
+
     </style>
 </head>
 <body>
@@ -176,17 +225,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-us">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section-3">Meet the Team</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="plans.html">Plans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="features.html">Features</a>
-                    </li>                      
+                    </li>                     
                 </ul>
             </div>
         </div>
@@ -220,10 +263,7 @@
                     <a class="nav-link" href="#benefits">Benefits</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about-us">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section-3">Meet the Team</a>
+                    <a class="nav-link" href="#feat-section">Features</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#faq-section">FAQ</a>
@@ -282,117 +322,69 @@
         </div>
     </div>
 
+    <!-- Section: Features-->
+    <div id="feat-section" class="features-container">
+        <h1>Key Features</h1>
+        
+        <div class="feature">
+            <h2>Privacy and Security</h2>
+            <p>Traible keeps your tribal knowledge safe and we offer to install a local model on your network.</p>
+            <p>Traible uses the best cyber security practices to keep your data safe.</p>
+            <p>A local model helps your information stay safe, and compliant with any proprietary information.</p>
+        </div>
+        
+        <div class="feature">
+            <h2>Blank Slate</h2>
+            <p>Traible’s model is a blank slate, unlike generic models, so your information helps shape it.</p>
+            <p>Traible’s model learns from the documents you upload. This helps it learn only the information you need and not irrelevant information.</p>
+        </div>
+        
+        <div class="feature">
+            <h2>Fine Tuning</h2>
+            <p>Traible can fine tune a model for your needs and guarantee customized answers for your needs and problems.</p>
+            <p>Traible can edit some of the technical processes in the model to further customize it for your needs. This helps ensure the highest quality answers for your questions.</p>
+        </div>
+    </div>          
 
-    <!-- Divider -->
-    <div class="container-fluid section section-2 text-center">
-        <h4>_______________________________</h4>
-    </div>
-
-    <!-- Section: About Us -->
-    <section id="about-us" class="container-fluid section section-2 py-5 bg-dark text-white">
+    <!-- Section: Function, Operation, and Use -->
+    <div id="fou-section" class="container-fluid section section-4">
         <div class="container text-center">
-            <h2 class="display-4 mb-4"><strong>About Us</strong></h2>
-            <p class="lead mb-4">
-                At <strong>Traible</strong>, we’re on a mission to revolutionize the way organizations capture, manage, and share internal knowledge.
-            </p>
-            <p class="h5 font-weight-normal mb-3">
-                Our platform is built to preserve the insights and problem-solving skills of experienced employees — ensuring that critical know-how never walks out the door.
-            </p>
-            <p class="h5 font-weight-normal mb-3">
-                Whether you’re onboarding new team members or optimizing workflows, Traible empowers your workforce by making expertise instantly searchable and accessible.
-            </p>
-            <p class="h5 font-weight-normal mb-0">
-                We believe in smarter work, fewer roadblocks, and faster resolutions — all backed by AI and powered by the people who know your company best.
-            </p>
-        </div>
-    </section>
-
-    <!-- Section: Meet the Team -->
-    <div id="section-3" class="container-fluid section-3 full-height d-flex flex-column bg-dark text-white">
-        <div class="container py-5">
-            <h1 class="text-center mb-5">Meet the Team</h1>
+            <h2 class="display-4 mb-5"><strong>Function • Operation • Use</strong></h2>
             <div class="row">
-                
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/sam.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Samuel Anyakwu">
+                <div class="col-md-4">
+                    <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Samuel Anyakwu</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">CEO</h6>
-                            <p class="card-text">Samuel is a co-founder of Traible and currently works as a warehouse supervisor at Pepsi. With a background in mechanical engineering, he brings structure and leadership to the team. Outside of work, he enjoys reading his Bible, playing disc golf, basketball, guitar, and contributing to Traible’s growth.</p>
+                            <h5 class="card-title">Function</h5>
+                            <p class="card-text">
+                                The function of Traible software is to close communication and training gaps.
+                                Many companies are not able to provide thorough training due to situational experience being required.
+                                We take all the experiential knowledge and put it into software that makes it accessible to new and seasoned employees.
+                            </p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/brian.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Brian Paniagua">
+                <div class="col-md-4">
+                    <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Brian Paniagua</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Lead Software Engineer</h6>
-                            <p class="card-text">Brian is a co-founder of Traible and a recent graduate from UTSA with a Bachelor's in Physics, a minor in Computer Science, and a certificate in Data Analytics. He leads our software development efforts and enjoys reading, video games, and music in his free time.</p>
+                            <h5 class="card-title">Operations</h5>
+                            <p class="card-text">
+                                Traible is a software package that encompasses a user-friendly search engine.
+                                Employees access the software and type in issues they may be experiencing.
+                                The answers and coaching will appear for them with company-specific solutions to use in resolving the issue.
+                            </p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/michael.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Michael Gruver">
+                <div class="col-md-4">
+                    <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Michael Gruver</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">COO & ML Engineer</h6>
-                            <p class="card-text">Michael is a co-founder and COO of Traible. He holds a degree in Industrial & Systems Engineering from Texas A&M and is pursuing a Master’s in Analytics. Passionate about data science and machine learning, he spends his free time reading, traveling, working out, and enjoying life with his wife.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/nathaniel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Nathaniel Candelaria">
-                        <div class="card-body">
-                            <h5 class="card-title">Nathaniel Candelaria</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Administrator</h6>
-                            <p class="card-text">Nathaniel supports Traible in a part-time role while pursuing his Master’s in English with a focus on Renaissance literature. He holds a Bachelor’s degree in English from UTSA and brings thoughtful insight and organization to our operations.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/logan.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Logan O'Neil">
-                        <div class="card-body">
-                            <h5 class="card-title">Logan O'Neil</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">CSO</h6>
-                            <p class="card-text">Logan is a co-founder of Traible and is pursuing a BBA in Information Systems and Cybersecurity. He previously interned at UTSA's Security Operations Center. In his free time, he enjoys playing instruments like the euphonium and harmonica, board games, and reading novels.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/sammy.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Samuel Vasquez">
-                        <div class="card-body">
-                            <h5 class="card-title">Samuel Vasquez</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Full-Stack Developer</h6>
-                            <p class="card-text">Samuel is a co-founder and full-stack developer at Traible. He holds a degree in Computer Science from UTSA and currently works full-time in IT. He enjoys reading his Bible, collecting board games, and refining his ping pong skills.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="img/miguel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Miguel Avilés">
-                        <div class="card-body">
-                            <h5 class="card-title">Miguel Avilés</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Marketing Lead</h6>
-                            <p class="card-text">Miguel is a co-founder of Traible and serves as the head of marketing. He also works as a data analyst. In his downtime, he enjoys salsa dancing, hiking, and challenging Sam, our CEO, to intense ping pong matches.</p>
+                            <h5 class="card-title">Uses</h5>
+                            <p class="card-text">
+                                Traible can be used in all knowledge transfer settings from the junior mechanics troubleshooting a machine
+                                to a consultant investigating historic work. Whether you're looking to streamline onboarding,
+                                provide instant troubleshooting, or preserve experiential knowledge, Traible adapts to your organization's unique needs,
+                                helping you save time, boost productivity, and maintain a competitive edge in your industry.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -400,35 +392,6 @@
         </div>
     </div>
 
-
-    <!-- Section: FOU -->
-    <div class="container-fluid section section-4">
-        <div class="container text-center text-wrap">
-            <div class="row">
-                <div class="col-md-4 section-2-col">
-                    <br>
-                    <h2 class="display-4">Function</h2>
-                    <h4>The function of Traible software is to close communication and training gaps.
-                        Many companies are not able to provide thorough training due to situational expeintial being required.
-                        We take all the experiential knowledge and put it into software that makes it accessible to new and seasoned employees.</h4>
-                </div>
-                <div class="col-md-4 section-2-col">
-                    <br>
-                    <h2 class="display-4">Operations</h2>
-                    <h4>Traible is a software package that encompasses a user-friendly search engine. 
-                        Employees access the software and type in issues they may be experiencing. 
-                        The awnsers and coaching will appear for them with company-specific solutions to use in resolving the issue.</h4>
-                </div>
-                <div class="col-md-4 section-2-col">
-                    <br>
-                    <h2 class="display-4">Uses</h2>
-                    <h4>Traible can be used in all knowledge transfer settings from the junior mechanics troubleshooting a machine to a consultant investigating historic work.
-                        Whether you're looking to streamline onboarding, provide instant troubleshooting, or preserve experiential knowledge, 
-                        Traible adapts to your organization's unique needs, helping you save time, boost productivity, and maintain a competitive edge in your industry.</h4>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Divider -->
     <div class="container-fluid section section-2 text-center">
