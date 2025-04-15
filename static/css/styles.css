@@ -15,7 +15,6 @@ h1, h2, h5 {
     color: #83a9d2;
 }
 .card-body h5,
-.card-title,
 .plan-card h2,
 .features-container h1,
 .feature h2,
@@ -94,9 +93,10 @@ ul.list-unstyled li h4 {
 .card-body h5 {
     color: #83a9d2;
 }
-.card-text {
+.card-title,.card-text {
     text-align: left;
 }
+
 
 /* ========== Scroll Slide-In ========== */
 .scroll-indicator {
