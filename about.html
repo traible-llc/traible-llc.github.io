@@ -6,8 +6,60 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/styles.css">
     <style>
+        .about-container {
+            background: linear-gradient(135deg, #000, #000);
+            border-radius: 2rem;
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: 3rem auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            animation: fadeInSlide 1s ease-out both;
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+        }
+        .about-text h2 {
+            font-size: 2.8rem;
+            color: #83a9d2;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .about-text h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: #83a9d2;
+            display: block;
+            border-radius: 2px;
+            margin-top: 0.5rem;
+        }
+        .about-text p {
+            font-size: 1.15rem;
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+        .about-text p.lead {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: white;
+        }
+        .about-text p:last-child {
+            font-style: italic;
+            color: #83a9d2;
+            font-weight: 500;
+        }
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* General Layout */
-        .about-container, .team-container {
+        .team-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 60px 20px;
@@ -15,25 +67,11 @@
             color: white;
             background-color: #000;
         }
-        
-        /* Section Titles */
-        .about-container h1,
         .team-container h1 {
             color: #83a9d2;
             margin-bottom: 30px;
             font-size: 2.5em;
         }
-        
-        /* About Section Text */
-        .about-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #ccc;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Team Grid */
         .team-grid {
             display: flex;
             flex-wrap: wrap;
@@ -41,8 +79,6 @@
             gap: 40px;
             margin-top: 40px;
         }
-        
-        /* Individual Team Card */
         .team-card {
             background-color: #111;
             border: 2px solid #83a9d2;
@@ -53,12 +89,9 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-        
         .team-card:hover {
             transform: translateY(-5px);
         }
-        
-        /* Profile Picture */
         .team-card img {
             width: 100px;
             height: 100px;
@@ -67,8 +100,6 @@
             object-fit: cover;
             margin-bottom: 15px;
         }
-        
-        /* Name + Role */
         .team-card h3 {
             margin: 10px 0 5px;
             color: #83a9d2;
@@ -83,7 +114,6 @@
             transition: transform 0.2s ease-in-out;
             margin-bottom: 1.5rem;
         }
-        
         .team-card p {
             margin: 0;
             color: #ccc;
@@ -127,23 +157,31 @@
     </nav>
 
     <!-- Section: About Us -->
-    <section id="about-us" class="about-container slide-in">
-        <div class="about-text">
-            <h2 class="display-4 mb-4"><strong>About Us</strong></h2>
-            <p class="lead mb-4">
-                At <strong>Traible</strong>, we’re on a mission to revolutionize the way organizations capture, manage, and share internal knowledge.
-            </p>
-            <p class="h5 font-weight-normal mb-3">
-                Our platform is built to preserve the insights and problem-solving skills of experienced employees — ensuring that critical know-how never walks out the door.
-            </p>
-            <p class="h5 font-weight-normal mb-3">
-                Whether you’re onboarding new team members or optimizing workflows, Traible empowers your workforce by making expertise instantly searchable and accessible.
-            </p>
-            <p class="h5 font-weight-normal mb-0">
-                We believe in smarter work, fewer roadblocks, and faster resolutions — all backed by AI and powered by the people who know your company best.
-            </p>
-        </div>
-    </section>
+<!-- Section: About Us -->
+<section id="about-us" class="about-container slide-in">
+    <div class="about-text">
+        <h2 class="display-4 mb-4"><strong>Who We Are</strong></h2>
+        <p class="lead mb-4">
+            We’re <span style="color: #83a9d2;">Traible</span> — a passionate team on a mission to keep your company’s brainpower where it belongs: at your fingertips.
+        </p>
+        <p class="h5 font-weight-normal mb-3">
+            Every team has that go-to person who just <em>knows</em> how to fix it, find it, or figure it out. 
+            Traible makes sure that <span style="color: #83a9d2;">knowledge doesn’t get lost</span> in the shuffle — or the exit interview.
+        </p>
+        <p class="h5 font-weight-normal mb-3">
+            Our platform <span style="color: #83a9d2;">captures experience</span>, insights, and solutions from your experts, 
+            and turns them into a smart, searchable knowledge base for your whole team to use — 
+            anytime, anywhere.
+        </p>
+        <p class="h5 font-weight-normal mb-3">
+            Whether you're training new hires or solving critical problems on the fly, Traible helps your team move faster , work smarter, and <span style="color: #83a9d2;">never reinvent the wheel</span>.
+        </p>
+        <p class="h5 font-weight-normal mb-0" style="color: #83a9d2;">
+            Backed by AI. Inspired by people. Built for results.
+        </p>
+    </div>
+</section>
+
 
     <!-- Section: Meet the Team -->
     <div id="section-3" class="team-container slide-in">
