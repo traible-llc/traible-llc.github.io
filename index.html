@@ -16,67 +16,54 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="static/css/styles.css">
-
     <style>
         html {
             scroll-behavior: smooth;
         }
-        
         body {
             background-color: #000;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #fff;
         }
-        
         .navbar {
             background-color: #000;
             box-shadow: 0 4px 8px rgba(131, 169, 210, 0.5);
             padding: 1rem 2rem;
             font-size: 1.2rem;
         }
-        
         .navbar-brand img {
             width: 50px;
             height: 50px;
         }
-        
         .section {
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
             flex-direction: column;
             padding: 4rem 2rem;
         }
-        
         .section-1 {
             background-color: #000;
             color: #fff;
             height: 100vh;
             padding-top: 100px;
         }
-        
         .section-2, .section-4 {
             background-color: #343a40;
             color: #fff;
         }
-        
         .section-3, .section-5 {
             background-color: #000;
             color: #fff;
         }
-        
         .scroll-indicator {
             margin-top: 20px;
             font-size: 1.2em;
             color: #ffffff;
             opacity: 0.7;
         }
-        
         .card {
             background-color: #1c1c1c;
             border: none;
@@ -85,29 +72,26 @@
             transition: transform 0.3s ease;
             margin-bottom: 1.5rem;
         }
-        
+        .card-text {
+            text-align: left;
+        }
         .card:hover {
             transform: translateY(-5px);
         }
-        
         .card-body h5 {
             color: #83a9d2;
         }
-        
         ul.list-unstyled li h4 {
             margin-bottom: 1rem;
         }
-        
         .btn-link {
             color: white;
             text-decoration: underline;
         }
-        
         .btn-link:hover {
             color: lightgray;
             text-decoration: none;
         }
-        
         .hr-divider {
             border: none;
             height: 2px;
@@ -115,30 +99,25 @@
             width: 60%;
             margin: 2rem auto;
         }
-        
         .sub-navbar .nav-link {
             color: #aaa;
             font-weight: 500;
             padding: 0.75rem 1rem;
             transition: color 0.3s;
         }
-        
         .sub-navbar .nav-link.active {
             color: #83a9d2;
             border-bottom: 2px solid #83a9d2;
         }
-        
         .card-img-top {
             object-fit: cover;
             max-height: 300px;
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
         }
-
         #changing-knowledge.section {
             display: block !important;
         }
-        
         @media (max-width: 768px) {
             .navbar-nav {
                 text-align: center;
@@ -147,8 +126,7 @@
             .section {
                 padding: 2rem 1rem;
             }
-        }  
-
+        }
         .features-container {  
             margin: 0 auto;
             padding: 60px 20px;
@@ -156,13 +134,11 @@
             background-color: #000;
             text-align: center;
         }
-          
         .features-container h1 {
             color: #83a9d2;
             margin-bottom: 40px;
             font-size: 2.5em;
         }
-          
         .feature {
             max-width: 900px;  
             margin: auto;
@@ -174,12 +150,10 @@
             box-shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
             text-align: left;
         }
-        
         .feature h2 {
             margin-top: 0;
             color: #83a9d2;
         }
-
         .card {
             background-color: #111;
             color: white;
@@ -188,15 +162,12 @@
             box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
             transition: transform 0.2s ease-in-out;
         }
-          
         .card:hover {
             transform: translateY(-5px);
         }
-          
         .card-title {
             color: #83a9d2;
         }
-
         .fou-img {
             display: block;
             margin-left: auto;
@@ -207,36 +178,20 @@
             object-fit: cover;
             border-radius: 10px;
         }
-
-        .scroll-indicator p {
-            font-style: italic;
-            animation: bounce 2s infinite;
-            color: #5c8bbd;
-        }
-          
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(5px); }
-        }
-
-        /* Pricing Section */
         #plans {
             background-color: #000;
             padding: 80px 20px;
         }
-        
         #plans h1 {
             color: #83a9d2;
             margin-bottom: 40px;
         }
-        
         .pricing-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
         }
-        
         .plan-card {
             background-color: #111;
             border: 2px solid #83a9d2;
@@ -248,24 +203,20 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        
         .plan-card h2 {
             color: #83a9d2;
             margin-bottom: 15px;
         }
-        
         .plan-card ul {
             list-style: none;
             padding: 0;
             text-align: left;
             line-height: 1.8;
         }
-        
         .plan-card ul.features-list li::before {
             content: "✓ ";
             color: #83a9d2;
         }
-        
         .plan-card .btn {
             margin-top: 20px;
             background-color: transparent;
@@ -276,15 +227,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-        }
-        
+        }  
         .plan-card .btn:hover {
             background-color: #83a9d2;
             color: black;
         }
-  
-          
-
     </style>
 </head>
 <body>
@@ -300,13 +247,11 @@
                     <img src="img/traible.png" alt="Traible Text Logo" style="height: 32px; margin-left: 10px;">
                 </a>
             </div>
-        
             <!-- Toggler Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -317,46 +262,42 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <div id="overview" class="container-fluid section section-1 slide-in py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                
+        <div class="container-fluid px-4">
+            <div class="row align-items-center justify-content-between">
                 <!-- Left Column: Text -->
-                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                    <h2 class="text" style="color: #83a9d2;">Don’t Let Expertise Walk Out the Door.</h2>
-                    <p class="fs-4" style="font-family: Arial, sans-serif;">Preserve institutional knowledge and make it accessible to everyone.</p>
-            
+                <div class="col-lg-5 mb-5 mb-lg-0" style="margin-left: 4rem; margin-right: auto;">
+                    <h1 class="fw-bold display-5" style="color: #83a9d2; font-family: 'Segoe UI', sans-serif;">
+                        Capture Knowledge. Empower Teams.
+                    </h1>
+                    <p class="fs-4 mt-3" style="font-family: 'Segoe UI', sans-serif; color: #aaa;">
+                        Don’t let critical expertise fade—transform experience into accessible insight for every employee, anytime.
+                    </p>
                     <!-- CTA Button -->
-                    <a href="#contact" class="btn btn-primary px-4 py-2 mt-3" style="background-color: #5c8bbd; border: none; font-size: 1.1em;">
-                        Book a Demo
+                    <a href="#contact" class="btn btn-lg mt-4" style="background-color: #83a9d2; color: white; border-radius: 8px; font-weight: 500;">
+                        Schedule a Demo
                     </a>
-            
                     <!-- Scroll Indicator -->
-                    <div class="scroll-indicator mt-4">
-                        <p>↓ Scroll down to learn more!</p>
+                    <div class="scroll-indicator mt-5 text-muted">
+                        <small>↓ Learn how we help you future-proof your workforce</small>
                     </div>
                 </div>
-        
                 <!-- Right Column: Video -->
-                <div class="col-md-6">
-                    <div class="w-100" style="aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                <div class="col-md-6 pe-lg-5">
+                    <div class="w-100" style="aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
                         <iframe 
-                            src="https://www.youtube.com/embed/405s0F1Iz9Q?autoplay=1&mute=1&loop=1&playlist=405s0F1Iz9Q&rel=0"
-                            title="Intro Video"
-                            allow="autoplay; encrypted-media"
-                            allowfullscreen
-                            style="width: 100%; height: 100%; border: none;">
+                        src="https://www.youtube.com/embed/405s0F1Iz9Q?autoplay=1&mute=1&loop=1&playlist=405s0F1Iz9Q&rel=0"
+                        title="Introduction to Our Solution"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        style="width: 100%; height: 100%; border: none;">
                         </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  
-  
-
     <!-- Sticky Sub-Navbar -->
     <nav id="sub-navbar" class="navbar navbar-expand-lg sub-navbar sticky-top shadow-sm" style="background-color: #000;">
         <div class="container justify-content-center">
@@ -382,7 +323,6 @@
             </ul>
         </div>
     </nav>
-
     <!-- Section: Benefits Beyond Onboarding -->
     <div id="benefits" class="container-fluid section section-2 slide-in">
         <div class="container text-center">
@@ -408,38 +348,33 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Accelerated Onboarding</h5>
-                            <p class="card-text">Blend digital training with real-world scenarios to reduce onboarding time and boost new hire confidence.</p>
+                            <p class="card-text" >Blend digital training with real-world scenarios to reduce onboarding time and boost new hire confidence.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Section: Features-->
     <div id="feat-section" class="features-container slide-in">
         <h2 class="display-4 mb-5" style="color: #83a9d2;"><strong>Key Features</strong></h2>
-        
         <div class="feature">
             <h2>Privacy and Security</h2>
             <p>Traible keeps your tribal knowledge safe and we offer to install a local model on your network.</p>
             <p>Traible uses the best cyber security practices to keep your data safe.</p>
             <p>A local model helps your information stay safe, and compliant with any proprietary information.</p>
-        </div>
-        
+        </div>   
         <div class="feature">
             <h2>Blank Slate</h2>
             <p>Traible’s model is a blank slate, unlike generic models, so your information helps shape it.</p>
             <p>Traible’s model learns from the documents you upload. This helps it learn only the information you need and not irrelevant information.</p>
-        </div>
-        
+        </div> 
         <div class="feature">
             <h2>Fine Tuning</h2>
             <p>Traible can fine tune a model for your needs and guarantee customized answers for your needs and problems.</p>
             <p>Traible can edit some of the technical processes in the model to further customize it for your needs. This helps ensure the highest quality answers for your questions.</p>
         </div>
     </div>          
-
     <!-- Section: Function, Operation, and Use -->
     <div id="fou-section" class="container-fluid section section-4 slide-in">
         <div class="container text-center">
@@ -484,11 +419,10 @@
             </div>
         </div>
     </div>
-
     <!-- Section: Plans -->
     <div id="plans-section" class="container-fluid section section-5">
         <div class="container">
-            <h1 style="color: #83a9d2;">Choose Your Traible Plan</h1>
+            <h1 class="text-center mb-5 display-4" style="color: #83a9d2;">Choose Your Traible Plan</h1>
             <div class="pricing-row">
                 <!-- Standard Plan -->
                 <div class="plan-card">
@@ -508,10 +442,9 @@
                     </ul>
                     <a href="#" class="btn">Buy Now</a>
                 </div>
-        
                 <!-- Premium Plan -->
                 <div class="plan-card">
-                <h2>Premium</h2>
+                    <h2>Premium</h2>
                     <ul class="features-list">
                         <li>AI Platform Access</li>
                         <li>Customer Support: Calls + Zoom</li>
@@ -527,7 +460,6 @@
                     </ul>
                     <a href="#" class="btn">Buy Now</a>
                 </div>
-        
                 <!-- Business Plan -->
                 <div class="plan-card">
                     <h2>Business</h2>
@@ -549,12 +481,11 @@
             </div>
         </div>
     </div>
-  
     <!-- FAQ Section -->
     <section id="faq-section" class="container-fluid section section-2 py-5 slide-in">
         <div class="container">
             <h2 class="text-center mb-5 display-4">Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">  
+            <div class="accordion text-center" id="faqAccordion">  
                 <div class="card bg-dark text-white border-0 mb-3">
                     <div class="card-header" id="faqHeading1">
                         <h5 class="mb-0">
@@ -628,7 +559,6 @@
             </div>
         </div>
     </section>
- 
     <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
@@ -638,8 +568,7 @@
             <p>Follow us on <a href="https://www.linkedin.com/company/traible">LinkedIn</a></p>
             <p>&copy; 2024 Traible. All rights reserved.</p>
         </div>
-    </footer>
-    
+    </footer> 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -648,7 +577,6 @@
     <script>
         const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
         const OFFSET = 80; // Adjust based on your navbar height
-
         navLinks.forEach(link => {
             link.addEventListener("click", function (e) {
                 const targetId = this.getAttribute("href").slice(1);
@@ -666,8 +594,6 @@
                 }
             });
         });
-
-    
         function getTargetSections() {
             return Array.from(navLinks)
                 .map(link => {
@@ -676,7 +602,6 @@
                 })
                 .filter(section => section !== null);
         }
-    
         window.addEventListener("scroll", () => {
             const sections = getTargetSections();
             let currentSectionId = null;
@@ -688,7 +613,6 @@
                     break;
                 }
             }
-    
             // Only update nav if we have a matched section
             if (currentSectionId) {
                 navLinks.forEach(link => {
@@ -700,7 +624,6 @@
             }
         });
     </script>
-    <!-- Link to External JavaScript File -->
     <script src="static/js/app.js"></script>
 </body>
 </html>
