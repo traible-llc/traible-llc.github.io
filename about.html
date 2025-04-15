@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Traible</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 4rem 2rem;
+        }
+
+        .section-2 {
+            background-color: #343a40;
+        }
+
+        .section-3 {
+            background-color: #000;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+            border: none;
+            color: white;
+            box-shadow: 0 4px 8px rgba(131, 169, 210, 0.2);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body h5 {
+            color: #83a9d2;
+        }
+
+        .hr-divider {
+            border: none;
+            height: 2px;
+            background-color: #83a9d2;
+            width: 60%;
+            margin: 2rem auto;
+        }
+
+        .navbar {
+            background-color: #000;
+            box-shadow: 0 4px 8px rgba(131, 169, 210, 0.5);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #83a9d2 !important;
+        }
+
+        /* General Layout */
+        .about-container, .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            background-color: #000;
+        }
+        
+        /* Section Titles */
+        .about-container h1,
+        .team-container h1 {
+            color: #83a9d2;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        /* About Section Text */
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Team Grid */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        /* Individual Team Card */
+        .team-card {
+            background-color: #111;
+            border: 2px solid #83a9d2;
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Profile Picture */
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #83a9d2;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        /* Name + Role */
+        .team-card h3 {
+            margin: 10px 0 5px;
+            color: #83a9d2;
+        }
+        
+        .team-card p {
+            margin: 0;
+            color: #ccc;
+            font-size: 0.95em;
+        }
+  
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="plans.html">Plans</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section: About Us -->
+    <section id="about-us" class="about-container">
+        <div class="about-text">
+            <h2 class="display-4 mb-4"style="color: #83a9d2;"><strong>About Us</strong></h2>
+            <p class="lead mb-4">
+                At <strong>Traible</strong>, we’re on a mission to revolutionize the way organizations capture, manage, and share internal knowledge.
+            </p>
+            <p class="h5 font-weight-normal mb-3">
+                Our platform is built to preserve the insights and problem-solving skills of experienced employees — ensuring that critical know-how never walks out the door.
+            </p>
+            <p class="h5 font-weight-normal mb-3">
+                Whether you’re onboarding new team members or optimizing workflows, Traible empowers your workforce by making expertise instantly searchable and accessible.
+            </p>
+            <p class="h5 font-weight-normal mb-0">
+                We believe in smarter work, fewer roadblocks, and faster resolutions — all backed by AI and powered by the people who know your company best.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: Meet the Team -->
+    <div id="section-3" class="team-container">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Meet the Team</h1>
+            <div class="team-grid">
+                
+                <!-- Card 1 -->
+                <div class="team-card">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/sam.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Samuel Anyakwu">
+                        <div class="card-body">
+                            <h5 class="card-title">Samuel Anyakwu</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">CEO</h6>
+                            <p class="card-text">Samuel is a co-founder of Traible and currently works as a warehouse supervisor at Pepsi. With a background in mechanical engineering, he brings structure and leadership to the team. Outside of work, he enjoys reading his Bible, playing disc golf, basketball, guitar, and contributing to Traible’s growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="team-card">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/brian.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Brian Paniagua">
+                        <div class="card-body">
+                            <h5 class="card-title">Brian Paniagua</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Lead Software Engineer</h6>
+                            <p class="card-text">Brian is a co-founder of Traible and a recent graduate from UTSA with a Bachelor's in Physics, a minor in Computer Science, and a certificate in Data Analytics. He leads our software development efforts and enjoys reading, video games, and music in his free time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="team-card">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/michael.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Michael Gruver">
+                        <div class="card-body">
+                            <h5 class="card-title">Michael Gruver</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">COO & ML Engineer</h6>
+                            <p class="card-text">Michael is a co-founder and COO of Traible. He holds a degree in Industrial & Systems Engineering from Texas A&M and is pursuing a Master’s in Analytics. Passionate about data science and machine learning, he spends his free time reading, traveling, working out, and enjoying life with his wife.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="team-card">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/nathaniel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Nathaniel Candelaria">
+                        <div class="card-body">
+                            <h5 class="card-title">Nathaniel Candelaria</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Administrator</h6>
+                            <p class="card-text">Nathaniel supports Traible in a part-time role while pursuing his Master’s in English with a focus on Renaissance literature. He holds a Bachelor’s degree in English from UTSA and brings thoughtful insight and organization to our operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="team-card">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/logan.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Logan O'Neil">
+                        <div class="card-body">
+                            <h5 class="card-title">Logan O'Neil</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">CSO</h6>
+                            <p class="card-text">Logan is a co-founder of Traible and is pursuing a BBA in Information Systems and Cybersecurity. He previously interned at UTSA's Security Operations Center. In his free time, he enjoys playing instruments like the euphonium and harmonica, board games, and reading novels.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="team-card">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/sammy.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Samuel Vasquez">
+                        <div class="card-body">
+                            <h5 class="card-title">Samuel Vasquez</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Full-Stack Developer</h6>
+                            <p class="card-text">Samuel is a co-founder and full-stack developer at Traible. He holds a degree in Computer Science from UTSA and currently works full-time in IT. He enjoys reading his Bible, collecting board games, and refining his ping pong skills.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 7 -->
+                <div class="team-card">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="img/miguel.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Miguel Avilés">
+                        <div class="card-body">
+                            <h5 class="card-title">Miguel Avilés</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Marketing Lead</h6>
+                            <p class="card-text">Miguel is a co-founder of Traible and serves as the head of marketing. He also works as a data analyst. In his downtime, he enjoys salsa dancing, hiking, and challenging Sam, our CEO, to intense ping pong matches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>© 2025 Traible. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
