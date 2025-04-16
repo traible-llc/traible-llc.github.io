@@ -151,12 +151,52 @@ ul.list-unstyled li h4 {
 .footer {
     background-color: var(--colorprimary);
     color: var(--coloraccent2);
-    padding: 20px 0;
+    padding: 40px 0;
+    font-family: var(--ff);
+}
+.footer-content h5 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 .footer a {
     color: var(--coloraccent2);
     text-decoration: none;
+    display: inline-block;
+    margin: 0.25rem 0;
+    transition: color 0.3s ease;
 }
 .footer a:hover {
     color: var(--coloraccent1);
 }
+.footer-divider {
+    width: 60%;
+    margin: 1.5rem auto;
+    border: 1px solid var(--coloraccent2);
+    opacity: 0.2;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between icons */
+    margin: 1rem 0;
+}
+.social-icons a svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--coloraccent2);
+    transition: fill 0.3s ease, transform 0.2s ease;
+}
+.social-icons a:hover svg {
+    fill: var(--coloraccent1);
+    transform: scale(1.1);
+}
+svg {
+    fill: var(--coloraccent2);
+    width: 20px;
+}
+svg:hover {
+    fill: var(--coloraccent1)
+}
+
