@@ -56,6 +56,11 @@ ul.list-unstyled li h4 {
     padding: 1rem 2rem;
     font-size: 1.2rem;
 }
+.sub-navbar {
+    background-color: var(--colorprimary);
+    box-shadow: 0 4px 8px rgba(131, 169, 210, 0.5); /* Always show this shadow */
+    z-index: 1050; /* Ensures it's above other elements */
+}
 .navbar-brand img {
     width: 50px;
     height: 50px;
@@ -64,12 +69,15 @@ ul.list-unstyled li h4 {
 .sub-navbar .nav-link {
     color: var(--colortext);
     font-weight: 500;
-    padding: 0.75rem 1rem;
+    padding: 1rem 2rem;
     transition: color var(--transition);
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .sub-navbar .nav-link.active {
     color: var(--coloraccent1);
+}
+.nav-link:hover  {
+    color: var(--coloraccent1); /* Change this to whatever color you want on hover */
 }
 .sub-navbar .nav-link.active {
     border-bottom: 2px solid var(--coloraccent1);
