@@ -20,6 +20,8 @@
 
     <!-- Roboto Font-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 
 
@@ -130,8 +132,6 @@
             outline: none; /* remove outline in some cases */
             box-shadow: none; /* fallback to ensure no glow */
         }
-
-        /* On hover */
         .btn-link:hover {
             color: var(--coloraccent1);
             text-decoration: none;
@@ -160,10 +160,19 @@
         .card-header .card-body {
             background-color: #111;
         }
-
         .nav-link:hover  {
             color: var(--coloraccent1); /* Change this to whatever color you want on hover */
         }
+        .benefit-description {
+            padding-left: 50px; /* Adjust this for your desired indentation */
+            text-align: left;
+        }
+        @media (max-width: 576px) {
+            .benefit-description {
+                padding-left: 1.5rem; /* Slightly smaller indent on small screens */
+            }
+        }        
+        
     </style>
 </head>
 <body>
@@ -246,37 +255,49 @@
     </nav>
 
     <!-- Section: Benefits Beyond Onboarding -->
-    <div id="benefits" class="container-fluid section section-2 slide-in">
-        <div class="container text-center">
-            <h2 class="display-4 mb-5">Benefits Beyond Onboarding</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Knowledge Retention</h4>
-                            <p class="card-text">As seasoned employees retire or transition, their expertise stays within the organization, accessible to everyone.</p>
-                        </div>
-                    </div>
+    <section id="benefits" class="container-fluid section section-2 slide-in">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <!-- Left Column: Graphic -->
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <img src="img/benefitsRe.png" alt="Benefits Graphic" class="img-fluid rounded" style="max-width: 90%;">
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Enhanced Productivity</h4>
-                            <p class="card-text">Close skill gaps and speed up problem resolution with instant access to specialized knowledge.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h4 class="card-title">Accelerated Onboarding</h4>
-                            <p class="card-text" >Blend digital training with real-world scenarios to reduce onboarding time and boost new hire confidence.</p>
-                        </div>
-                    </div>
+
+                <!-- Right Column: Text Content -->
+                <div class="col-lg-6 text-light">
+                    <h2 class="" style="color: var(--coloraccent2);">Real Solutions for</h2>
+                    <h2 class="mb-4" style="color: var(--coloraccent2);">Real Challenges</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-4">
+                            <h3 class="mb-1" style="color: var(--coloraccent1);">
+                                <i class="fa-solid fa-brain mr-2"></i> Knowledge Retention
+                            </h3>
+                            <p class="mb-0 benefit-description">
+                                Preserve expert knowledge even as employees retire or transition, keeping critical insights accessible to the entire team.
+                            </p>
+                        </li>                        
+                        <li class="mb-4">
+                            <h3 class="mb-1" style="color: var(--coloraccent1);">
+                                <i class="fa-solid fa-bolt mr-2"></i> Enhanced Productivity
+                            </h3>
+                            <p class="mb-0 benefit-description">
+                                Empower employees with instant access to solutions, reducing downtime and accelerating decision-making.
+                            </p>
+                        </li>
+                        <li class="mb-4">
+                            <h3 class="mb-1" style="color: var(--coloraccent1);">
+                                <i class="fa-solid fa-gauge-high mr-2"></i> Accelerated Onboarding
+                            </h3>
+                            <p class="mb-0 benefit-description">
+                                Train new hires more efficiently by combining digital resources with real-world scenarios and tribal knowledge.
+                            </p>
+                        </li>
+                    </ul>
+                    
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     
     <!-- Section: Features-->
     <div id="feat-section" class="features-container slide-in">
