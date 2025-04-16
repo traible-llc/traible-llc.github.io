@@ -1,9 +1,10 @@
 /* ========== Global Variables ========== */
 :root {
-    --colorprimary: black;
-    --colorsecondary: #aaa;
+    --colorprimary: #121212;
+    --colorsecondary: #111F2D;
     --coloraccent1: #83a9d2;
     --coloraccent2: white;
+    --textcolor: #aaa;
     --ff: 'Roboto', sans-serif;
 
     --h1: bold 54px/64px var(--ff);
@@ -16,9 +17,16 @@
     --subtext: 12px/20px var(--ff);
 
     --transition: 0.3s ease-in-out;
-    --shadow: #00000030 0px 0px 10px 0px;
-    --darkshadow: #00000030 0px 5px 10px 5px;
+    --shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
+    --darkshadow: 0px 5px 10px 5px var(--colorprimary);
 }
+
+.light-mode {
+    --colorprimary: #ecf2f8;
+    --textcolor: #aaa;
+    --coloraccent1: #83a9d2;
+    --coloraccent2: white;
+  }
 
 /* ========== Base Elements ========== */
 html {
@@ -40,8 +48,26 @@ h3 { font: var(--h3); font-size: clamp(20px, 2.5vw, 32px); line-height: 1.4; }
 h4 { font: var(--h4); line-height: 1.4; }
 h5 { font: var(--h5); line-height: 1.4; }
 
+.row-standard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Space between cards */
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+.col-1-3 {
+    width: 100%;
+    padding: 0.75rem;
+}
+@media (min-width: 768px) {
+    .col-1-3 {
+      width: calc(33.333% - 1.5rem); /* account for gap */
+    }
+}
+  
 p, ul, .card-text {
-    color: var(--colorsecondary);
+    color: var(--textcolor);
     font: var(--p);
 }
 ul.list-unstyled li h4 {
@@ -51,13 +77,13 @@ ul.list-unstyled li h4 {
 /* ========== Navbar Styles ========== */
 .navbar {
     background-color: var(--colorprimary);
-    box-shadow: 0 4px 8px rgba(131, 169, 210, 0.5);
+    box-shadow: var(--shadow);
     padding: 1rem 2rem;
     font-size: 1.2rem;
 }
 .sub-navbar {
     background-color: var(--colorprimary);
-    box-shadow: 0 4px 8px rgba(131, 169, 210, 0.5); /* Always show this shadow */
+    box-shadow: var(--shadow);
     z-index: 1050; /* Ensures it's above other elements */
 }
 .navbar-brand img {
@@ -66,7 +92,7 @@ ul.list-unstyled li h4 {
 }
 .navbar-dark .navbar-nav .nav-link,
 .sub-navbar .nav-link {
-    color: var(--colorsecondary);
+    color: var(--textcolor);
     font-weight: 500;
     padding: 1rem 2rem;
     transition: color var(--transition);
@@ -102,7 +128,7 @@ ul.list-unstyled li h4 {
     padding-top: 100px;
 }
 .section-2, .section-4 {
-    background-color: var(--colorsecondary);
+    background-color: var(--textcolor);
     color: var(--coloraccent2);
 }
 .section-3, .section-5 {
@@ -112,7 +138,59 @@ ul.list-unstyled li h4 {
 
 /* ========== Cards & Blocks ========== */
 .card {
-    background-color: #111;
+    background-color: var(--colorsecondary);
+    border: 2px solid var(--coloraccent1);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    transition: transform var(--transition);
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    line-height: 1.8;
+}
+.card ul.features-list li {
+    padding-left: 24px;
+    position: relative;
+}
+.card ul.features-list li.feature-yes::before {
+    content: "✓";
+    color: var(--coloraccent1);
+    position: absolute;
+    left: 0;
+}
+.card ul.features-list li.feature-no::before {
+    content: "✗";
+    color: #e57373; /* soft red */
+    position: absolute;
+    left: 0;
+}
+.card .btn {
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid var(--coloraccent1);
+    color: var(--coloraccent2); /* button text color */
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.card .btn:hover {
+    background-color: var(--coloraccent1);
+    color: var(--colorprimary);
+}
+/* .card {
+    background-color: red;
     color: var(--coloraccent2);
     border-radius: 12px;
     border-left: 4px solid var(--coloraccent1);
@@ -130,7 +208,7 @@ ul.list-unstyled li h4 {
 }
 .card-title, .card-text {
     text-align: left;
-}
+} */
 
 /* ========== Scroll Indicator & Animations ========== */
 .scroll-indicator {

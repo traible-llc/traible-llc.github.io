@@ -36,93 +36,16 @@
         }
 
         /* ========== Features Section ========== */
-        .features-container {
-            margin: 0 auto;
-            padding: 60px 20px;
-            color: var(--coloraccent2);
-            background-color: var(--colorprimary);
-            text-align: center;
-        }
         .feature {
-            max-width: 900px;
-            margin: auto;
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #111;
-            border-left: 5px solid var(--coloraccent1);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
-            text-align: left;
-            transition: transform var(--transition);
+            max-width: 900px; /* Keeps it from stretching too wide */
+            margin: auto; /* Centers horizontally */
+            margin-bottom: 40px; /* Adds space below */
+            padding: 20px; /* Inner space */
+            box-shadow: var(--shadow); /* Soft drop shadow */
+            text-align: left; /* Left-aligns text */
+            transition: transform var(--transition); /* Smooth transform effect */
         }
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-
-        /* ========== Plans Section ========== */
-        #plans {
-            background-color: var(--colorprimary);
-            padding: 80px 20px;
-        }
-        .pricing-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-        .plan-card {
-            background-color: #111;
-            border: 2px solid var(--coloraccent1);
-            border-radius: 12px;
-            padding: 30px;
-            width: 350px;
-            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform var(--transition);
-        }
-        .plan-card:hover {
-            transform: translateY(-5px);
-        }
-        .plan-card ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            line-height: 1.8;
-        }
-        .plan-card ul.features-list li {
-            padding-left: 24px;
-            position: relative;
-        }
-        .plan-card ul.features-list li.feature-yes::before {
-            content: "✓";
-            color: var(--coloraccent1);
-            position: absolute;
-            left: 0;
-        }
-        .plan-card ul.features-list li.feature-no::before {
-            content: "✗";
-            color: #e57373; /* soft red */
-            position: absolute;
-            left: 0;
-        }
-        .plan-card .btn {
-            margin-top: 20px;
-            background-color: transparent;
-            border: 2px solid var(--coloraccent1);
-            color: var(--coloraccent2);
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .plan-card .btn:hover {
-            background-color: var(--coloraccent1);
-            color: var(--colorprimary);
-        }
-
+        
         /* Base style for FAQ links */
         .btn-link {
             color: var(--coloraccent1);
@@ -155,9 +78,6 @@
             transform: scale(1.05);
             text-decoration: none;
         }
-        .card-header .card-body {
-            background-color: #111;
-        }
         .benefit-description {
             padding-left: 50px; /* Adjust this for your desired indentation */
             text-align: left;
@@ -166,7 +86,54 @@
             .benefit-description {
                 padding-left: 1.5rem; /* Slightly smaller indent on small screens */
             }
-        }        
+        }   
+        
+        /* FAQ Section */
+        .faq-item {
+            background-color: var(--colorsecondary);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            padding: 1.2rem 1.2rem;
+            color: var(--coloraccent2);
+            font: var(--p);
+            cursor: pointer;
+            transition: background-color var(--transition);
+            box-shadow: var(--shadow);
+            user-select: none;
+        }
+        .faq-item:hover {
+            background-color: rgba(131, 169, 210, 0.05);
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question h4 {
+            font: var(--h4);
+            margin: 5;
+            text-align: left;
+            flex: 1;
+        }
+        .arrow {
+            font-size: 1.5rem;
+            transition: transform var(--transition);
+            color: var(--coloraccent1);
+            margin-left: 1rem;
+        }
+        /* When open, rotate the arrow */
+        .faq-item.open .arrow {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition);
+            padding-left: 0.5rem;
+            font: var(--p);
+            color: var(--textcolor);
+        }
+        
     </style>
 </head>
 <body>
@@ -294,64 +261,69 @@
     </section>
     
     <!-- Section: Features-->
-    <div id="feat-section" class="features-container slide-in">
+    <div id="feat-section" class="section slide-in">
         <h2 class="display-4 mb-5">Key Features</h2>
-        <div class="feature">
-            <h3>Privacy and Security</h3>
-            <p>Traible keeps your tribal knowledge safe and we offer to install a local model on your network.</p>
-            <p>Traible uses the best cyber security practices to keep your data safe.</p>
-            <p>A local model helps your information stay safe, and compliant with any proprietary information.</p>
-        </div>   
-        <div class="feature">
-            <h3>Blank Slate</h3>
-            <p>Traible’s model is a blank slate, unlike generic models, so your information helps shape it.</p>
-            <p>Traible’s model learns from the documents you upload. This helps it learn only the information you need and not irrelevant information.</p>
-        </div> 
-        <div class="feature">
-            <h3>Fine Tuning</h3>
-            <p>Traible can fine tune a model for your needs and guarantee customized answers for your needs and problems.</p>
-            <p>Traible can edit some of the technical processes in the model to further customize it for your needs. This helps ensure the highest quality answers for your questions.</p>
+        <div class="column">
+            <div class="card feature">
+                <h3>Privacy and Security</h3>
+                <p>Traible keeps your tribal knowledge safe and we offer to install a local model on your network.</p>
+                <p>Traible uses the best cyber security practices to keep your data safe.</p>
+                <p>A local model helps your information stay safe, and compliant with any proprietary information.</p>
+            </div>   
+            <div class="card feature">
+                <h3>Blank Slate</h3>
+                <p>Traible’s model is a blank slate, unlike generic models, so your information helps shape it.</p>
+                <p>Traible’s model learns from the documents you upload. This helps it learn only the information you need and not irrelevant information.</p>
+            </div> 
+            <div class="card feature">
+                <h3>Fine Tuning</h3>
+                <p>Traible can fine tune a model for your needs and guarantee customized answers for your needs and problems.</p>
+                <p>Traible can edit some of the technical processes in the model to further customize it for your needs. This helps ensure the highest quality answers for your questions.</p>
+            </div>
         </div>
     </div>  
 
     <!-- Section: Function, Operation, and Use -->
     <div id="fou-section" class="container-fluid section slide-in">
         <div class="container text-center">
-            <div class="row">
+            <div class="row-standard"> <!-- Add gutter spacing between columns -->
+
                 <!-- Function -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
                             <h3 class="card-title top">Function</h3>
-                            <p class="card-text">
+                            <p>
                                 Traible captures and delivers critical on-the-job knowledge, making it accessible to both new hires and seasoned professionals—ensuring expertise is never lost, only shared.
                             </p>
-                        </div>
-                        <img src="img/function.png" alt="Centered Image" class="fou-img">
+                            </div>
+                        <img src="img/function.png" alt="Function Graphic" class="fou-img">
                     </div>
                 </div>
+        
                 <!-- Operation -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
                             <h3 class="card-title top">Operation</h3>
-                            <p class="card-text">
+                            <p>
                                 Traible instantly delivers tailored, company-specific guidance—transforming problems into solutions in seconds.
                             </p>
                         </div>
-                        <img src="img/operation.png" alt="Centered Image" class="fou-img">
+                        <img src="img/operation.png" alt="Operation Graphic" class="fou-img">
                     </div>
                 </div>
+        
                 <!-- Use -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
                             <h3 class="card-title top">Use</h3>
-                            <p class="card-text">
+                            <p>
                                 Traible supports every level of knowledge transfer—from technicians troubleshooting on the floor to consultants analyzing historical data.
                             </p>
                         </div>
-                        <img src="img/use.png" alt="Centered Image" class="fou-img">
+                        <img src="img/use.png" alt="Use Graphic" class="fou-img">
                     </div>
                 </div>
             </div>
@@ -362,11 +334,12 @@
     <div id="plans-section" class="container-fluid section">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
-            <div class="pricing-row">
-                <!-- Standard Plan -->
-                <div class="plan-card">
-                    <h3>Standard</h3>
-                    <ul class="features-list">
+            <div class="row-standard">
+            <!-- Standard Plan -->
+                <div class="col-1-3">
+                    <div class="card">
+                        <h3>Standard</h3>
+                        <ul class="features-list">
                         <li class="feature-yes">AI Platform Access</li>
                         <li class="feature-yes">Customer Support: Zoom + Email</li>
                         <li class="feature-yes">Document Upload: 100 Docs</li>
@@ -378,13 +351,16 @@
                         <li class="feature-no">On-site Support</li>
                         <li class="feature-no">SME Interview</li>
                         <li class="feature-no">24/6 Support</li>
-                    </ul>
-                    <a href="#" class="btn">Buy Now</a>
+                        </ul>
+                        <a href="#" class="btn mt-auto">Buy Now</a>
+                    </div>
                 </div>
+
                 <!-- Premium Plan -->
-                <div class="plan-card">
-                    <h3>Premium</h3>
-                    <ul class="features-list">
+                <div class="col-1-3">
+                    <div class="card">
+                        <h3>Premium</h3>
+                        <ul class="features-list">
                         <li class="feature-yes">AI Platform Access</li>
                         <li class="feature-yes">Customer Support: Calls + Zoom</li>
                         <li class="feature-yes">Document Upload: 500 Docs</li>
@@ -396,13 +372,16 @@
                         <li class="feature-no">On-site Support</li>
                         <li class="feature-no">SME Interview</li>
                         <li class="feature-no">24/6 Support</li>
-                    </ul>
-                    <a href="#" class="btn">Buy Now</a>
+                        </ul>
+                        <a href="#" class="btn mt-auto">Buy Now</a>
+                    </div>
                 </div>
+
                 <!-- Business Plan -->
-                <div class="plan-card">
-                    <h3>Business</h3>
-                    <ul class="features-list">
+                <div class="col-1-3">
+                    <div class="card">
+                        <h3>Business</h3>
+                        <ul class="features-list">
                         <li class="feature-yes">AI Platform Access</li>
                         <li class="feature-yes">Customer Support: 24/7 + Onsite</li>
                         <li class="feature-yes">Document Upload: Unlimited</li>
@@ -414,8 +393,9 @@
                         <li class="feature-yes">On-site Support</li>
                         <li class="feature-yes">SME Interview</li>
                         <li class="feature-yes">24/6 Support</li>
-                    </ul>
-                    <a href="#" class="btn">Buy Now</a>
+                        </ul>
+                        <a href="#" class="btn mt-auto">Buy Now</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -425,80 +405,59 @@
     <section id="faq-section" class="container-fluid section py-5 slide-in">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Frequently Asked Questions</h2>
-            <div class="accordion text-center" id="faqAccordion">  
-                <div class="card text-var(--coloraccent2) border-0 mb-3">
-                    <div class="card-header" id="faqHeading1">
-                        <h4 class="mb-0">
-                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                                What is Traible and how does it work?
-                            </button>
-                        </h4>
-                    </div>
-                    <div id="faq1" class="collapse" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                        <div class="card-body">
-                            Traible is an AI-powered platform that captures and organizes internal organizational knowledge, making it easily searchable and accessible. It ensures that critical expertise doesn't leave when experienced employees do.
-                        </div>
-                    </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What is Traible and how does it work?</h4>
+                    <span class="arrow">&#9660;</span>
                 </div>
-                <div class="card text-var(--coloraccent2) border-0 mb-3">
-                    <div class="card-header" id="faqHeading2">
-                        <h4 class="mb-0">
-                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                Who can benefit from using Traible?
-                            </button>
-                        </h4>
-                    </div>
-                    <div id="faq2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
-                        <div class="card-body">
-                            Any organization looking to retain knowledge, improve onboarding, and reduce downtime. Whether you're in tech, manufacturing, healthcare, or education — Traible helps preserve expert insights.
-                        </div>
-                    </div>
+                <div id="faq1" class="faq-answer ">
+                    <p>Traible is an AI-powered platform that captures and organizes internal organizational knowledge, making it easily searchable and accessible. It ensures that critical expertise doesn't leave when experienced employees do.</p>
                 </div>
-                <div class="card text-var(--coloraccent2) border-0 mb-3">
-                    <div class="card-header" id="faqHeading3">
-                        <h4 class="mb-0">
-                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                Is my company's data secure on Traible?
-                            </button>
-                        </h4>
-                    </div>
-                    <div id="faq3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
-                        <div class="card-body">
-                            Yes. Security is our top priority. Traible uses industry-standard encryption and best practices to keep your data safe, private, and accessible only to your team.
-                        </div>
-                    </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Who can benefit from using Traible?</h4>
+                    <span class="arrow">&#9660;</span>
                 </div>
-                <div class="card text-var(--coloraccent2) border-0 mb-3">
-                    <div class="card-header" id="faqHeading4">
-                        <h4 class="mb-0">
-                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                How do I get started with Traible?
-                            </button>
-                        </h4>
-                    </div>
-                    <div id="faq4" class="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
-                        <div class="card-body">
-                            You can request a demo or sign up for an onboarding session. We’ll guide you through setting up your knowledge base and training your team to get the most out of Traible.
-                        </div>
-                    </div>
+                <div id="faq2" class="faq-answer">
+                    <p>Any organization looking to retain knowledge, improve onboarding, and reduce downtime. Whether you're in tech, manufacturing, healthcare, or education — Traible helps preserve expert insights.</p>
                 </div>
-                <div class="card text-var(--coloraccent2) border-0 mb-3">
-                    <div class="card-header" id="faqHeading5">
-                        <h4 class="mb-0">
-                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                Can Traible integrate with our existing tools?
-                            </button>
-                        </h4>
-                    </div>
-                    <div id="faq5" class="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
-                        <div class="card-body">
-                            Absolutely. We offer integrations with popular collaboration platforms, databases, and file storage services. Custom integrations can also be developed based on your needs.
-                        </div>
-                    </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Is my company's data secure on Traible?</h4>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div id="faq3" class="faq-answer">
+                    <p>Yes. Security is our top priority. Traible uses industry-standard encryption and best practices to keep your data safe, private, and accessible only to your team.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How do I get started with Traible?</h4>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div id="faq4" class="faq-answer">
+                    <p>You can request a demo or sign up for an onboarding session. We’ll guide you through setting up your knowledge base and training your team to get the most out of Traible.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Can Traible integrate with our existing tools?</h4>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div id="faq5" class="faq-answer">
+                    <p>Absolutely. We offer integrations with popular collaboration platforms, databases, and file storage services. Custom integrations can also be developed based on your needs.</p>
                 </div>
             </div>
         </div>
     </section>
+  
     <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
@@ -569,6 +528,29 @@
                 });
             }
         });
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            const arrow = item.querySelector('.arrow');
+        
+            item.addEventListener('click', () => {
+              const isOpen = item.classList.contains('open');
+        
+              // Close all others
+              document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-answer').style.maxHeight = null;
+                i.querySelector('.arrow').style.transform = 'rotate(0deg)';
+              });
+        
+              if (!isOpen) {
+                item.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+              }
+            });
+          });
+          
     </script>
     <script src="static/js/app.js"></script>
 </body>
