@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="static/css/styles.css">
     <style>
         .about-container {
-            background: linear-gradient(135deg, #000, #000);
+            background: var(--colorsecondary);
             border-radius: 2rem;
             padding: 3rem 2rem;
             max-width: 900px;
             margin: 3rem auto;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--darkshadow);
             animation: fadeInSlide 1s ease-out both;
             font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
         }
         .about-text h2 {
             font-size: 2.8rem;
-            color: #83a9d2;
+            color: var(--coloraccent1);
             margin-bottom: 1.5rem;
             position: relative;
         }
@@ -26,25 +26,25 @@
             content: '';
             width: 60px;
             height: 4px;
-            background-color: #83a9d2;
+            background-color: var(--coloraccent1);
             display: block;
             border-radius: 2px;
             margin-top: 0.5rem;
         }
         .about-text p {
             font-size: 1.15rem;
-            color: #aaa;
+            color: var(--textcolor);
             line-height: 1.7;
             margin-bottom: 1.25rem;
         }
         .about-text p.lead {
             font-weight: 600;
             font-size: 1.3rem;
-            color: white;
+            color: var(--coloraccent2);
         }
         .about-text p:last-child {
             font-style: italic;
-            color: #83a9d2;
+            color: var(--coloraccent1);
             font-weight: 500;
         }
         @keyframes fadeInSlide {
@@ -64,11 +64,10 @@
             margin: 0 auto;
             padding: 60px 20px;
             text-align: center;
-            color: white;
-            background-color: #000;
+            background-color: var(--colorprimary);
         }
         .team-container h1 {
-            color: #83a9d2;
+            color: var(--coloraccent1);
             margin-bottom: 30px;
             font-size: 2.5em;
         }
@@ -81,13 +80,13 @@
         }
         .team-card {
             background-color: #111;
-            border: 2px solid #83a9d2;
+            border: 2px solid var(--coloraccent1);
             border-radius: 12px;
             padding: 20px;
             width: 250px;
-            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
+            box-shadow: var(--darkshadow);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: var(--transition);
         }
         .team-card:hover {
             transform: translateY(-5px);
@@ -96,27 +95,27 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            border: 2px solid #83a9d2;
+            border: 2px solid var(--coloraccent1);
             object-fit: cover;
             margin-bottom: 15px;
         }
         .team-card h3 {
             margin: 10px 0 5px;
-            color: #83a9d2;
+            color: var(--coloraccent1);
         }
 
         /* ========== Cards & Content Blocks ========== */
         .card-team {
-            background-color: #111;
-            color: white;
+            background-color: var(--colorprimary);
+            color: var(--coloraccent2);
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
+            box-shadow: var(--shadow);
             transition: transform 0.2s ease-in-out;
             margin-bottom: 1.5rem;
         }
         .team-card p {
             margin: 0;
-            color: #ccc;
+            color: var(--textcolor);
             font-size: 0.95em;
         }
         .card-title {
@@ -164,21 +163,21 @@
         <div class="about-text">
             <h1 class="display-4 mb-4"><strong>Who We Are</strong></h1>
             <p class="lead mb-4">
-                We’re <span style="color: #83a9d2;">Traible</span> — a passionate team on a mission to keep your company’s brainpower where it belongs: at your fingertips.
+                We’re <span style="color: var(--coloraccent1);">Traible</span> — a passionate team on a mission to keep your company’s brainpower where it belongs: at your fingertips.
             </p>
             <p class="h5 font-weight-normal mb-3">
                 Every team has that go-to person who just <em>knows</em> how to fix it, find it, or figure it out. 
-                Traible makes sure that <span style="color: #83a9d2;">knowledge doesn’t get lost</span> in the shuffle — or the exit interview.
+                Traible makes sure that <span style="color: var(--coloraccent1);">knowledge doesn’t get lost</span> in the shuffle — or the exit interview.
             </p>
             <p class="h5 font-weight-normal mb-3">
-                Our platform <span style="color: #83a9d2;">captures experience</span>, insights, and solutions from your experts, 
+                Our platform <span style="color: var(--coloraccent1);">captures experience</span>, insights, and solutions from your experts, 
                 and turns them into a smart, searchable knowledge base for your whole team to use — 
                 anytime, anywhere.
             </p>
             <p class="h5 font-weight-normal mb-3">
-                Whether you're training new hires or solving critical problems on the fly, Traible helps your team move faster , work smarter, and <span style="color: #83a9d2;">never reinvent the wheel</span>.
+                Whether you're training new hires or solving critical problems on the fly, Traible helps your team move faster , work smarter, and <span style="color: var(--coloraccent1);">never reinvent the wheel</span>.
             </p>
-            <p class="h5 font-weight-normal mb-0" style="color: #83a9d2;">
+            <p class="h5 font-weight-normal mb-0" style="color: var(--coloraccent1);">
                 Backed by AI. Inspired by people. Built for results.
             </p>
         </div>
