@@ -1,10 +1,9 @@
 /* ========== Global Variables ========== */
 :root {
     --colorprimary: black;
-    --colorsecondary: #343a40;
+    --colorsecondary: #aaa;
     --coloraccent1: #83a9d2;
     --coloraccent2: white;
-    --colortext: #aaa;
     --ff: 'Roboto', sans-serif;
 
     --h1: bold 54px/64px var(--ff);
@@ -42,7 +41,7 @@ h4 { font: var(--h4); line-height: 1.4; }
 h5 { font: var(--h5); line-height: 1.4; }
 
 p, ul, .card-text {
-    color: var(--colortext);
+    color: var(--colorsecondary);
     font: var(--p);
 }
 ul.list-unstyled li h4 {
@@ -67,7 +66,7 @@ ul.list-unstyled li h4 {
 }
 .navbar-dark .navbar-nav .nav-link,
 .sub-navbar .nav-link {
-    color: var(--colortext);
+    color: var(--colorsecondary);
     font-weight: 500;
     padding: 1rem 2rem;
     transition: color var(--transition);
@@ -91,7 +90,12 @@ ul.list-unstyled li h4 {
     align-items: center;
     padding: 4rem 2rem;
 }
-.section-1 {
+.col {
+    display: flex;
+    height: 100vh;
+    padding-top: 100px;
+}
+/* .section-1 {
     background-color: var(--colorprimary);
     color: var(--coloraccent2);
     height: 100vh;
@@ -104,7 +108,7 @@ ul.list-unstyled li h4 {
 .section-3, .section-5 {
     background-color: var(--colorprimary);
     color: var(--coloraccent2);
-}
+} */
 
 /* ========== Cards & Blocks ========== */
 .card {
