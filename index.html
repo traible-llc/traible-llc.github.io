@@ -45,6 +45,60 @@
             text-align: left; /* Left-aligns text */
             transition: transform var(--transition); /* Smooth transform effect */
         }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 2rem; /* space for the icon */
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--textcolor);
+            font: var(--p);
+        }
+        .feature-list li::before {
+            content: "\f023"; /* Unicode for fa-lock */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+        .lightbulb-list li::before {
+            content: "\f0eb"; /* Unicode for fa-lightbulb */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+        .check-list li::before {
+            content: "\f14a"; /* Unicode for fa-square-check */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+          }          
+          
+        /* Responsive */
+        @media (max-width: 768px) {
+            .row-standard {
+            flex-direction: column;
+            gap: 1.5rem;
+            }
+            .feature-header {
+            flex-direction: row;
+            }
+        }
         
         /* Base style for FAQ links */
         .btn-link {
@@ -78,12 +132,12 @@
             transform: scale(1.05);
             text-decoration: none;
         }
-        .benefit-description {
+        .benefit-description, .feat-description {
             padding-left: 50px; /* Adjust this for your desired indentation */
             text-align: left;
         }
         @media (max-width: 576px) {
-            .benefit-description {
+            .benefit-description, .feat-description {
                 padding-left: 1.5rem; /* Slightly smaller indent on small screens */
             }
         }   
@@ -261,27 +315,72 @@
     </section>
     
     <!-- Section: Features-->
-    <div id="feat-section" class="section slide-in">
-        <h2 class="display-4 mb-5">Key Features</h2>
-        <div class="column">
-            <div class="card feature">
-                <h3>Privacy and Security</h3>
-                <p>Traible keeps your tribal knowledge safe and we offer to install a local model on your network.</p>
-                <p>Traible uses the best cyber security practices to keep your data safe.</p>
-                <p>A local model helps your information stay safe, and compliant with any proprietary information.</p>
-            </div>   
-            <div class="card feature">
-                <h3>Blank Slate</h3>
-                <p>Traible’s model is a blank slate, unlike generic models, so your information helps shape it.</p>
-                <p>Traible’s model learns from the documents you upload. This helps it learn only the information you need and not irrelevant information.</p>
-            </div> 
-            <div class="card feature">
-                <h3>Fine Tuning</h3>
-                <p>Traible can fine tune a model for your needs and guarantee customized answers for your needs and problems.</p>
-                <p>Traible can edit some of the technical processes in the model to further customize it for your needs. This helps ensure the highest quality answers for your questions.</p>
+    <div id="feat-section" class="container-fluid section slide-in">
+        <div class="container text-center">
+            <h2 class="text-center display-4 mb-5">Key Features</h2>
+            <div class="row-standard"> <!-- Add gutter spacing between columns -->
+
+                <!-- Privacy and Security -->
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
+                            <img src="img/security.png" alt="Function Graphic" class="fou-img">
+                            <h3 class="card-title top text-center">Privacy and Security</h3>
+                            <ul class="feature-list">
+                            <li>
+                                Traible keeps your tribal knowledge safe and secure. We can even install a private model on your local network.
+                            </li>
+                            <li>
+                                Our cybersecurity practices align with industry standards to protect sensitive data.
+                            </li>
+                            <li>
+                                A local model ensures full compliance with proprietary requirements and internal policies.
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+  
+                <!-- blank slate model -->
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
+                            <img src="img/idea.png" alt="Function Graphic" class="fou-img">
+                            <h3 class="card-title top text-center">Blank Slate Model</h3>
+                            <ul class="feature-list lightbulb-list">
+                            <li>
+                                Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.
+                            </li>
+                            <li>
+                                The model adapts only to your unique workflows, language, and problems.
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fine tuning -->
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
+                            <img src="img/select.png" alt="Function Graphic" class="fou-img">
+                            <h3 class="card-title top text-center">Fine-Tuning</h3>
+                            <ul class="feature-list check-list">
+                            <li>
+                                Need deeper customization? Traible fine-tunes the model for your business, ensuring expert-level responses to your most complex issues.
+                            </li>
+                            <li>
+                                We tailor technical processes to improve accuracy, reliability, and contextual understanding.
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>  
+    </div>
+
+    <hr class="footer-divider slide-in">
 
     <!-- Section: Function, Operation, and Use -->
     <div id="fou-section" class="container-fluid section slide-in">
