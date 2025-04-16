@@ -1,7 +1,7 @@
 /* ========== Global Variables ========== */
 :root {
     --colorprimary: #121212;
-    --colorsecondary: #111F2D;
+    --colorsecondary: #0B141E;
     --coloraccent1: #83a9d2;
     --coloraccent2: white;
     --textcolor: #aaa;
@@ -189,26 +189,6 @@ ul.list-unstyled li h4 {
     background-color: var(--coloraccent1);
     color: var(--colorprimary);
 }
-/* .card {
-    background-color: red;
-    color: var(--coloraccent2);
-    border-radius: 12px;
-    border-left: 4px solid var(--coloraccent1);
-    box-shadow: 0 4px 12px rgba(131, 169, 210, 0.2);
-    transition: transform var(--transition);
-    margin-bottom: 1.5rem;
-}
-.card:hover {
-    transform: translateY(-5px);
-}
-.card-body h5,
-.card-title {
-    color: var(--coloraccent1);
-    font-family: var(--ff);
-}
-.card-title, .card-text {
-    text-align: left;
-} */
 
 /* ========== Scroll Indicator & Animations ========== */
 .scroll-indicator {
