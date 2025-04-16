@@ -35,8 +35,8 @@
         .features-container {
             margin: 0 auto;
             padding: 60px 20px;
-            color: white;
-            background-color: #000;
+            color: var(--coloraccent2);
+            background-color: var(--colorprimary);
             text-align: center;
         }
         .feature {
@@ -45,11 +45,11 @@
             margin-bottom: 40px;
             padding: 20px;
             background-color: #111;
-            border-left: 5px solid #83a9d2;
+            border-left: 5px solid var(--coloraccent1);
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
             text-align: left;
-            transition: transform 0.2s ease-in-out;
+            transition: transform var(--transition);
         }
         .feature:hover {
             transform: translateY(-5px);
@@ -57,7 +57,7 @@
 
         /* ========== Plans Section ========== */
         #plans {
-            background-color: #000;
+            background-color: var(--colorprimary);
             padding: 80px 20px;
         }
         .pricing-row {
@@ -68,7 +68,7 @@
         }
         .plan-card {
             background-color: #111;
-            border: 2px solid #83a9d2;
+            border: 2px solid var(--coloraccent1);
             border-radius: 12px;
             padding: 30px;
             width: 350px;
@@ -76,7 +76,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.2s ease-in-out;
+            transition: transform var(--transition);
         }
         .plan-card:hover {
             transform: translateY(-5px);
@@ -93,7 +93,7 @@
         }
         .plan-card ul.features-list li.feature-yes::before {
             content: "✓";
-            color: #83a9d2;
+            color: var(--coloraccent1);
             position: absolute;
             left: 0;
         }
@@ -106,8 +106,8 @@
         .plan-card .btn {
             margin-top: 20px;
             background-color: transparent;
-            border: 2px solid #83a9d2;
-            color: #fff;
+            border: 2px solid var(--coloraccent1);
+            color: var(--coloraccent2);
             padding: 10px 20px;
             border-radius: 8px;
             cursor: pointer;
@@ -115,18 +115,50 @@
             text-decoration: none;
         }
         .plan-card .btn:hover {
-            background-color: #83a9d2;
-            color: black;
+            background-color: var(--coloraccent1);
+            color: var(--colorprimary);
         }
 
-        /* ========== FAQ Section ========== */
+        /* Base style for FAQ links */
         .btn-link {
-            color: white;
+            color: var(--coloraccent2);
+            text-decoration: none;
+            outline: none; /* remove outline in some cases */
+            box-shadow: none; /* fallback to ensure no glow */
+        }
+
+        /* On hover */
+        .btn-link:hover {
+            color: var(--coloraccent1);
             text-decoration: none;
         }
-        .btn-link:hover {
-            color: lightgray;
+
+        /* On focus (when clicked or tabbed) */
+        .btn-link:focus {
+            outline: none;
+            box-shadow: none;
             text-decoration: none;
+        }
+
+        /* On active (mouse click) */
+        .btn-link:active {
+            outline: none;
+            box-shadow: none;
+            text-decoration: none;
+        }
+
+        /* General .btn hover effect */
+        .btn:hover {
+            color: var(--coloraccent1);
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+        .card-header .card-body {
+            background-color: #111;
+        }
+
+        .nav-link:hover  {
+            color: var(--coloraccent1); /* Change this to whatever color you want on hover */
         }
     </style>
 </head>
@@ -167,11 +199,11 @@
                 <div class="col-lg-5 mb-5 mb-lg-0" style="margin-left: 4rem; margin-right: auto;">
                     <h1 class="fw-bold display-5"> Capture Knowledge.</h1>
                     <h1 class="fw-bold display-5"> Empower Teams.</h1>
-                    <p class="fs-4 mt-3" style="font-family: 'Segoe UI', sans-serif; color: #aaa;">
+                    <p class="fs-4 mt-3">
                         Don’t let critical expertise fade—transform experience into accessible insight for every employee, anytime.
                     </p>
                     <!-- CTA Button -->
-                    <a href="#contact" class="btn btn-lg mt-4" style="background-color: #83a9d2; color: white; border-radius: 8px; font-weight: 500;">
+                    <a href="#contact" class="btn btn-lg mt-4" style="transition: transform var(--transition); background-color: var(--coloraccent1); color: var(--coloraccent2); border-radius: 8px; font-weight: 500;">
                         Schedule a Demo
                     </a>
                     <!-- Scroll Indicator -->
@@ -217,7 +249,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Knowledge Retention</h5>
+                            <h4 class="card-title">Knowledge Retention</h4>
                             <p class="card-text">As seasoned employees retire or transition, their expertise stays within the organization, accessible to everyone.</p>
                         </div>
                     </div>
@@ -225,7 +257,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Enhanced Productivity</h5>
+                            <h4 class="card-title">Enhanced Productivity</h4>
                             <p class="card-text">Close skill gaps and speed up problem resolution with instant access to specialized knowledge.</p>
                         </div>
                     </div>
@@ -233,7 +265,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Accelerated Onboarding</h5>
+                            <h4 class="card-title">Accelerated Onboarding</h4>
                             <p class="card-text" >Blend digital training with real-world scenarios to reduce onboarding time and boost new hire confidence.</p>
                         </div>
                     </div>
@@ -246,18 +278,18 @@
     <div id="feat-section" class="features-container slide-in">
         <h2 class="display-4 mb-5">Key Features</h2>
         <div class="feature">
-            <h2>Privacy and Security</h2>
+            <h3>Privacy and Security</h3>
             <p>Traible keeps your tribal knowledge safe and we offer to install a local model on your network.</p>
             <p>Traible uses the best cyber security practices to keep your data safe.</p>
             <p>A local model helps your information stay safe, and compliant with any proprietary information.</p>
         </div>   
         <div class="feature">
-            <h2>Blank Slate</h2>
+            <h3>Blank Slate</h3>
             <p>Traible’s model is a blank slate, unlike generic models, so your information helps shape it.</p>
             <p>Traible’s model learns from the documents you upload. This helps it learn only the information you need and not irrelevant information.</p>
         </div> 
         <div class="feature">
-            <h2>Fine Tuning</h2>
+            <h3>Fine Tuning</h3>
             <p>Traible can fine tune a model for your needs and guarantee customized answers for your needs and problems.</p>
             <p>Traible can edit some of the technical processes in the model to further customize it for your needs. This helps ensure the highest quality answers for your questions.</p>
         </div>
@@ -271,7 +303,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title top">Function</h5>
+                            <h4 class="card-title top">Function</h4>
                             <p class="card-text">
                                 Traible captures and delivers critical on-the-job knowledge, making it accessible to both new hires and seasoned professionals—ensuring expertise is never lost, only shared.
                             </p>
@@ -283,7 +315,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title top">Operation</h5>
+                            <h4 class="card-title top">Operation</h4>
                             <p class="card-text">
                                 Traible instantly delivers tailored, company-specific guidance—transforming problems into solutions in seconds.
                             </p>
@@ -295,7 +327,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title top">Use</h5>
+                            <h4 class="card-title top">Use</h4>
                             <p class="card-text">
                                 Traible supports every level of knowledge transfer—from technicians troubleshooting on the floor to consultants analyzing historical data.
                             </p>
@@ -310,11 +342,11 @@
     <!-- Section: Plans -->
     <div id="plans-section" class="container-fluid section section-5">
         <div class="container">
-            <h2 class="text-center mb-5 display-4">Choose Your Traible Plan</h2>
+            <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
             <div class="pricing-row">
                 <!-- Standard Plan -->
                 <div class="plan-card">
-                    <h2>Standard</h2>
+                    <h3>Standard</h3>
                     <ul class="features-list">
                         <li class="feature-yes">AI Platform Access</li>
                         <li class="feature-yes">Customer Support: Zoom + Email</li>
@@ -332,7 +364,7 @@
                 </div>
                 <!-- Premium Plan -->
                 <div class="plan-card">
-                    <h2>Premium</h2>
+                    <h3>Premium</h3>
                     <ul class="features-list">
                         <li class="feature-yes">AI Platform Access</li>
                         <li class="feature-yes">Customer Support: Calls + Zoom</li>
@@ -350,7 +382,7 @@
                 </div>
                 <!-- Business Plan -->
                 <div class="plan-card">
-                    <h2>Business</h2>
+                    <h3>Business</h3>
                     <ul class="features-list">
                         <li class="feature-yes">AI Platform Access</li>
                         <li class="feature-yes">Customer Support: 24/7 + Onsite</li>
@@ -373,15 +405,15 @@
     <!-- FAQ Section -->
     <section id="faq-section" class="container-fluid section section-2 py-5 slide-in">
         <div class="container">
-            <h2 class="text-center mb-5 display-4">Frequently Asked Questions</h2>
+            <h2 class="text-center display-4 mb-5">Frequently Asked Questions</h2>
             <div class="accordion text-center" id="faqAccordion">  
-                <div class="card bg-dark text-white border-0 mb-3">
+                <div class="card bg-dark text-var(--coloraccent2) border-0 mb-3">
                     <div class="card-header" id="faqHeading1">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                        <h4 class="mb-0">
+                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="false" aria-controls="faq1">
                                 What is Traible and how does it work?
                             </button>
-                        </h5>
+                        </h4>
                     </div>
                     <div id="faq1" class="collapse" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
                         <div class="card-body">
@@ -389,13 +421,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="card bg-dark text-white border-0 mb-3">
+                <div class="card bg-dark text-var(--coloraccent2) border-0 mb-3">
                     <div class="card-header" id="faqHeading2">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                        <h4 class="mb-0">
+                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
                                 Who can benefit from using Traible?
                             </button>
-                        </h5>
+                        </h4>
                     </div>
                     <div id="faq2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
                         <div class="card-body">
@@ -403,13 +435,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="card bg-dark text-white border-0 mb-3">
+                <div class="card bg-dark text-var(--coloraccent2) border-0 mb-3">
                     <div class="card-header" id="faqHeading3">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                        <h4 class="mb-0">
+                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
                                 Is my company's data secure on Traible?
                             </button>
-                        </h5>
+                        </h4>
                     </div>
                     <div id="faq3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
                         <div class="card-body">
@@ -417,13 +449,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="card bg-dark text-white border-0 mb-3">
+                <div class="card bg-dark text-var(--coloraccent2) border-0 mb-3">
                     <div class="card-header" id="faqHeading4">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                        <h4 class="mb-0">
+                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
                                 How do I get started with Traible?
                             </button>
-                        </h5>
+                        </h4>
                     </div>
                     <div id="faq4" class="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
                         <div class="card-body">
@@ -431,13 +463,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="card bg-dark text-white border-0 mb-3">
+                <div class="card bg-dark text-var(--coloraccent2) border-0 mb-3">
                     <div class="card-header" id="faqHeading5">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                        <h4 class="mb-0">
+                            <button class="btn btn-link text-var(--coloraccent2) collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="faq5">
                                 Can Traible integrate with our existing tools?
                             </button>
-                        </h5>
+                        </h4>
                     </div>
                     <div id="faq5" class="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
                         <div class="card-body">
