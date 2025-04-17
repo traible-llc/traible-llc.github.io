@@ -6,6 +6,14 @@
     --coloraccent2: #ecf2f8;
     --textcolor: #aaa;
     --ff: 'Roboto', sans-serif;
+    /* --tf: ''; Traible font here */
+    --magin-xxs: .25rem;
+    --magin-xs: .5rem;
+    --magin-s: .75rem;
+    --magin-m: 1rem;
+    --magin-l: 1.25rem;
+    --magin-xl: 1.75rem;
+    --magin-xxl: 2.5rem;
 
     --h1: bold max(54px, 4vw) / max(81px,5vw) var(--ff);
     --h2: bold max(36px, 4vw) / max(36px,5vw) var(--ff);
@@ -26,7 +34,7 @@
     --textcolor: #aaa;
     --coloraccent1: #83a9d2;
     --coloraccent2: white;
-  }
+}
 
 /* ========== Base Elements ========== */
 html {
@@ -111,8 +119,8 @@ ul.list-unstyled li h4 {
 .section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     padding: 4rem 2rem;
 }
 .col {
@@ -254,4 +262,3 @@ svg {
 svg:hover {
     fill: var(--coloraccent1)
 }
-
