@@ -220,7 +220,7 @@
     </nav>
     
     <!-- Hero Section -->
-    <div id="hero" class="container-fluid section col slide-in py-5">
+    <section id="hero" class="container-fluid section col slide-in">
         <div class="container-fluid px-4">
             <div class="row align-items-center justify-content-between">
                 <!-- Left Column: Text -->
@@ -253,7 +253,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Sticky Sub-Navbar -->
     <nav id="sub-navbar" class="navbar navbar-expand-lg sub-navbar sticky-top">
@@ -315,7 +315,7 @@
     </section>
     
     <!-- Section: Features-->
-    <div id="feat-section" class="container-fluid section slide-in">
+    <section id="feat-section" class="container-fluid section slide-in">
         <div class="container text-center">
             <h2 class="text-center display-4 mb-5">Key Features</h2>
             <div class="row-standard"> <!-- Add gutter spacing between columns -->
@@ -378,12 +378,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <hr class="footer-divider slide-in">
 
     <!-- Section: Function, Operation, and Use -->
-    <div id="fou-section" class="container-fluid section slide-in">
+    <section id="fou-section" class="container-fluid section slide-in">
         <div class="container text-center">
             <div class="row-standard"> <!-- Add gutter spacing between columns -->
 
@@ -427,10 +427,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Section: Plans -->
-    <div id="plans-section" class="container-fluid section">
+    <section id="plans-section" class="container-fluid section">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
             <div class="row-standard">
@@ -498,10 +498,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- FAQ Section -->
-    <section id="faq-section" class="container-fluid section py-5 slide-in">
+    <section id="faq-section" class="container-fluid section slide-in">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Frequently Asked Questions</h2>
         
@@ -581,8 +581,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
+        // Scroll jump on click with sub nav bar
         const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
-        const OFFSET = 75; // Adjust based on your navbar height
+        const OFFSET = 80; // Adjust based on your navbar height
         navLinks.forEach(link => {
             link.addEventListener("click", function (e) {
                 const targetId = this.getAttribute("href").slice(1);
@@ -630,6 +631,7 @@
             }
         });
 
+        // Arrow Animation
         document.querySelectorAll('.faq-item').forEach(item => {
             const answer = item.querySelector('.faq-answer');
             const arrow = item.querySelector('.arrow');
