@@ -54,11 +54,11 @@
             position: relative;
             padding-left: 2rem; /* space for the icon */
             margin-bottom: 1rem;
-            line-height: 1.6;
+            line-height: 2;
             color: var(--textcolor);
             font: var(--p);
         }
-        .feature-list li::before {
+        .lock-list li::before {
             content: "\f023"; /* Unicode for fa-lock */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
@@ -87,8 +87,38 @@
             left: 0;
             top: 0.1rem;
             font-size: 1rem;
-          }          
-          
+        }
+        .shield-list li::before {
+            content: "\f132";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+        .you-list li::before {
+            content: "\f4c4";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+        .tool-list li::before {
+            content: "\f013";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .row-standard {
@@ -117,8 +147,6 @@
             outline: none;
             box-shadow: none;
             text-decoration: none;
-            outline: none; /* remove outline in some cases */
-            box-shadow: none; /* fallback to ensure no glow */
         }
 
         /* On active (mouse click) */
@@ -199,10 +227,10 @@
             <!-- Brand Area: logo + traible.png -->
             <div class="d-flex align-items-center">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="Logo" style="height: 40px;">
+                    <img src="resources/img/logo.png" alt="Logo" style="height: 40px;">
                 </a>
                 <a href="index.html">
-                    <img src="img/traible.png" alt="Traible Text Logo" style="height: 32px; margin-left: 10px;">
+                    <img src="resources/img/traible.png" alt="Traible Text Logo" style="height: 32px; margin-left: 10px;">
                 </a>
             </div>
             <!-- Toggler Button -->
@@ -221,7 +249,7 @@
         </div>
     </nav>
     
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="hero" class="container-fluid section col slide-in">
         <div class="container-fluid px-4">
             <div class="row align-items-center justify-content-between">
@@ -233,7 +261,7 @@
                         Don’t let critical expertise fade—transform experience into accessible insight for every employee, anytime.
                     </p>
                     <!-- CTA Button -->
-                    <a href="https://youtu.be/xvFZjo5PgG0?feature=shared" class="btn btn-lg mt-4" style="transition: transform var(--transition); background-color: var(--coloraccent1); color: var(--coloraccent2); border-radius: 8px; font-weight: 500;">
+                    <a href="mailto:info@traible.com" class="btn btn-lg mt-4" style="transition: transform var(--transition); background-color: var(--coloraccent1); color: var(--coloraccent2); border-radius: 8px; font-weight: 500;">
                         Schedule a Demo
                     </a>
                     <!-- Scroll Indicator -->
@@ -241,16 +269,18 @@
                         <small>↓ Learn how we help you future-proof your workforce</small>
                     </div>
                 </div>
-                <!-- Right Column: Video -->
+                <!-- Right Column: Traible Video -->
                 <div class="col-md-6 pe-lg-5">
                     <div class="w-100" style="aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
-                        <iframe 
-                        src="https://www.youtube.com/embed/405s0F1Iz9Q?autoplay=1&mute=1&loop=1&playlist=405s0F1Iz9Q&rel=0"
-                        title="Introduction to Our Solution"
-                        allow="autoplay; encrypted-media"
-                        allowfullscreen
-                        style="width: 100%; height: 100%; border: none;">
-                        </iframe>
+                        <video
+                            src="resources/vid/Traible Draft 4.0.mp4"
+                            autoplay
+                            muted
+                            loop
+                            controls
+                            style="width: 100%; height: 100%; object-fit: cover; border: none; border-radius: 20px;">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -271,13 +301,13 @@
         </div>
     </nav>
 
-    <!-- Section: Benefits Beyond Onboarding -->
+    <!-- Benefits Beyond Onboarding -->
     <section id="benefits" class="container-fluid section col slide-in">
         <div class="container py-5">
             <div class="row align-items-center">
                 <!-- Left Column: Graphic -->
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="img/benefitsRe.png" alt="Benefits Graphic" class="img-fluid rounded" style="max-width: 90%;">
+                    <img src="resources/img/benefitsRe.png" alt="Benefits Graphic" class="img-fluid rounded" style="max-width: 90%;">
                 </div>
 
                 <!-- Right Column: Text Content -->
@@ -316,46 +346,46 @@
         </div>
     </section>
     
-    <!-- Section: Features-->
+    <!-- Features-->
     <section id="feat-section" class="container-fluid section slide-in">
         <div class="container text-center">
             <h2 class="text-center display-4 mb-5">Key Features</h2>
             <div class="row-standard"> <!-- Add gutter spacing between columns -->
 
-                <!-- Privacy and Security -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <img src="img/security.png" alt="Function Graphic" class="fou-img">
-                            <h3 class="card-title top text-center">Privacy and Security</h3>
-                            <ul class="feature-list">
-                            <li>
-                                Traible keeps your tribal knowledge safe and secure. We can even install a private model on your local network.
-                            </li>
-                            <li>
-                                Our cybersecurity practices align with industry standards to protect sensitive data.
-                            </li>
-                            <li>
-                                A local model ensures full compliance with proprietary requirements and internal policies.
-                            </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-  
                 <!-- blank slate model -->
                 <div class="col-1-3">
                     <div class="card">
                         <div class="card-body text-left">
-                            <img src="img/idea.png" alt="Function Graphic" class="fou-img">
-                            <h3 class="card-title top text-center">Blank Slate Model</h3>
+                            <img src="resources/img/idea.png" alt="Function Graphic" class="fou-img">
+                            <h3 class="card-title top">Blank Slate Model</h3>
                             <ul class="feature-list lightbulb-list">
-                            <li>
-                                Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.
-                            </li>
-                            <li>
-                                The model adapts only to your unique workflows, language, and problems.
-                            </li>
+                                <li>
+                                    Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.
+                                </li>
+                                <li>
+                                    The model adapts only to your unique workflows, language, and problems.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy and Security -->
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
+                            <img src="resources/img/security.png" alt="Function Graphic" class="fou-img">
+                            <h3 class="card-title top">Privacy and Security</h3>
+                            <ul class="feature-list lock-list">
+                                <li>
+                                    Traible keeps your tribal knowledge safe and secure. We can even install a private model on your local network.
+                                </li>
+                                <li>
+                                    Our cybersecurity practices align with industry standards to protect sensitive data.
+                                </li>
+                                <li>
+                                    A local model ensures full compliance with proprietary requirements and internal policies.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -365,15 +395,15 @@
                 <div class="col-1-3">
                     <div class="card">
                         <div class="card-body text-left">
-                            <img src="img/select.png" alt="Function Graphic" class="fou-img">
-                            <h3 class="card-title top text-center">Fine-Tuning</h3>
+                            <img src="resources/img/select.png" alt="Function Graphic" class="fou-img">
+                            <h3 class="card-title top">Fine-Tuning</h3>
                             <ul class="feature-list check-list">
-                            <li>
-                                Need deeper customization? Traible fine-tunes the model for your business, ensuring expert-level responses to your most complex issues.
-                            </li>
-                            <li>
-                                We tailor technical processes to improve accuracy, reliability, and contextual understanding.
-                            </li>
+                                <li>
+                                    Need deeper customization? Traible fine-tunes the model for your business, ensuring expert-level responses to your most complex issues.
+                                </li>
+                                <li>
+                                    We tailor technical processes to improve accuracy, reliability, and contextual understanding.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -384,7 +414,7 @@
 
     <hr class="footer-divider slide-in">
 
-    <!-- Section: Function, Operation, and Use -->
+    <!-- Function, Operation, and Use -->
     <section id="fou-section" class="container-fluid section slide-in">
         <div class="container text-center">
             <div class="row-standard"> <!-- Add gutter spacing between columns -->
@@ -394,11 +424,16 @@
                     <div class="card">
                         <div class="card-body text-left">
                             <h3 class="card-title top">Knowledge that is captured</h3>
-                            <p>
-                                Traible captures and delivers critical on-the-job knowledge, making it accessible to both new hires and seasoned professionals—ensuring expertise is never lost, only shared.
-                            </p>
-                            </div>
-                        <img src="img/function.png" alt="Function Graphic" class="fou-img">
+                            <ul class="feature-list shield-list">
+                                <li>
+                                    Captures and delivers critical on-the-job knowledge, so expertise is never lost—only shared.
+                                </li>
+                                <li>
+                                    Makes essential know-how accessible to both new hires and seasoned professionals.
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="resources/img/function.png" alt="Function Graphic" class="fou-img">
                     </div>
                 </div>
         
@@ -407,11 +442,16 @@
                     <div class="card">
                         <div class="card-body text-left">
                             <h3 class="card-title top">Knowledge just for you</h3>
-                            <p>
-                                Traible instantly delivers tailored, company-specific guidance—transforming problems into solutions in seconds.
-                            </p>
+                            <ul class="feature-list you-list">
+                                <li>
+                                    Instantly delivers tailored, company-specific guidance.
+                                </li>
+                                <li>
+                                    Transforms complex problems into actionable solutions in seconds.
+                                </li>
+                            </ul>
                         </div>
-                        <img src="img/operation.png" alt="Operation Graphic" class="fou-img">
+                        <img src="resources/img/operation.png" alt="Operation Graphic" class="fou-img">
                     </div>
                 </div>
         
@@ -419,19 +459,24 @@
                 <div class="col-1-3">
                     <div class="card">
                         <div class="card-body text-left">
-                            <h3 class="card-title top">Knowledge for your whole tribe</h3>
-                            <p>
-                                Traible supports every level of knowledge transfer—from technicians troubleshooting on the floor to consultants analyzing historical data.
-                            </p>
+                            <h3 class="card-title top">Knowledge for your company</h3>
+                            <ul class="feature-list tool-list">
+                                <li>
+                                    Supports knowledge transfer at every level—from the shop floor to the strategy room.
+                                </li>
+                                <li>
+                                    Empowers technicians, engineers, and consultants with relevant historical insights.
+                                </li>
+                            </ul>
                         </div>
-                        <img src="img/use.png" alt="Use Graphic" class="fou-img">
+                        <img src="resources/img/use.png" alt="Use Graphic" class="fou-img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Plans -->
+    <!-- Plans -->
     <section id="plans-section" class="container-fluid section">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
@@ -502,7 +547,7 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section id="faq-section" class="container-fluid section slide-in">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Frequently Asked Questions</h2>
@@ -567,9 +612,12 @@
                 <ul class="navbar-nav">
                 </ul>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/company/traible"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
-                    <a href="mailto:info@traible.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
-                    <a href="https://www.instagram.com/traiblellc?igsh=cDVmb2JjeDBmd2lp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/traible">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                    <a href="mailto:info@traible.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+                    <a href="https://www.instagram.com/traiblellc?igsh=cDVmb2JjeDBmd2lp">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
                 </div>
                 <hr class="footer-divider">
                 <p class="small mb-0">&copy; 2025 <strong>Traible</strong>. All rights reserved.</p>

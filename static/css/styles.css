@@ -6,7 +6,6 @@
     --coloraccent2: #ecf2f8;
     --textcolor: #aaa;
     --ff: 'Roboto', sans-serif;
-<<<<<<< HEAD
     /* --tf: ''; Traible font here */
     --magin-xxs: .25rem;
     --magin-xs: .5rem;
@@ -15,22 +14,14 @@
     --magin-l: 1.25rem;
     --magin-xl: 1.75rem;
     --magin-xxl: 2.5rem;
-=======
->>>>>>> 10fc84129767428b35c1960509d6041187ae17a9
 
     --h1: bold max(54px, 4vw) / max(81px,5vw) var(--ff);
     --h2: bold max(36px, 4vw) / max(36px,5vw) var(--ff);
     --h3: bold 24px/36px var(--ff);
     --h4: bold 18px/27px var(--ff);
-<<<<<<< HEAD
     --p: 18px/27px var(--ff);
     --links: bold 18px/18px var(--ff);
     --h5: bold 14px/21px var(--ff);
-=======
-    --h5: bold 14px/21px var(--ff);
-    --links: bold 18px/18px var(--ff);
-    --p: 18px/18px var(--ff);
->>>>>>> 10fc84129767428b35c1960509d6041187ae17a9
     --subtext: 12px/20px var(--ff);
 
     --transition: 0.3s ease-in-out;
@@ -43,11 +34,7 @@
     --textcolor: #aaa;
     --coloraccent1: #83a9d2;
     --coloraccent2: white;
-<<<<<<< HEAD
 }
-=======
-  }
->>>>>>> 10fc84129767428b35c1960509d6041187ae17a9
 
 /* ========== Base Elements ========== */
 html {
@@ -67,46 +54,11 @@ h2 { font: var(--h2); line-height: 1.3; }
 h3 { font: var(--h3); font-size: clamp(20px, 2.5vw, 32px); line-height: 1.4; }
 h4 { font: var(--h4); line-height: 1.4; }
 h5 { font: var(--h5); line-height: 1.4; }
-<<<<<<< HEAD
-  
-p, ul, .card-text {
-    color: var(--textcolor);
-    font: var(--p);
-}
-ul.list-unstyled li h4 {
-    margin-bottom: 1rem;
-}
 
-/* ========== Section Layouts ========== */
-.section {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    padding: 4rem 2rem;
-}
-.col {
-    display: flex;
-    height: 100vh;
-    padding-top: 100px;
-}
-.col-1-3 {
-    flex: 1 1 calc(33.333% - 1rem);
-    max-width: calc(33.333% - 1rem);
-}
-=======
-
->>>>>>> 10fc84129767428b35c1960509d6041187ae17a9
 .row-standard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-<<<<<<< HEAD
-    gap: 1rem;
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    align-items: stretch;
-=======
     gap: 1rem; /* Space between cards */
     margin-left: -0.75rem;
     margin-right: -0.75rem;
@@ -115,11 +67,6 @@ ul.list-unstyled li h4 {
     width: 100%;
     padding: 0.75rem;
 }
-@media (min-width: 768px) {
-    .col-1-3 {
-      width: calc(33.333% - 1.5rem); /* account for gap */
-    }
-}
   
 p, ul, .card-text {
     color: var(--textcolor);
@@ -127,7 +74,6 @@ p, ul, .card-text {
 }
 ul.list-unstyled li h4 {
     margin-bottom: 1rem;
->>>>>>> 10fc84129767428b35c1960509d6041187ae17a9
 }
 
 /* ========== Navbar Styles ========== */
@@ -168,8 +114,8 @@ ul.list-unstyled li h4 {
 .section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     padding: 4rem 2rem;
 }
 .col {
@@ -259,6 +205,12 @@ ul.list-unstyled li h4 {
     }
 }
 
+@media (min-width: 768px) {
+    .col-1-3 {
+      width: calc(33.333% - 1.5rem); /* account for gap */
+    }
+}
+
 /* ========== Footer ========== */
 .footer {
     background-color: var(--colorprimary);
@@ -311,4 +263,3 @@ svg {
 svg:hover {
     fill: var(--coloraccent1)
 }
-
