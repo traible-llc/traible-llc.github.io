@@ -27,12 +27,25 @@
         /* ========== Image Styling ========== */
         .fou-img {
             display: block;
-            margin: 0 auto;
+            margin: 0 auto 1rem;
             width: 100%;
             max-width: 400px;
-            height: auto;
-            object-fit: cover;
+            height: 200px;
+            object-fit: contain;
             border-radius: 10px;
+        }
+        .card-title.top {
+            min-height: 3.5rem; /* Ensures titles align regardless of length */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        /* Ensure section spacing is consistent */
+        #feat-section {
+            padding: 4rem 1rem; /* Adds top/bottom padding */
+            position: relative;
+            z-index: 1; /* Ensures it sits on top cleanly */
         }
 
         /* ========== Features Section ========== */
@@ -54,11 +67,11 @@
             position: relative;
             padding-left: 2rem; /* space for the icon */
             margin-bottom: 1rem;
-            line-height: 1.6;
+            
             color: var(--textcolor);
             font: var(--p);
         }
-        .feature-list li::before {
+        .lock-list li::before {
             content: "\f023"; /* Unicode for fa-lock */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
@@ -87,8 +100,38 @@
             left: 0;
             top: 0.1rem;
             font-size: 1rem;
-          }          
-          
+        }
+        .shield-list li::before {
+            content: "\f132";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+        .you-list li::before {
+            content: "\f4c4";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+        .tool-list li::before {
+            content: "\f013";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--coloraccent1);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            font-size: 1rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .row-standard {
@@ -219,7 +262,7 @@
         </div>
     </nav>
     
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="hero" class="container-fluid section col slide-in">
         <div class="container-fluid px-4">
             <div class="row align-items-center justify-content-between">
@@ -271,7 +314,7 @@
         </div>
     </nav>
 
-    <!-- Section: Benefits Beyond Onboarding -->
+    <!-- Benefits Beyond Onboarding -->
     <section id="benefits" class="container-fluid section col slide-in">
         <div class="container py-5">
             <div class="row align-items-center">
@@ -316,33 +359,12 @@
         </div>
     </section>
     
-    <!-- Section: Features-->
+    <!-- Features-->
     <section id="feat-section" class="container-fluid section slide-in">
         <div class="container text-center">
             <h2 class="text-center display-4 mb-5">Key Features</h2>
             <div class="row-standard"> <!-- Add gutter spacing between columns -->
 
-                <!-- Privacy and Security -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <img src="resources/img/security.png" alt="Function Graphic" class="fou-img">
-                            <h3 class="card-title top">Privacy and Security</h3>
-                            <ul class="feature-list">
-                            <li>
-                                Traible keeps your tribal knowledge safe and secure. We can even install a private model on your local network.
-                            </li>
-                            <li>
-                                Our cybersecurity practices align with industry standards to protect sensitive data.
-                            </li>
-                            <li>
-                                A local model ensures full compliance with proprietary requirements and internal policies.
-                            </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-  
                 <!-- blank slate model -->
                 <div class="col-1-3">
                     <div class="card">
@@ -350,12 +372,33 @@
                             <img src="resources/img/idea.png" alt="Function Graphic" class="fou-img">
                             <h3 class="card-title top">Blank Slate Model</h3>
                             <ul class="feature-list lightbulb-list">
-                            <li>
-                                Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.
-                            </li>
-                            <li>
-                                The model adapts only to your unique workflows, language, and problems.
-                            </li>
+                                <li>
+                                    Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.
+                                </li>
+                                <li>
+                                    The model adapts only to your unique workflows, language, and problems.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy and Security -->
+                <div class="col-1-3">
+                    <div class="card">
+                        <div class="card-body text-left">
+                            <img src="resources/img/security.png" alt="Function Graphic" class="fou-img">
+                            <h3 class="card-title top">Privacy and Security</h3>
+                            <ul class="feature-list lock-list">
+                                <li>
+                                    Traible keeps your tribal knowledge safe and secure. We can even install a private model on your local network.
+                                </li>
+                                <li>
+                                    Our cybersecurity practices align with industry standards to protect sensitive data.
+                                </li>
+                                <li>
+                                    A local model ensures full compliance with proprietary requirements and internal policies.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -368,12 +411,12 @@
                             <img src="resources/img/select.png" alt="Function Graphic" class="fou-img">
                             <h3 class="card-title top">Fine-Tuning</h3>
                             <ul class="feature-list check-list">
-                            <li>
-                                Need deeper customization? Traible fine-tunes the model for your business, ensuring expert-level responses to your most complex issues.
-                            </li>
-                            <li>
-                                We tailor technical processes to improve accuracy, reliability, and contextual understanding.
-                            </li>
+                                <li>
+                                    Need deeper customization? Traible fine-tunes the model for your business, ensuring expert-level responses to your most complex issues.
+                                </li>
+                                <li>
+                                    We tailor technical processes to improve accuracy, reliability, and contextual understanding.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -384,7 +427,7 @@
 
     <hr class="footer-divider slide-in">
 
-    <!-- Section: Function, Operation, and Use -->
+    <!-- Function, Operation, and Use -->
     <section id="fou-section" class="container-fluid section slide-in">
         <div class="container text-center">
             <div class="row-standard"> <!-- Add gutter spacing between columns -->
@@ -394,10 +437,15 @@
                     <div class="card">
                         <div class="card-body text-left">
                             <h3 class="card-title top">Knowledge that is captured</h3>
-                            <p>
-                                Traible captures and delivers critical on-the-job knowledge, making it accessible to both new hires and seasoned professionals—ensuring expertise is never lost, only shared.
-                            </p>
-                            </div>
+                            <ul class="feature-list shield-list">
+                                <li>
+                                    Captures and delivers critical on-the-job knowledge, so expertise is never lost—only shared.
+                                </li>
+                                <li>
+                                    Makes essential know-how accessible to both new hires and seasoned professionals.
+                                </li>
+                            </ul>
+                        </div>
                         <img src="resources/img/function.png" alt="Function Graphic" class="fou-img">
                     </div>
                 </div>
@@ -407,9 +455,14 @@
                     <div class="card">
                         <div class="card-body text-left">
                             <h3 class="card-title top">Knowledge just for you</h3>
-                            <p>
-                                Traible instantly delivers tailored, company-specific guidance—transforming problems into solutions in seconds.
-                            </p>
+                            <ul class="feature-list you-list">
+                                <li>
+                                    Instantly delivers tailored, company-specific guidance.
+                                </li>
+                                <li>
+                                    Transforms complex problems into actionable solutions in seconds.
+                                </li>
+                            </ul>
                         </div>
                         <img src="resources/img/operation.png" alt="Operation Graphic" class="fou-img">
                     </div>
@@ -420,9 +473,14 @@
                     <div class="card">
                         <div class="card-body text-left">
                             <h3 class="card-title top">Knowledge for your company</h3>
-                            <p>
-                                Traible supports every level of knowledge transfer—from technicians troubleshooting on the floor to consultants analyzing historical data.
-                            </p>
+                            <ul class="feature-list tool-list">
+                                <li>
+                                    Supports knowledge transfer at every level—from the shop floor to the strategy room.
+                                </li>
+                                <li>
+                                    Empowers technicians, engineers, and consultants with relevant historical insights.
+                                </li>
+                            </ul>
                         </div>
                         <img src="resources/img/use.png" alt="Use Graphic" class="fou-img">
                     </div>
@@ -431,7 +489,7 @@
         </div>
     </section>
 
-    <!-- Section: Plans -->
+    <!-- Plans -->
     <section id="plans-section" class="container-fluid section">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
@@ -440,18 +498,18 @@
                 <div class="col-1-3">
                     <div class="card">
                         <h3>Standard</h3>
-                        <ul class="features-list">
-                        <li class="feature-yes">AI Platform Access</li>
-                        <li class="feature-yes">Customer Support: Zoom + Email</li>
-                        <li class="feature-yes">Document Upload: 100 Docs</li>
-                        <li class="feature-yes">Add-ons</li>
-                        <li class="feature-no">Wearable Kit</li>
-                        <li class="feature-no">AI Transcription</li>
-                        <li class="feature-no">Workflow Integration</li>
-                        <li class="feature-no">Account Manager</li>
-                        <li class="feature-no">On-site Support</li>
-                        <li class="feature-no">SME Interview</li>
-                        <li class="feature-no">24/6 Support</li>
+                        <ul class="plans-list">
+                            <li class="plans-yes">AI Platform Access</li>
+                            <li class="plans-yes">Customer Support: Zoom + Email</li>
+                            <li class="plans-yes">Document Upload: 100 Docs</li>
+                            <li class="plans-yes">Add-ons</li>
+                            <li class="plans-no">Wearable Kit</li>
+                            <li class="plans-no">AI Transcription</li>
+                            <li class="plans-no">Workflow Integration</li>
+                            <li class="plans-no">Account Manager</li>
+                            <li class="plans-no">On-site Support</li>
+                            <li class="plans-no">SME Interview</li>
+                            <li class="plans-no">24/6 Support</li>
                         </ul>
                         <a href="#" class="btn mt-auto">Buy Now</a>
                     </div>
@@ -461,18 +519,18 @@
                 <div class="col-1-3">
                     <div class="card">
                         <h3>Premium</h3>
-                        <ul class="features-list">
-                        <li class="feature-yes">AI Platform Access</li>
-                        <li class="feature-yes">Customer Support: Calls + Zoom</li>
-                        <li class="feature-yes">Document Upload: 500 Docs</li>
-                        <li class="feature-yes">Add-ons</li>
-                        <li class="feature-yes">Wearable Kit</li>
-                        <li class="feature-yes">AI Transcription</li>
-                        <li class="feature-yes">Workflow Integration</li>
-                        <li class="feature-no">Account Manager</li>
-                        <li class="feature-no">On-site Support</li>
-                        <li class="feature-no">SME Interview</li>
-                        <li class="feature-no">24/6 Support</li>
+                        <ul class="plans-list">
+                            <li class="plans-yes">AI Platform Access</li>
+                            <li class="plans-yes">Customer Support: Calls + Zoom</li>
+                            <li class="plans-yes">Document Upload: 500 Docs</li>
+                            <li class="plans-yes">Add-ons</li>
+                            <li class="plans-yes">Wearable Kit</li>
+                            <li class="plans-yes">AI Transcription</li>
+                            <li class="plans-yes">Workflow Integration</li>
+                            <li class="plans-no">Account Manager</li>
+                            <li class="plans-no">On-site Support</li>
+                            <li class="plans-no">SME Interview</li>
+                            <li class="plans-no">24/6 Support</li>
                         </ul>
                         <a href="#" class="btn mt-auto">Buy Now</a>
                     </div>
@@ -482,18 +540,18 @@
                 <div class="col-1-3">
                     <div class="card">
                         <h3>Business</h3>
-                        <ul class="features-list">
-                        <li class="feature-yes">AI Platform Access</li>
-                        <li class="feature-yes">Customer Support: 24/7 + Onsite</li>
-                        <li class="feature-yes">Document Upload: Unlimited</li>
-                        <li class="feature-yes">Add-ons</li>
-                        <li class="feature-yes">Wearable Kit</li>
-                        <li class="feature-yes">AI Transcription</li>
-                        <li class="feature-yes">Workflow Integration</li>
-                        <li class="feature-yes">Account Manager</li>
-                        <li class="feature-yes">On-site Support</li>
-                        <li class="feature-yes">SME Interview</li>
-                        <li class="feature-yes">24/6 Support</li>
+                        <ul class="plans-list">
+                            <li class="plans-yes">AI Platform Access</li>
+                            <li class="plans-yes">Customer Support: 24/7 + Onsite</li>
+                            <li class="plans-yes">Document Upload: Unlimited</li>
+                            <li class="plans-yes">Add-ons</li>
+                            <li class="plans-yes">Wearable Kit</li>
+                            <li class="plans-yes">AI Transcription</li>
+                            <li class="plans-yes">Workflow Integration</li>
+                            <li class="plans-yes">Account Manager</li>
+                            <li class="plans-yes">On-site Support</li>
+                            <li class="plans-yes">SME Interview</li>
+                            <li class="plans-yes">24/6 Support</li>
                         </ul>
                         <a href="#" class="btn mt-auto">Buy Now</a>
                     </div>
@@ -502,7 +560,7 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section id="faq-section" class="container-fluid section slide-in">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Frequently Asked Questions</h2>

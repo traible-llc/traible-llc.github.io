@@ -19,9 +19,9 @@
     --h2: bold max(36px, 4vw) / max(36px,5vw) var(--ff);
     --h3: bold 24px/36px var(--ff);
     --h4: bold 18px/27px var(--ff);
-    --h5: bold 14px/21px var(--ff);
+    --p: 18px/27px var(--ff);
     --links: bold 18px/18px var(--ff);
-    --p: 18px/18px var(--ff);
+    --h5: bold 14px/21px var(--ff);
     --subtext: 12px/20px var(--ff);
 
     --transition: 0.3s ease-in-out;
@@ -54,24 +54,6 @@ h2 { font: var(--h2); line-height: 1.3; }
 h3 { font: var(--h3); font-size: clamp(20px, 2.5vw, 32px); line-height: 1.4; }
 h4 { font: var(--h4); line-height: 1.4; }
 h5 { font: var(--h5); line-height: 1.4; }
-
-.row-standard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem; /* Space between cards */
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-.col-1-3 {
-    width: 100%;
-    padding: 0.75rem;
-}
-@media (min-width: 768px) {
-    .col-1-3 {
-      width: calc(33.333% - 1.5rem); /* account for gap */
-    }
-}
   
 p, ul, .card-text {
     color: var(--textcolor);
@@ -79,6 +61,33 @@ p, ul, .card-text {
 }
 ul.list-unstyled li h4 {
     margin-bottom: 1rem;
+}
+
+/* ========== Section Layouts ========== */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    padding: 4rem 2rem;
+}
+.col {
+    display: flex;
+    height: 100vh;
+    padding-top: 100px;
+}
+.col-1-3 {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+}
+.row-standard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    align-items: stretch;
 }
 
 /* ========== Navbar Styles ========== */
@@ -115,20 +124,6 @@ ul.list-unstyled li h4 {
     border-bottom: 2px solid var(--coloraccent1);
 }
 
-/* ========== Section Layouts ========== */
-.section {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    padding: 4rem 2rem;
-}
-.col {
-    display: flex;
-    height: 100vh;
-    padding-top: 100px;
-}
-
 /* ========== Cards & Blocks ========== */
 .card {
     background-color: var(--colorsecondary);
@@ -151,17 +146,17 @@ ul.list-unstyled li h4 {
     text-align: left;
     line-height: 1.8;
 }
-.card ul.features-list li {
+.card ul.plans-list li {
     padding-left: 24px;
     position: relative;
 }
-.card ul.features-list li.feature-yes::before {
+.card ul.plans-list li.plans-yes::before {
     content: "✓";
     color: var(--coloraccent1);
     position: absolute;
     left: 0;
 }
-.card ul.features-list li.feature-no::before {
+.card ul.plans-list li.plans-no::before {
     content: "✗";
     color: #e57373; /* soft red */
     position: absolute;
@@ -182,6 +177,16 @@ ul.list-unstyled li h4 {
     background-color: var(--coloraccent1);
     color: var(--colorprimary);
 }
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
 
 /* ========== Scroll Indicator & Animations ========== */
 .scroll-indicator {
@@ -208,8 +213,21 @@ ul.list-unstyled li h4 {
     .section {
         padding: 2rem 1rem;
     }
+    .card {
+        height: auto;
+    }
 }
 
+@media (max-width: 991px) {
+    .col-1-3 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
 /* ========== Footer ========== */
 .footer {
     background-color: var(--colorprimary);
@@ -260,5 +278,5 @@ svg {
     width: 20px;
 }
 svg:hover {
-    fill: var(--coloraccent1)
+    fill: var(--coloraccent1);
 }
