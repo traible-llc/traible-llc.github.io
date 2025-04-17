@@ -5,7 +5,32 @@
     <title>About Us - Traible</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
     <style>
+        .about-container {
+            background: var(--colorsecondary);
+            border-radius: 2rem;
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: 3rem auto;
+            box-shadow: var(--darkshadow);
+            animation: fadeInSlide 1s ease-out both;
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+        }
+        .about-text h2 {
+            font-size: 2.8rem;
+            color: var(--coloraccent1);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .about-text h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--coloraccent1);
+            display: block;
+            border-radius: 2px;
+            margin-top: 0.5rem;
         .about-container {
             background: var(--colorsecondary);
             border-radius: 2rem;
@@ -36,12 +61,25 @@
             color: var(--textcolor);
             line-height: 1.7;
             margin-bottom: 1.25rem;
+        .about-text p {
+            font-size: 1.15rem;
+            color: var(--textcolor);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
         }
         .about-text p.lead {
             font-weight: 600;
             font-size: 1.3rem;
             color: var(--coloraccent2);
+        .about-text p.lead {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--coloraccent2);
         }
+        .about-text p:last-child {
+            font-style: italic;
+            color: var(--coloraccent1);
+            font-weight: 500;
         .about-text p:last-child {
             font-style: italic;
             color: var(--coloraccent1);
@@ -56,17 +94,29 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* General Layout */
+        .team-container {
         .team-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 60px 20px;
             text-align: center;
             background-color: var(--colorprimary);
+            background-color: var(--colorprimary);
         }
         .team-container h1 {
+            color: var(--coloraccent1);
             color: var(--coloraccent1);
             margin-bottom: 30px;
             font-size: 2.5em;
@@ -81,26 +131,36 @@
         .team-card-bg {
             background-color: var(--colorsecondary);
             border: 2px solid var(--coloraccent1);
+        .team-card-bg {
+            background-color: var(--colorsecondary);
+            border: 2px solid var(--coloraccent1);
             border-radius: 12px;
             padding: 20px;
             width: 250px;
             box-shadow: var(--darkshadow);
+            box-shadow: var(--darkshadow);
             text-align: center;
+            transition: var(--transition);
             transition: var(--transition);
         }
         .team-card-bg:hover {
+        .team-card-bg:hover {
             transform: translateY(-5px);
         }
+        .team-card-bg img {
         .team-card-bg img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             border: 2px solid var(--coloraccent1);
+            border: 2px solid var(--coloraccent1);
             object-fit: cover;
             margin-bottom: 15px;
         }
         .team-card-bg h3 {
+        .team-card-bg h3 {
             margin: 10px 0 5px;
+            color: var(--coloraccent1);
             color: var(--coloraccent1);
         }
 
@@ -114,9 +174,41 @@
             margin-bottom: 1.5rem;
         }
         .team-card-bg p {
+
+        /* ========== Cards & Content Blocks ========== */
+        .team-card {
+            background-color: var(--colorprimary);
+            color: var(--coloraccent2);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 1.5rem;
+        }
+        .team-card-bg p {
             margin: 0;
             color: var(--textcolor);
+            color: var(--textcolor);
             font-size: 0.95em;
+        }
+        .card-title {
+            text-align: center;
+        }
+        .card-text {
+            text-align: center;
+        }
+        .card-subtitle{
+            text-align: center;
+        }
+        .card-body h5, /*Names*/
+        .card-title {
+            color: var(--coloraccent1);
+            font-family: var(--ff);
+        }
+        .card-title, .card-subtitle, .card-text {
+            text-align: left;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .card-title {
             text-align: center;
@@ -143,6 +235,7 @@
 </head>
 <body>
     <!-- Main Navbar -->
+    <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- Brand Area: logo + traible.png -->
@@ -167,6 +260,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Overview</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Overview</a>
+                </li>
                 </ul>
             </div>
         </div>
@@ -174,9 +270,16 @@
 
     <!-- Section: About Us -->
     <section id="about-us" class="about-container slide-in">
+    <section id="about-us" class="about-container slide-in">
         <div class="about-text">
             <h1 class="display-4 mb-4"><strong>Who We Are</strong></h1>
+            <h1 class="display-4 mb-4"><strong>Who We Are</strong></h1>
             <p class="lead mb-4">
+                We’re <span style="color: var(--coloraccent1);">Traible</span> — a passionate team on a mission to keep your company’s brainpower where it belongs: at your fingertips.
+            </p>
+            <p class="h5 font-weight-normal mb-3">
+                Every team has that go-to person who just <em>knows</em> how to fix it, find it, or figure it out. 
+                Traible makes sure that <span style="color: var(--coloraccent1);">knowledge doesn’t get lost</span> in the shuffle — or the exit interview.
                 We’re <span style="color: var(--coloraccent1);">Traible</span> — a passionate team on a mission to keep your company’s brainpower where it belongs: at your fingertips.
             </p>
             <p class="h5 font-weight-normal mb-3">
@@ -187,10 +290,16 @@
                 Our platform <span style="color: var(--coloraccent1);">captures experience</span>, insights, and solutions from your experts, 
                 and turns them into a smart, searchable knowledge base for your whole team to use — 
                 anytime, anywhere.
+                Our platform <span style="color: var(--coloraccent1);">captures experience</span>, insights, and solutions from your experts, 
+                and turns them into a smart, searchable knowledge base for your whole team to use — 
+                anytime, anywhere.
             </p>
             <p class="h5 font-weight-normal mb-3">
                 Whether you're training new hires or solving critical problems on the fly, Traible helps your team move faster , work smarter, and <span style="color: var(--coloraccent1);">never reinvent the wheel</span>.
+                Whether you're training new hires or solving critical problems on the fly, Traible helps your team move faster , work smarter, and <span style="color: var(--coloraccent1);">never reinvent the wheel</span>.
             </p>
+            <p class="h5 font-weight-normal mb-0" style="color: var(--coloraccent1);">
+                Backed by AI. Inspired by people. Built for results.
             <p class="h5 font-weight-normal mb-0" style="color: var(--coloraccent1);">
                 Backed by AI. Inspired by people. Built for results.
             </p>
@@ -198,9 +307,12 @@
     </section>
 
 
+
     <!-- Section: Meet the Team -->
     <div id="section-3" class="team-container slide-in">
+    <div id="section-3" class="team-container slide-in">
         <div class="container py-5">
+            <h2 class="display-4 mb-5">Meet the Team</h2>
             <h2 class="display-4 mb-5">Meet the Team</h2>
             <div class="team-grid">
                 
@@ -209,6 +321,9 @@
                     <div class="team-card h-100">
                         <img src="resources/img/sam.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Samuel Anyakwu">
                         <div class="card-body">
+                            <h4 class="card-title text-center">Samuel Anyakwu</h4>
+                            <h6 class="card-subtitle mb-3 text-center">CEO</h6>
+                            <p class="card-text ">Samuel is a co-founder of Traible and currently works as a warehouse supervisor at Pepsi. With a background in mechanical engineering, he brings structure and leadership to the team. Outside of work, he enjoys reading his Bible, playing disc golf, basketball, guitar, and contributing to Traible’s growth.</p>
                             <h4 class="card-title text-center">Samuel Anyakwu</h4>
                             <h6 class="card-subtitle mb-3 text-center">CEO</h6>
                             <p class="card-text ">Samuel is a co-founder of Traible and currently works as a warehouse supervisor at Pepsi. With a background in mechanical engineering, he brings structure and leadership to the team. Outside of work, he enjoys reading his Bible, playing disc golf, basketball, guitar, and contributing to Traible’s growth.</p>
@@ -224,6 +339,9 @@
                             <h4 class="card-title text-center">Michael Gruver</h4>
                             <h6 class="card-subtitle mb-3 text-center">COO & ML Engineer</h6>
                             <p class="card-text ">Michael is a co-founder and COO of Traible. He holds a degree in Industrial & Systems Engineering from Texas A&M and is pursuing a Master’s in Analytics. Passionate about data science and machine learning, he spends his free time reading, traveling, working out, and enjoying life with his wife.</p>
+                            <h4 class="card-title text-center">Michael Gruver</h4>
+                            <h6 class="card-subtitle mb-3 text-center">COO & ML Engineer</h6>
+                            <p class="card-text ">Michael is a co-founder and COO of Traible. He holds a degree in Industrial & Systems Engineering from Texas A&M and is pursuing a Master’s in Analytics. Passionate about data science and machine learning, he spends his free time reading, traveling, working out, and enjoying life with his wife.</p>
                         </div>
                     </div>
                 </div>
@@ -233,6 +351,9 @@
                     <div class="team-card h-100 ">
                         <img src="resources/img/brian.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Brian Paniagua">
                         <div class="card-body">
+                            <h4 class="card-title text-center">Brian Paniagua</h4>
+                            <h6 class="card-subtitle mb-3 text-center">Lead Software Engineer</h6>
+                            <p class="card-text ">Brian is a co-founder of Traible and a recent graduate from UTSA with a Bachelor's in Physics, a minor in Computer Science, and a certificate in Data Analytics. He leads our software development efforts and enjoys reading, video games, and music in his free time.</p>
                             <h4 class="card-title text-center">Brian Paniagua</h4>
                             <h6 class="card-subtitle mb-3 text-center">Lead Software Engineer</h6>
                             <p class="card-text ">Brian is a co-founder of Traible and a recent graduate from UTSA with a Bachelor's in Physics, a minor in Computer Science, and a certificate in Data Analytics. He leads our software development efforts and enjoys reading, video games, and music in his free time.</p>
@@ -248,6 +369,9 @@
                             <h4 class="card-title text-center">Nathaniel Candelaria</h4>
                             <h6 class="card-subtitle mb-3 text-center">Administrator</h6>
                             <p class="card-text ">Nathaniel supports Traible in a part-time role while pursuing his Master’s in English with a focus on Renaissance literature. He holds a Bachelor’s degree in English from UTSA and brings thoughtful insight and organization to our operations.</p>
+                            <h4 class="card-title text-center">Nathaniel Candelaria</h4>
+                            <h6 class="card-subtitle mb-3 text-center">Administrator</h6>
+                            <p class="card-text ">Nathaniel supports Traible in a part-time role while pursuing his Master’s in English with a focus on Renaissance literature. He holds a Bachelor’s degree in English from UTSA and brings thoughtful insight and organization to our operations.</p>
                         </div>
                     </div>
                 </div>
@@ -257,6 +381,9 @@
                     <div class="team-card h-100 ">
                         <img src="resources/img/logan.jpeg" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 200px; height: 200px; object-fit: cover;" alt="Logan O'Neil">
                         <div class="card-body">
+                            <h4 class="card-title text-center">Logan O'Neil</h4>
+                            <h6 class="card-subtitle mb-3 text-center">CSO</h6>
+                            <p class="card-text ">Logan is a co-founder of Traible and is pursuing a BBA in Information Systems and Cybersecurity. He previously interned at UTSA's Security Operations Center. In his free time, he enjoys playing instruments like the euphonium and harmonica, board games, and reading novels.</p>
                             <h4 class="card-title text-center">Logan O'Neil</h4>
                             <h6 class="card-subtitle mb-3 text-center">CSO</h6>
                             <p class="card-text ">Logan is a co-founder of Traible and is pursuing a BBA in Information Systems and Cybersecurity. He previously interned at UTSA's Security Operations Center. In his free time, he enjoys playing instruments like the euphonium and harmonica, board games, and reading novels.</p>
@@ -272,6 +399,9 @@
                             <h4 class="card-title text-center">Samuel Vasquez</h4>
                             <h6 class="card-subtitle mb-3 text-center">Full-Stack Developer</h6>
                             <p class="card-text ">Samuel is a co-founder and full-stack developer at Traible. He holds a degree in Computer Science from UTSA and currently works full-time in IT. He enjoys reading his Bible, collecting board games, and refining his ping pong skills.</p>
+                            <h4 class="card-title text-center">Samuel Vasquez</h4>
+                            <h6 class="card-subtitle mb-3 text-center">Full-Stack Developer</h6>
+                            <p class="card-text ">Samuel is a co-founder and full-stack developer at Traible. He holds a degree in Computer Science from UTSA and currently works full-time in IT. He enjoys reading his Bible, collecting board games, and refining his ping pong skills.</p>
                         </div>
                     </div>
                 </div>
@@ -284,6 +414,9 @@
                             <h4 class="card-title text-center">Miguel Avilés</h4>
                             <h6 class="card-subtitle mb-3 text-center">Marketing Lead</h6>
                             <p class="card-text ">Miguel is a co-founder of Traible and serves as the head of marketing. He also works as a data analyst. In his downtime, he enjoys salsa dancing, hiking, and challenging Sam, our CEO, to intense ping pong matches.</p>
+                            <h4 class="card-title text-center">Miguel Avilés</h4>
+                            <h6 class="card-subtitle mb-3 text-center">Marketing Lead</h6>
+                            <p class="card-text ">Miguel is a co-founder of Traible and serves as the head of marketing. He also works as a data analyst. In his downtime, he enjoys salsa dancing, hiking, and challenging Sam, our CEO, to intense ping pong matches.</p>
                         </div>
                     </div>
                 </div>
@@ -291,6 +424,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
@@ -304,7 +438,22 @@
                 <hr class="footer-divider">
                 <p class="small mb-0">&copy; 2025 <strong>Traible</strong>. All rights reserved.</p>
             </div>
+            <div class="footer-content">
+                <p class="links" style=" color: var(--coloraccent1)">Stay Connected</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/traible"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                    <a href="mailto:info@traible.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+                    <a href="https://www.instagram.com/traiblellc?igsh=cDVmb2JjeDBmd2lp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                </div>
+                <hr class="footer-divider">
+                <p class="small mb-0">&copy; 2025 <strong>Traible</strong>. All rights reserved.</p>
+            </div>
         </div>
+    </footer
+
+    <!-- Link to External JavaScript File -->
+    <script src="static/js/app.js"></script>
+        
     </footer
 
     <!-- Link to External JavaScript File -->
