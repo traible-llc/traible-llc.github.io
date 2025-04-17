@@ -7,8 +7,8 @@
     --textcolor: #aaa;
     --ff: 'Roboto', sans-serif;
 
-    --h1: bold 54px/81px var(--ff);
-    --h2: bold 36px/54px var(--ff);
+    --h1: bold max(54px, 4vw) / max(81px,5vw) var(--ff);
+    --h2: bold max(36px, 4vw) / max(36px,5vw) var(--ff);
     --h3: bold 24px/36px var(--ff);
     --h4: bold 18px/27px var(--ff);
     --h5: bold 14px/21px var(--ff);
@@ -40,7 +40,6 @@ body {
 }
 h1, h2, h3, h4, h5 {
     color: var(--coloraccent1);
-    font-family: var(--ff);
 }
 h1 { font: var(--h1); line-height: 1.2; }
 h2 { font: var(--h2); line-height: 1.3; }
