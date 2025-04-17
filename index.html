@@ -27,12 +27,25 @@
         /* ========== Image Styling ========== */
         .fou-img {
             display: block;
-            margin: 0 auto;
+            margin: 0 auto 1rem;
             width: 100%;
             max-width: 400px;
-            height: auto;
-            object-fit: cover;
+            height: 200px;
+            object-fit: contain;
             border-radius: 10px;
+        }
+        .card-title.top {
+            min-height: 3.5rem; /* Ensures titles align regardless of length */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        /* Ensure section spacing is consistent */
+        #feat-section {
+            padding: 4rem 1rem; /* Adds top/bottom padding */
+            position: relative;
+            z-index: 1; /* Ensures it sits on top cleanly */
         }
 
         /* ========== Features Section ========== */
@@ -54,7 +67,7 @@
             position: relative;
             padding-left: 2rem; /* space for the icon */
             margin-bottom: 1rem;
-            line-height: 2;
+            
             color: var(--textcolor);
             font: var(--p);
         }
@@ -485,18 +498,18 @@
                 <div class="col-1-3">
                     <div class="card">
                         <h3>Standard</h3>
-                        <ul class="features-list">
-                        <li class="feature-yes">AI Platform Access</li>
-                        <li class="feature-yes">Customer Support: Zoom + Email</li>
-                        <li class="feature-yes">Document Upload: 100 Docs</li>
-                        <li class="feature-yes">Add-ons</li>
-                        <li class="feature-no">Wearable Kit</li>
-                        <li class="feature-no">AI Transcription</li>
-                        <li class="feature-no">Workflow Integration</li>
-                        <li class="feature-no">Account Manager</li>
-                        <li class="feature-no">On-site Support</li>
-                        <li class="feature-no">SME Interview</li>
-                        <li class="feature-no">24/6 Support</li>
+                        <ul class="plans-list">
+                            <li class="plans-yes">AI Platform Access</li>
+                            <li class="plans-yes">Customer Support: Zoom + Email</li>
+                            <li class="plans-yes">Document Upload: 100 Docs</li>
+                            <li class="plans-yes">Add-ons</li>
+                            <li class="plans-no">Wearable Kit</li>
+                            <li class="plans-no">AI Transcription</li>
+                            <li class="plans-no">Workflow Integration</li>
+                            <li class="plans-no">Account Manager</li>
+                            <li class="plans-no">On-site Support</li>
+                            <li class="plans-no">SME Interview</li>
+                            <li class="plans-no">24/6 Support</li>
                         </ul>
                         <a href="#" class="btn mt-auto">Buy Now</a>
                     </div>
@@ -506,18 +519,18 @@
                 <div class="col-1-3">
                     <div class="card">
                         <h3>Premium</h3>
-                        <ul class="features-list">
-                        <li class="feature-yes">AI Platform Access</li>
-                        <li class="feature-yes">Customer Support: Calls + Zoom</li>
-                        <li class="feature-yes">Document Upload: 500 Docs</li>
-                        <li class="feature-yes">Add-ons</li>
-                        <li class="feature-yes">Wearable Kit</li>
-                        <li class="feature-yes">AI Transcription</li>
-                        <li class="feature-yes">Workflow Integration</li>
-                        <li class="feature-no">Account Manager</li>
-                        <li class="feature-no">On-site Support</li>
-                        <li class="feature-no">SME Interview</li>
-                        <li class="feature-no">24/6 Support</li>
+                        <ul class="plans-list">
+                            <li class="plans-yes">AI Platform Access</li>
+                            <li class="plans-yes">Customer Support: Calls + Zoom</li>
+                            <li class="plans-yes">Document Upload: 500 Docs</li>
+                            <li class="plans-yes">Add-ons</li>
+                            <li class="plans-yes">Wearable Kit</li>
+                            <li class="plans-yes">AI Transcription</li>
+                            <li class="plans-yes">Workflow Integration</li>
+                            <li class="plans-no">Account Manager</li>
+                            <li class="plans-no">On-site Support</li>
+                            <li class="plans-no">SME Interview</li>
+                            <li class="plans-no">24/6 Support</li>
                         </ul>
                         <a href="#" class="btn mt-auto">Buy Now</a>
                     </div>
@@ -527,18 +540,18 @@
                 <div class="col-1-3">
                     <div class="card">
                         <h3>Business</h3>
-                        <ul class="features-list">
-                        <li class="feature-yes">AI Platform Access</li>
-                        <li class="feature-yes">Customer Support: 24/7 + Onsite</li>
-                        <li class="feature-yes">Document Upload: Unlimited</li>
-                        <li class="feature-yes">Add-ons</li>
-                        <li class="feature-yes">Wearable Kit</li>
-                        <li class="feature-yes">AI Transcription</li>
-                        <li class="feature-yes">Workflow Integration</li>
-                        <li class="feature-yes">Account Manager</li>
-                        <li class="feature-yes">On-site Support</li>
-                        <li class="feature-yes">SME Interview</li>
-                        <li class="feature-yes">24/6 Support</li>
+                        <ul class="plans-list">
+                            <li class="plans-yes">AI Platform Access</li>
+                            <li class="plans-yes">Customer Support: 24/7 + Onsite</li>
+                            <li class="plans-yes">Document Upload: Unlimited</li>
+                            <li class="plans-yes">Add-ons</li>
+                            <li class="plans-yes">Wearable Kit</li>
+                            <li class="plans-yes">AI Transcription</li>
+                            <li class="plans-yes">Workflow Integration</li>
+                            <li class="plans-yes">Account Manager</li>
+                            <li class="plans-yes">On-site Support</li>
+                            <li class="plans-yes">SME Interview</li>
+                            <li class="plans-yes">24/6 Support</li>
                         </ul>
                         <a href="#" class="btn mt-auto">Buy Now</a>
                     </div>
