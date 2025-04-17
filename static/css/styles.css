@@ -120,20 +120,6 @@ ul.list-unstyled li h4 {
     height: 100vh;
     padding-top: 100px;
 }
-/* .section-1 {
-    background-color: var(--colorprimary);
-    color: var(--coloraccent2);
-    height: 100vh;
-    padding-top: 100px;
-}
-.section-2, .section-4 {
-    background-color: var(--textcolor);
-    color: var(--coloraccent2);
-}
-.section-3, .section-5 {
-    background-color: var(--colorprimary);
-    color: var(--coloraccent2);
-} */
 
 /* ========== Cards & Blocks ========== */
 .card {
