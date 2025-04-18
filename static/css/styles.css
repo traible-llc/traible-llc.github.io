@@ -6,7 +6,7 @@
     --coloraccent2: #ecf2f8;
     --textcolor: #aaa;
     --ff: 'Roboto', sans-serif;
-    --tf: '';
+    --tf: 'Myriad Pro', sans-serif;
     --magin-xxs: .25rem;
     --magin-xs: .5rem;
     --magin-s: .75rem;
@@ -38,21 +38,11 @@
 
 @font-face {
     font-family: 'Myriad Pro';
-    src: url('MYRIADPRO-REGULAR.otf') format('woff2'),
-         url('/fonts/MyriadPro-Regular.woff') format('woff');
+    src: url('Resources/fonts/myriad-pro/MYRIADPRO-REGULAR.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Myriad Pro';
-    src: url('/fonts/MyriadPro-Bold.woff2') format('woff2'),
-         url('/fonts/MyriadPro-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* Apply it */
 body {
     font-family: 'Myriad Pro', sans-serif;
 }
@@ -209,7 +199,6 @@ ul.list-unstyled li h4 {
     flex-grow: 1;
 }
 
-
 /* ========== Scroll Indicator & Animations ========== */
 .scroll-indicator {
     margin-top: 20px;
@@ -301,4 +290,36 @@ svg {
 }
 svg:hover {
     fill: var(--coloraccent1);
+}
+
+/* ========== Logo ========== */
+/* Apply font and remove all default link/hover styles */
+.logo-link {
+    text-decoration: none!important;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Prevent underline on hover/focus */
+.logo-link:hover,
+.logo-link:focus,
+.logo-link:visited {
+    text-decoration: none!important;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Style the logo text */
+.logo {
+    font-family: var(--tf); /* This uses 'Myriad Pro' */
+    font-size: 2.25rem; /* Adjust as needed */
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: var(--coloraccent2);
+}
+
+/* Style the colored "ai" part */
+.logo .accent {
+    color: var(--coloraccent1);
 }
