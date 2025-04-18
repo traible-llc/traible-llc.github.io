@@ -6,7 +6,7 @@
     --coloraccent2: #ecf2f8;
     --textcolor: #aaa;
     --ff: 'Roboto', sans-serif;
-    /* --tf: ''; Traible font here */
+    --tf: '';
     --magin-xxs: .25rem;
     --magin-xs: .5rem;
     --magin-s: .75rem;
@@ -35,6 +35,28 @@
     --coloraccent1: #83a9d2;
     --coloraccent2: white;
 }
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('MYRIADPRO-REGULAR.otf') format('woff2'),
+         url('/fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('/fonts/MyriadPro-Bold.woff2') format('woff2'),
+         url('/fonts/MyriadPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Apply it */
+body {
+    font-family: 'Myriad Pro', sans-serif;
+}
+
 
 /* ========== Base Elements ========== */
 html {
