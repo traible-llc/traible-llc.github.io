@@ -120,7 +120,7 @@ ul.list-unstyled li h4 {
     color: var(--coloraccent1);
 }
 .nav-link:hover  {
-    color: var(--coloraccent1); /* Change this to whatever color you want on hover */
+    color: var(--coloraccent1); 
 }
 .sub-navbar .nav-link.active {
     border-bottom: 2px solid var(--coloraccent1);
@@ -128,13 +128,6 @@ ul.list-unstyled li h4 {
 
 #current-section-title {
     font-size: 1rem;
-}
-/* Align and style both hamburger buttons consistently */
-.custom-toggler {
-    padding: 8px 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 6px;
-    background-color: transparent;
 }
 
 .dropdown-toggle {
@@ -147,13 +140,6 @@ ul.list-unstyled li h4 {
 .dropdown-menu {
     min-width: auto;
 }
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    width: 1.5em;
-    height: 1.5em;
-}
-
 
 /* ========== Cards & Blocks ========== */
 .card {

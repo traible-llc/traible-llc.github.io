@@ -244,13 +244,9 @@
                     <h2 class="logo">tr<span class="accent">ai</span>ble.</h2>
                 </a>                
             </div>
-            <!-- Toggler Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
             <!-- Navbar Links -->
-            <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+            <div id="navbarNav" class=" justify-content-end">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
@@ -259,7 +255,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Hero -->
     <section id="hero" class="container-fluid section col slide-in">
         <div class="container-fluid px-4">
@@ -299,14 +295,14 @@
     </section>
 
     <!-- Sticky Sub-Navbar -->
-    <nav id="sub-navbar" class="navbar navbar-expand-lg sub-navbar sticky-top">
-        <div class="container">
+    <nav id="sub-navbar" class="navbar navbar-expand-lg navbar-dark sub-navbar sticky-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- Current Section Display -->
           <div id="current-section-title" class="fw-medium d-lg-none" style="color: var(--coloraccent1);"> <ul><li><strong>Overview</strong></li></ul>
           </div>
     
             <!-- Hamburger button -->
-            <button class="navbar-toggler custom-toggler align-subnav-hamburger" type="button"
+            <button class="navbar-toggler" type="button"
             data-toggle="collapse" data-target="#subNavbarNav"
             aria-controls="subNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -319,7 +315,7 @@
                     <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
                     <li class="nav-item"><a class="nav-link" href="#feat-section">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#plans-section">Plans</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="#con-section">Company</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 </ul>
             </div>
         </div>
@@ -536,7 +532,6 @@
         </div>
     </section>
 
-
     <!-- FAQ -->
     <section id="faq-section" class="container-fluid section slide-in">
         <div class="container">
@@ -620,22 +615,20 @@
         </div>
     </footer>
   
-
     <!-- Bootstrap JS and dependencies -->
     <!-- jQuery (required) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    
     <!-- Bootstrap 4.5.2 JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Popper.js (required for dropdowns/tooltips/navbar toggler) -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
-
+    <!-- JS -->
     <script>
         // Scroll jump on click with sub nav bar
         const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
-        const OFFSET = 80; // Adjust based on your navbar height
         const currentSectionTitle = document.getElementById("current-section-title");
         const dropdownLinks = document.querySelectorAll(".dropdown-item.nav-link");
     
@@ -649,23 +642,43 @@
             "con-section": "Company"
         };
 
+        // Function to get the combined height of the main navbar and sub navbar
+        function getNavHeight() {
+            const navbar = document.querySelector(".navbar");
+            const subNavbar = document.querySelector(".sub-navbar");
+            return navbar.offsetHeight + subNavbar.offsetHeight; // Combined height
+        }
+
+        // Smooth scroll with offset for navbar height
         navLinks.forEach(link => {
             link.addEventListener("click", function (e) {
-                const targetId = this.getAttribute("href").slice(1); // e.g. "#hero" → "hero"
+                const targetId = this.getAttribute("href").slice(1); // Get target section ID from href (e.g., "#hero" → "hero")
                 const targetEl = document.getElementById(targetId);
+
                 if (targetEl) {
-                    e.preventDefault(); // Prevent default jump behavior
-        
-                    const elementPosition = targetEl.getBoundingClientRect().top; // Distance from top of viewport
-                    const offsetPosition = elementPosition + window.scrollY - OFFSET; // Adjust for navbar height
-        
+                    e.preventDefault(); // Prevent the default anchor behavior
+
+                    // Get the current navbar height dynamically
+                    const offset = getNavHeight();
+
+                    // Get the position of the target element relative to the viewport
+                    const elementPosition = targetEl.getBoundingClientRect().top;
+
+                    // Calculate the scroll position to move the page, adjusting for the navbar height
+                    const offsetPosition = elementPosition + window.scrollY - offset;
+
+                    // Adjust the scroll position by a small correction to ensure full visibility
+                    const correctedPosition = offsetPosition + 100; // 10px correction to fix the slight undershoot
+
+                    // Scroll to the target position with smooth animation
                     window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth" // Smooth scrolling animation
+                        top: correctedPosition,
+                        behavior: "smooth"
                     });
                 }
             });
-        });        
+        });
+               
         function getTargetSections() {
             return Array.from(navLinks)
                 .map(link => {
@@ -711,7 +724,20 @@
                 });
             }
         });
-        
+        // Close the sub-navbar with a smooth transition when a link is clicked
+        const subNavLinks = document.querySelectorAll("#sub-navbar .nav-link");
+        const subNavbarCollapse = document.getElementById("subNavbarNav");
+
+        subNavLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                // Check if the sub-navbar is expanded
+                if (subNavbarCollapse.classList.contains("show")) {
+                    // Start the collapsing transition
+                    $(subNavbarCollapse).collapse('hide');
+                }
+            });
+        });
+          
         // Arrow Animation
         document.querySelectorAll('.faq-item').forEach(item => {
             const answer = item.querySelector('.faq-answer');
