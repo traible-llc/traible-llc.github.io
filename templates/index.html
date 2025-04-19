@@ -634,7 +634,10 @@
     <!-- PayPal SDK script -->
     <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&components=buttons"></script>
 
-    <!-- JS -->
+    <!-- External JS: Slide-In annimation -->
+    <script src="../static/js/app.js"></script>
+
+    <!-- Sub Nav Script -->
     <script>
         // Scroll jump on click with sub nav bar
         const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
@@ -744,7 +747,11 @@
                 }
             });
         });
-          
+
+    </script>
+
+    <!-- FAQ Arrow Script -->
+    <script>
         // Arrow Animation
         document.querySelectorAll('.faq-item').forEach(item => {
             const answer = item.querySelector('.faq-answer');
@@ -766,8 +773,7 @@
                 arrow.style.transform = 'rotate(180deg)';
                 }
             });
-        });
-          
+        }); 
     </script>
 
     <!-- Standard Plan -->
@@ -847,7 +853,5 @@
         }
     }).render('#paypal-button-container-business');
     </script>
-    
-    <script src="../static/js/app.js"></script>
 </body>
 </html>

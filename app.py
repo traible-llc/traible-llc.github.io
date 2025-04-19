@@ -31,11 +31,11 @@ def create_order():
     data = request.get_json()
     plan = data.get("plan")
 
-    # Plan prices hardcoded server-side (secure)
+    # Price Plans
     plan_pricing = {
-        "standard": {"description": "Standard Plan Subscription", "value": "0.99"},
-        "premium": {"description": "Premium Plan Subscription", "value": "4.99"},
-        "business": {"description": "Business Plan Subscription", "value": "9.99"},
+        "standard": {"description": "Standard Plan Subscription", "value": "499.99"},
+        "premium": {"description": "Premium Plan Subscription", "value": "999.99"},
+        "business": {"description": "Business Plan Subscription", "value": "1999.99"},
     }
 
     if plan not in plan_pricing:
