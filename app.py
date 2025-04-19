@@ -26,28 +26,41 @@ def index():
 def about():
     return render_template("about.html")
 
-
-# Example route to create an order (payment request)
 @app.route("/create_order", methods=["POST"])
 def create_order():
+    data = request.get_json()
+    plan = data.get("plan")
+
+    # Plan prices hardcoded server-side (secure)
+    plan_pricing = {
+        "standard": {"description": "Standard Plan Subscription", "value": "0.99"},
+        "premium": {"description": "Premium Plan Subscription", "value": "4.99"},
+        "business": {"description": "Business Plan Subscription", "value": "9.99"},
+    }
+
+    if plan not in plan_pricing:
+        return jsonify({"error": "Invalid plan selected."}), 400
+
     access_token = get_paypal_access_token()
-    url = "https://api.sandbox.paypal.com/v2/checkout/orders"
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {access_token}"
     }
-    data = {
+
+    payload = {
         "intent": "CAPTURE",
         "purchase_units": [{
+            "description": plan_pricing[plan]["description"],
             "amount": {
                 "currency_code": "USD",
-                "value": "10.00"  # The price of the product
+                "value": plan_pricing[plan]["value"]
             }
         }]
     }
-    response = requests.post(url, json=data, headers=headers)
-    order = response.json()
-    return jsonify(order)
+
+    url = "https://api.sandbox.paypal.com/v2/checkout/orders"
+    response = requests.post(url, json=payload, headers=headers)
+    return jsonify(response.json())
 
 if __name__ == "__main__":
     app.run(debug=True)
