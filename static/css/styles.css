@@ -38,7 +38,7 @@
 
 @font-face {
     font-family: 'Myriad Pro';
-    src: url('Resources/fonts/myriad-pro/MYRIADPRO-REGULAR.otf') format('opentype');
+    src: url("{{ url_for('static', filename='fonts/MYRIADPRO-REGULAR.otf') }}");
     font-weight: normal;
     font-style: normal;
 }

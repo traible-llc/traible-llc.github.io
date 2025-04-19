@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us - Traible</title>
-    <link rel="icon" type="image/x-icon" href="resources/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Bootstrap 4.5.2 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <style>
         .about-container {
             background: var(--colorsecondary);
@@ -160,10 +160,10 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- Brand Area: logo + traible.png -->
             <div class="d-flex align-items-center">
-                <a class="navbar-brand" href="index.html">
-                    <img src="resources/img/logo-nb.png" alt="Logo" style="height: 40px;">
+                <a class="navbar-brand" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='img/logo-nb.png')}}" alt="Logo" style="height: 40px;">
                 </a>
-                <a href="index.html" class="logo-link">
+                <a href="{{ url_for('index') }}" class="logo-link">
                     <h2 class="logo">tr<span class="accent">ai</span>ble.</h2>
                 </a>                
             </div>
@@ -172,7 +172,7 @@
             <div id="navbarNav" class=" justify-content-end">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Overview</a>
+                        <a class="nav-link" href="{{ url_for('index') }}">Overview</a>
                     </li>
                 </ul>
             </div>
@@ -216,7 +216,7 @@
                         
                     </div>
                     <div class="team-card-img">
-                        <img src="resources/img/sam.jpeg" alt="Samuel Anyakwu" class="team-image">
+                        <img src="{{ url_for('static', filename='img/sam.jpeg')}}" alt="Samuel Anyakwu" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">CEO</h6>
@@ -230,7 +230,7 @@
                 <!-- Card 2 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="resources/img/michael.jpeg" alt="Michael Gruver" class="team-image">
+                        <img src="{{ url_for('static', filename='img/michael.jpeg')}}" alt="Michael Gruver" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">COO & ML Engineer</h6>
@@ -242,7 +242,7 @@
                 <!-- Card 3 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="resources/img/brian.jpeg" alt="Brian Paniagua" class="team-image">
+                        <img src="{{ url_for('static', filename='img/brian.jpeg')}}" alt="Brian Paniagua" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Lead Software Engineer</h6>
@@ -254,7 +254,7 @@
                 <!-- Card 4 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="resources/img/sammy.jpeg" alt="Samuel Vasquez" class="team-image">
+                        <img src="{{ url_for('static', filename='img/sammy.jpeg')}}" alt="Samuel Vasquez" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Full-Stack Developer</h6>
@@ -266,7 +266,7 @@
                 <!-- Card 5 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="resources/img/logan.jpeg" alt="Logan O'Neil" class="team-image">
+                        <img src="{{ url_for('static', filename='img/logan.jpeg')}}" alt="Logan O'Neil" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">CSO</h6>
@@ -278,7 +278,7 @@
                 <!-- Card 6 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="resources/img/nathaniel.jpeg" alt="Nathaniel Candelaria" class="team-image">
+                        <img src="{{ url_for('static', filename='img/nathaniel.jpeg')}}" alt="Nathaniel Candelaria" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Administrator</h6>
@@ -290,7 +290,7 @@
                 <!-- Card 7 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="resources/img/miguel.jpeg" alt="Miguel Avilés" class="team-image">
+                        <img src="{{ url_for('static', filename='img/miguel.jpeg')}}" alt="Miguel Avilés" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Marketing Lead</h6>
@@ -310,7 +310,7 @@
                 <div id="con-section" class="col-md-6 mb-4">
                     <p class="links" style=" color: var(--coloraccent1)">Company</p>
                     <ul class="list-unstyled">
-                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="{{ url_for('about') }}" class="text-white text-decoration-none">About Us</a></li>
                     </ul>
                 </div>
         
@@ -329,7 +329,7 @@
     </footer>
 
     <!-- Link to External JavaScript File -->
-    <script src="static/js/app.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     <!-- Bootstrap JS and dependencies -->
     <!-- jQuery (required) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
