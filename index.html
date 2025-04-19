@@ -136,10 +136,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .row-standard {
-            flex-direction: column;
-            gap: 1.5rem;
-            }
             .feature-header {
             flex-direction: row;
             }
@@ -330,108 +326,86 @@
     </nav>     
 
     <!-- Benefits Beyond Onboarding -->
-    <section id="benefits" class="container-fluid section col slide-in">
+    <section id="benefits" class="container-fluid section slide-in  text-light">
         <div class="container py-5">
             <div class="row align-items-center">
-                <!-- Left Column: Graphic -->
-                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                <!-- Graphic -->
+                <div class="col-md-6 text-center mb-4 mb-md-0">
                     <img src="resources/img/benefitsRe.png" alt="Benefits Graphic" class="img-fluid rounded" style="max-width: 90%;">
                 </div>
-
-                <!-- Right Column: Text Content -->
-                <div class="col-lg-6 text-light">
+                <!-- Text -->
+                <div class="col-md-6">
                     <h2 style="color: var(--coloraccent2);">Real Solutions for</h2>
                     <h2 class="mb-4" style="color: var(--coloraccent2);">Real Challenges.</h2>
                     <ul class="list-unstyled">
                         <li class="mb-4">
                             <h3 class="mb-1" style="color: var(--coloraccent1);">
-                                <i class="fa-solid fa-brain mr-2"></i> Knowledge Retention
+                                <i class="fa-solid fa-brain me-2"></i> Knowledge Retention
                             </h3>
-                            <p class="mb-0 benefit-description">
-                                Preserve expert knowledge even as employees retire or transition, keeping critical insights accessible to the entire team.
-                            </p>
-                        </li>                        
-                        <li class="mb-4">
-                            <h3 class="mb-1" style="color: var(--coloraccent1);">
-                                <i class="fa-solid fa-bolt mr-2"></i> Enhanced Productivity
-                            </h3>
-                            <p class="mb-0 benefit-description">
-                                Empower employees with instant access to solutions, reducing downtime and accelerating decision-making.
-                            </p>
+                            <p>Preserve expert knowledge even as employees retire or transition, keeping critical insights accessible to the entire team.</p>
                         </li>
                         <li class="mb-4">
                             <h3 class="mb-1" style="color: var(--coloraccent1);">
-                                <i class="fa-solid fa-gauge-high mr-2"></i> Accelerated Onboarding
+                                <i class="fa-solid fa-bolt me-2"></i> Enhanced Productivity
                             </h3>
-                            <p class="mb-0 benefit-description">
-                                Train new hires more efficiently by combining digital resources with real-world scenarios and tribal knowledge.
-                            </p>
+                            <p>Empower employees with instant access to solutions, reducing downtime and accelerating decision-making.</p>
+                        </li>
+                        <li class="mb-4">
+                            <h3 class="mb-1" style="color: var(--coloraccent1);">
+                                <i class="fa-solid fa-gauge-high me-2"></i> Accelerated Onboarding
+                            </h3>
+                            <p>Train new hires more efficiently by combining digital resources with real-world scenarios and tribal knowledge.</p>
                         </li>
                     </ul>
-                    
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Features-->
-    <section id="feat-section" class="container-fluid section slide-in">
-        <div class="container text-center">
-            <h2 class="text-center display-4 mb-5">Key Features</h2>
-            <div class="row-standard"> <!-- Add gutter spacing between columns -->
 
-                <!-- blank slate model -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <img src="resources/img/idea.png" alt="Function Graphic" class="fou-img">
-                            <h3 class="card-title top">Blank Slate Model</h3>
+    <!-- Features -->
+    <section id="feat-section" class="container-fluid section slide-in py-5">
+        <div class="container text-center">
+            <h2 class="display-4 mb-5">Key Features</h2>
+            <div class="row g-4">
+
+                <!-- Blank Slate -->
+                <div class="col-12 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-start">
+                            <img src="resources/img/idea.png" alt="Function Graphic" class="img-fluid mb-3 fou-img">
+                            <h3 class="card-title">Blank Slate Model</h3>
                             <ul class="feature-list lightbulb-list">
-                                <li>
-                                    Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.
-                                </li>
-                                <li>
-                                    The model adapts only to your unique workflows, language, and problems.
-                                </li>
+                                <li>Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.</li>
+                                <li>The model adapts only to your unique workflows, language, and problems.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Privacy and Security -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <img src="resources/img/security.png" alt="Function Graphic" class="fou-img">
-                            <h3 class="card-title top">Privacy and Security</h3>
+                <!-- Privacy -->
+                <div class="col-12 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-start">
+                            <img src="resources/img/security.png" alt="Function Graphic" class="img-fluid mb-3 fou-img">
+                            <h3 class="card-title">Privacy and Security</h3>
                             <ul class="feature-list lock-list">
-                                <li>
-                                    Traible keeps your tribal knowledge safe and secure. We can even install a private model on your local network.
-                                </li>
-                                <li>
-                                    Our cybersecurity practices align with industry standards to protect sensitive data.
-                                </li>
-                                <li>
-                                    A local model ensures full compliance with proprietary requirements and internal policies.
-                                </li>
+                                <li>Traible keeps your tribal knowledge safe and secure.</li>
+                                <li>We can install a private model on your local network.</li>
+                                <li>Our practices align with industry standards to protect data.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Fine tuning -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <img src="resources/img/select.png" alt="Function Graphic" class="fou-img">
-                            <h3 class="card-title top">Fine-Tuning</h3>
+
+                <!-- Fine Tuning -->
+                <div class="col-12 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-start">
+                            <img src="resources/img/select.png" alt="Function Graphic" class="img-fluid mb-3 fou-img">
+                            <h3 class="card-title">Fine-Tuning</h3>
                             <ul class="feature-list check-list">
-                                <li>
-                                    Need deeper customization? Traible fine-tunes the model for your business, ensuring expert-level responses to your most complex issues.
-                                </li>
-                                <li>
-                                    We tailor technical processes to improve accuracy, reliability, and contextual understanding.
-                                </li>
+                                <li>Traible fine-tunes the model for your business, ensuring expert-level responses.</li>
+                                <li>We tailor technical processes to improve accuracy and contextual understanding.</li>
                             </ul>
                         </div>
                     </div>
@@ -440,64 +414,50 @@
         </div>
     </section>
 
-    <!-- <hr class="footer-divider slide-in "> -->
-
-    <!-- Function, Operation, and Use -->
-    <section id="fou-section" class="container-fluid section slide-in">
+    <!-- Function, Operation, Use -->
+    <section id="fou-section" class="container-fluid section slide-in py-5">
         <div class="container text-center">
-            <div class="row-standard"> <!-- Add gutter spacing between columns -->
+            <div class="row g-4">
 
                 <!-- Function -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <h3 class="card-title top">Knowledge that is captured</h3>
+                <div class="col-12 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-start">
+                            <h3 class="card-title">Knowledge that is captured</h3>
                             <ul class="feature-list shield-list">
-                                <li>
-                                    Captures and delivers critical on-the-job knowledge, so expertise is never lost—only shared.
-                                </li>
-                                <li>
-                                    Makes essential know-how accessible to both new hires and seasoned professionals.
-                                </li>
+                                <li>Captures and delivers critical on-the-job knowledge.</li>
+                                <li>Makes essential know-how accessible to new hires and pros.</li>
                             </ul>
                         </div>
-                        <img src="resources/img/function.png" alt="Function Graphic" class="fou-img">
+                        <img src="resources/img/function.png" alt="Function Graphic" class="img-fluid fou-img p-3">
                     </div>
                 </div>
-        
+
                 <!-- Operation -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <h3 class="card-title top">Knowledge just for you</h3>
+                <div class="col-12 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-start">
+                            <h3 class="card-title">Knowledge just for you</h3>
                             <ul class="feature-list you-list">
-                                <li>
-                                    Instantly delivers tailored, company-specific guidance.
-                                </li>
-                                <li>
-                                    Transforms complex problems into actionable solutions in seconds.
-                                </li>
+                                <li>Instantly delivers tailored, company-specific guidance.</li>
+                                <li>Transforms complex problems into actionable solutions.</li>
                             </ul>
                         </div>
-                        <img src="resources/img/operation.png" alt="Operation Graphic" class="fou-img">
+                        <img src="resources/img/operation.png" alt="Operation Graphic" class="img-fluid fou-img p-3">
                     </div>
                 </div>
-        
+
                 <!-- Use -->
-                <div class="col-1-3">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <h3 class="card-title top">Knowledge for your company</h3>
+                <div class="col-12 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-start">
+                            <h3 class="card-title">Knowledge for your company</h3>
                             <ul class="feature-list tool-list">
-                                <li>
-                                    Supports knowledge transfer at every level—from the shop floor to the strategy room.
-                                </li>
-                                <li>
-                                    Empowers technicians, engineers, and consultants with relevant historical insights.
-                                </li>
+                                <li>Supports knowledge transfer across the organization.</li>
+                                <li>Empowers all roles with relevant historical insights.</li>
                             </ul>
                         </div>
-                        <img src="resources/img/use.png" alt="Use Graphic" class="fou-img">
+                        <img src="resources/img/use.png" alt="Use Graphic" class="img-fluid fou-img p-3">
                     </div>
                 </div>
             </div>
@@ -508,10 +468,11 @@
     <section id="plans-section" class="container-fluid section">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
-            <div class="row-standard">
-            <!-- Standard Plan -->
-                <div class="col-1-3">
-                    <div class="card">
+            <div class="row">
+
+                <!-- Standard Plan -->
+                <div class="col-12 col-lg-4 mb-4 d-flex">
+                    <div class="card flex-fill">
                         <h3>Standard</h3>
                         <ul class="plans-list">
                             <li class="plans-yes">AI Platform Access</li>
@@ -531,8 +492,8 @@
                 </div>
 
                 <!-- Premium Plan -->
-                <div class="col-1-3">
-                    <div class="card">
+                <div class="col-12 col-lg-4 mb-4 d-flex">
+                    <div class="card flex-fill">
                         <h3>Premium</h3>
                         <ul class="plans-list">
                             <li class="plans-yes">AI Platform Access</li>
@@ -552,8 +513,8 @@
                 </div>
 
                 <!-- Business Plan -->
-                <div class="col-1-3">
-                    <div class="card">
+                <div class="col-12 col-lg-4 mb-4 d-flex mx-md-auto">
+                    <div class="card flex-fill">
                         <h3>Business</h3>
                         <ul class="plans-list">
                             <li class="plans-yes">AI Platform Access</li>
@@ -574,6 +535,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- FAQ -->
     <section id="faq-section" class="container-fluid section slide-in">
