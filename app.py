@@ -20,7 +20,7 @@ def get_paypal_access_token():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", paypal_client_id=PAYPAL_CLIENT_ID)
 
 @app.route("/about")
 def about():
