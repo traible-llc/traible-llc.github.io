@@ -39,7 +39,7 @@
 
 @font-face {
     font-family: 'Myriad Pro';
-    src: url("{{ url_for('static', filename='fonts/MYRIADPRO-REGULAR.otf') }}");
+    src: url("{{ url_for('static', filename='fonts/myriadproregular.OTF') }}");
     font-weight: normal;
     font-style: normal;
 }
@@ -56,6 +56,7 @@ a:focus, button:focus {
 /* ========== Base Elements ========== */
 html {
     scroll-behavior: smooth;
+    /* scroll-snap-type: y mandatory; */
 }
 body {
     background-color: var(--colorprimary);
@@ -91,6 +92,7 @@ ul.list-unstyled li h4 {
     justify-content: left;
     align-items: left;
     padding: 4rem 2rem;
+    /* scroll-snap-align: start; */
 }
 .col {
     display: flex;
