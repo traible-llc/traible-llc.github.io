@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>About Us - Traible</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico')}}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Bootstrap 4.5.2 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
@@ -180,7 +179,7 @@
     </nav>
 
     <!-- Section: About Us -->
-    <section id="about-us" class="about-container slide-in">
+    <main id="about-us" class="about-container slide-in" aria-label="About Us">
         <div class="about-text">
             <h1 class="display-4 mb-4"><strong>Who We Are</strong></h1>
             <p class="lead mb-4">
@@ -202,7 +201,7 @@
                 Backed by AI. Inspired by people. Built for results.
             </p>
         </div>
-    </section>
+    </main>
 
     <!-- Section: Meet the Team -->
     <div class="team-container slide-in">
@@ -212,9 +211,6 @@
             
                 <!-- Card 1 -->
                 <div class="team-card-horizontal">
-                    <div class="team-image-wrapper">
-                        
-                    </div>
                     <div class="team-card-img">
                         <img src="{{ url_for('static', filename='img/sam.jpeg')}}" alt="Samuel Anyakwu" class="team-image">
                     </div>
@@ -247,7 +243,7 @@
                     <div class="team-card-info">
                         <h6 class="team-role">Lead Software Engineer</h6>
                         <h4 class="team-name">Brian Paniagua</h4>
-                        <p class="team-bio">Brian is a co-founder of Traible and a recent graduate from UTSA with a Bachelor's in Physics, a minor in Computer Science, and a certificate in Data Analytics. He leads our software development efforts and enjoys reading, video games, and music in his free time.</p>
+                        <p class="team-bio">Brian is a co-founder of Traible and a recent graduate from UTSA with a Bachelor's in Physics, a minor in Computer Science, and a certificate in Data Analytics. He leads our software development efforts and enjoys reading, video games, and music in his free time</p>
                     </div>
                 </div>
                 

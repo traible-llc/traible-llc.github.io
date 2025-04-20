@@ -169,13 +169,6 @@
             box-shadow: none;
             text-decoration: none;
         }
-
-        /* General .btn hover effect */
-        .btn:hover {
-            color: var(--coloraccent1);
-            transform: scale(1.05);
-            text-decoration: none;
-        }
         .benefit-description, .feat-description {
             padding-left: 50px; /* Adjust this for your desired indentation */
             text-align: left;
@@ -339,21 +332,21 @@
                     <ul class="list-unstyled">
                         <li class="mb-4">
                             <h3 class="mb-1" style="color: var(--coloraccent1);">
-                                <i class="fa-solid fa-brain me-2"></i> Knowledge Retention
+                                <i class="fa-solid fa-brain me-2 aria-hidden="true""></i> Knowledge Retention
                             </h3>
                             <p>Preserve expert knowledge even as employees retire or transition, keeping critical insights accessible to the entire team.</p>
                         </li>
                         <li class="mb-4">
                             <h3 class="mb-1" style="color: var(--coloraccent1);">
-                                <i class="fa-solid fa-bolt me-2"></i> Enhanced Productivity
+                                <i class="fa-solid fa-bolt me-2 aria-hidden="true""></i> Enhanced Productivity
                             </h3>
                             <p>Empower employees with instant access to solutions, reducing downtime and accelerating decision-making.</p>
                         </li>
                         <li class="mb-4">
                             <h3 class="mb-1" style="color: var(--coloraccent1);">
-                                <i class="fa-solid fa-gauge-high me-2"></i> Accelerated Onboarding
+                                <i class="fa-solid fa-gauge-high me-2 aria-hidden="true" "></i> Accelerated Onboarding
                             </h3>
-                            <p>Train new hires more efficiently by combining digital ../resources with real-world scenarios and tribal knowledge.</p>
+                            <p>Train new hires more efficiently by combining digital resources with real-world scenarios and tribal knowledge.</p>
                         </li>
                     </ul>
                 </div>
@@ -473,6 +466,7 @@
                 <div class="col-12 col-lg-4 mb-4 d-flex">
                     <div class="card flex-fill">
                         <h3>Standard</h3>
+                        <p class="price">$499.99/month</p>
                         <ul class="plans-list">
                             <li class="plans-yes">AI Platform Access</li>
                             <li class="plans-yes">Customer Support: Zoom + Email</li>
@@ -495,6 +489,7 @@
                 <div class="col-12 col-lg-4 mb-4 d-flex">
                     <div class="card flex-fill">
                         <h3>Premium</h3>
+                        <p class="price">$999.99/month</p>
                         <ul class="plans-list">
                             <li class="plans-yes">AI Platform Access</li>
                             <li class="plans-yes">Customer Support: Calls + Zoom</li>
@@ -517,6 +512,7 @@
                 <div class="col-12 col-lg-4 mb-4 d-flex mx-md-auto">
                     <div class="card flex-fill">
                         <h3>Business</h3>
+                        <p class="price">$1999.99/month</p>
                         <ul class="plans-list">
                             <li class="plans-yes">AI Platform Access</li>
                             <li class="plans-yes">Customer Support: 24/7 + Onsite</li>
@@ -536,6 +532,7 @@
                 </div>
             </div>
         </div>
+        <p class="text-center mt-4">Need help deciding? <a href="#faq-section" class="links">Check our FAQ</a> or <a href="mailto:info@traible.com" class="links">talk to us</a>.</p>
     </section>
 
     <!-- FAQ -->
@@ -543,7 +540,7 @@
         <div class="container">
             <h2 class="text-center display-4 mb-5">Frequently Asked Questions</h2>
         
-            <div class="faq-item">
+            <div class="faq-item ">
                 <div class="faq-question">
                     <h4>What is Traible and how does it work?</h4>
                     <span class="arrow">&#9660;</span>
@@ -635,7 +632,7 @@
     <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&components=buttons"></script>
 
     <!-- External JS: Slide-In annimation -->
-    <script src="../static/js/app.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
     <!-- Sub Nav Script -->
     <script>
@@ -776,82 +773,29 @@
         }); 
     </script>
 
-    <!-- Standard Plan -->
+    <!-- Plan Pricing -->
     <script>
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return fetch('/create_order', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ plan: "standard" })
-            })
-            .then(res => res.json())
-            .then(order => order.id);
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Thank you, ' + details.payer.name.given_name + '! Your Standard Plan payment was successful.');
-            });
-        },
-        onError: function(err) {
-            console.error(err);
-            alert("An error occurred during the payment process (Standard).");
+        function renderPayPalButton(plan, containerId) {
+            paypal.Buttons({
+                createOrder: () => fetch('/create_order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ plan })
+                }).then(res => res.json()).then(order => order.id),
+                onApprove: (data, actions) => actions.order.capture().then(details => {
+                    alert(`Thank you, ${details.payer.name.given_name}! Your ${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan payment was successful.`);
+                }),
+                onError: err => {
+                    console.error(err);
+                    alert(`An error occurred during the payment process (${plan.charAt(0).toUpperCase() + plan.slice(1)}).`);
+                }
+            }).render(containerId);
         }
-    }).render('#paypal-button-container-standard');
-    </script>
-    
-    <!-- Premium Plan -->
-    <script>
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return fetch('/create_order', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ plan: "premium" })
-            })
-            .then(res => res.json())
-            .then(order => order.id);
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Thank you, ' + details.payer.name.given_name + '! Your Premium Plan payment was successful.');
-            });
-        },
-        onError: function(err) {
-            console.error(err);
-            alert("An error occurred during the payment process (Premium).");
-        }
-    }).render('#paypal-button-container-premium');
-    </script>
-    
-    <!-- Business Plan -->
-    <script>
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return fetch('/create_order', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ plan: "business" })
-            })
-            .then(res => res.json())
-            .then(order => order.id);
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Thank you, ' + details.payer.name.given_name + '! Your Business Plan payment was successful.');
-            });
-        },
-        onError: function(err) {
-            console.error(err);
-            alert("An error occurred during the payment process (Business).");
-        }
-    }).render('#paypal-button-container-business');
+        
+        renderPayPalButton("standard", "#paypal-button-container-standard");
+        renderPayPalButton("premium", "#paypal-button-container-premium");
+        renderPayPalButton("business", "#paypal-button-container-business");
+        
     </script>
 </body>
 </html>
