@@ -30,10 +30,11 @@
 }
 
 .light-mode {
-    --colorprimary: #ecf2f8;
-    --textcolor: #333;
-    --coloraccent1: #83a9d2;
-    --coloraccent2: white;
+    --colorprimary: #ffffff;     /* Light background */
+    --colorsecondary: #ECF2F8;   /* Slightly off-white for cards/sections */
+    --coloraccent1: #78A2CE;     /* Kept constant for brand identity */
+    --coloraccent2: #1a1a1a;     /* Strong dark text or emphasis */
+    --textcolor: #333333;  
 }
 
 @font-face {
@@ -61,6 +62,7 @@ body {
     font-family: var(--ff);
     line-height: 1.6;
     color: var(--coloraccent2);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 h1, h2, h3, h4, h5 {
     color: var(--coloraccent1);
@@ -136,6 +138,7 @@ ul.list-unstyled li h4 {
     color: var(--coloraccent1); 
 }
 .sub-navbar .nav-link.active {
+    color: var(--coloraccent2) !important;
     border-bottom: 2px solid var(--coloraccent1);
 }
 

@@ -14,7 +14,7 @@
             padding: 3rem 2rem;
             max-width: 900px;
             margin: 3rem auto;
-            box-shadow: var(--darkshadow);
+            box-shadow: var(--shadow);
             animation: fadeInSlide 1s ease-out both;
             font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
         }
@@ -67,7 +67,7 @@
             background-color: var(--colorsecondary);
             border-radius: 16px;
             padding: 20px;
-            box-shadow: var(--darkshadow);
+            box-shadow: var(--shadow);
             border: 2px solid var(--coloraccent1);
             gap: 20px;
             transition: var(--transition);
@@ -168,10 +168,15 @@
             </div>
 
             <!-- Navbar Links -->
-            <div id="navbarNav" class=" justify-content-end">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
+            <div id="navbarNav" class="justify-content-end d-flex align-items-center">
+                <ul class="navbar-nav d-flex flex-row align-items-center">
+                    <li class="nav-item me-2">
                         <a class="nav-link" href="{{ url_for('index') }}">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-primary ms-3" aria-label="Toggle theme">
+                            <i class="fa-solid fa-moon" id="theme-icon"></i>
+                          </button>
                     </li>
                 </ul>
             </div>
