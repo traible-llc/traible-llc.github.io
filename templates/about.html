@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         .about-container {
-            background: var(--colorsecondary);
+            background: var(--colorsurface);
             border-radius: 2rem;
             padding: 3rem 2rem;
             max-width: 900px;
@@ -20,11 +20,11 @@
             animation: fadeInSlide 1s ease-out both;
             font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
             border-radius: 16px;
-            border: 2px solid var(--coloraccent1);
+            border: 2px solid var(--colorprimary);
         }
         .about-text h2 {
             font-size: 2.8rem;
-            color: var(--coloraccent1);
+            color: var(--colorprimary);
             margin-bottom: 1.5rem;
             position: relative;
         }
@@ -32,7 +32,7 @@
             content: '';
             width: 60px;
             height: 4px;
-            background-color: var(--coloraccent1);
+            background-color: var(--colorprimary);
             display: block;
             border-radius: 2px;
             margin-top: 0.5rem;
@@ -46,11 +46,11 @@
         .about-text p.lead {
             font-weight: 600;
             font-size: 1.3rem;
-            color: var(--coloraccent2);
+            color: var(--colorsecondary);
         }
         .about-text p:last-child {
             font-style: italic;
-            color: var(--coloraccent1);
+            color: var(--colorprimary);
             font-weight: 500;
         }
         @keyframes fadeInSlide {
@@ -68,9 +68,9 @@
         .team-card-horizontal {
             display: flex;
             align-items: center;
-            background-color: var(--colorsecondary);
+            background-color: var(--colorsurface);
             border-radius: 16px;
-            border: 2px solid var(--coloraccent1);
+            border: 2px solid var(--colorprimary);
             padding: 20px;
             box-shadow: var(--shadow);
             gap: 20px;
@@ -87,7 +87,7 @@
             height: 120px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid var(--coloraccent1);
+            border: 3px solid var(--colorprimary);
         }
         .team-image {
             width: 100%;
@@ -115,7 +115,7 @@
         }
         .team-name {
             font-size: 1.4rem;
-            color: var(--coloraccent1);
+            color: var(--colorprimary);
             font-family: var(--ff);
             margin: 0;
         }
@@ -192,21 +192,21 @@
         <div class="about-text">
             <h1 class="display-4 mb-4"><strong>Who We Are</strong></h1>
             <p class="lead mb-4">
-                We’re <span style="color: var(--coloraccent1);">Traible</span> — a passionate team on a mission to keep your company’s brainpower where it belongs: at your fingertips.
+                We’re <span style="color: var(--colorprimary);">Traible</span> — a passionate team on a mission to keep your company’s brainpower where it belongs: at your fingertips.
             </p>
             <p class="h5 font-weight-normal mb-3">
                 Every team has that go-to person who just <em>knows</em> how to fix it, find it, or figure it out. 
-                Traible makes sure that <span style="color: var(--coloraccent1);">knowledge doesn’t get lost</span> in the shuffle — or the exit interview.
+                Traible makes sure that <span style="color: var(--colorprimary);">knowledge doesn’t get lost</span> in the shuffle — or the exit interview.
             </p>
             <p class="h5 font-weight-normal mb-3">
-                Our platform <span style="color: var(--coloraccent1);">captures experience</span>, insights, and solutions from your experts, 
+                Our platform <span style="color: var(--colorprimary);">captures experience</span>, insights, and solutions from your experts, 
                 and turns them into a smart, searchable knowledge base for your whole team to use — 
                 anytime, anywhere.
             </p>
             <p class="h5 font-weight-normal mb-3">
-                Whether you're training new hires or solving critical problems on the fly, Traible helps your team move faster , work smarter, and <span style="color: var(--coloraccent1);">never reinvent the wheel</span>.
+                Whether you're training new hires or solving critical problems on the fly, Traible helps your team move faster , work smarter, and <span style="color: var(--colorprimary);">never reinvent the wheel</span>.
             </p>
-            <p class="h5 font-weight-normal mb-0" style="color: var(--coloraccent1);">
+            <p class="h5 font-weight-normal mb-0" style="color: var(--colorprimary);">
                 Backed by AI. Inspired by people. Built for results.
             </p>
         </div>
@@ -313,7 +313,7 @@
             <div class="row align-items-start justify-content-between">
                 <!-- Company Section -->
                 <div id="con-section" class="col-md-6 mb-4">
-                    <p class="links" style=" color: var(--coloraccent1)">Company</p>
+                    <p class="links" style=" color: var(--colorprimary)">Company</p>
                     <ul class="list-unstyled">
                         <li><a href="{{ url_for('about') }}" class=" text-decoration-none">About Us</a></li>
                     </ul>
@@ -321,7 +321,7 @@
         
                 <!-- Stay Connected Section -->
                 <div class="footer-content">
-                    <p class="links" style=" color: var(--coloraccent1)">Stay Connected</p>
+                    <p class="links" style=" color: var(--colorprimary)">Stay Connected</p>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/company/traible"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
                         <a href="mailto:info@traible.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>

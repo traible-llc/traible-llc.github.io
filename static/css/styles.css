@@ -1,10 +1,10 @@
 /* ========== Global Variables ========== */
 :root {
-    --colorprimary: #121212; /* 121212 */
-    --colorsecondary: #0B141E;
-    --coloraccent1: #83a9d2;
-    --coloraccent2: #ecf2f8;
-    --textcolor: #aaa;
+    --colorprimary: #83a9d2;    /* 'Ruddy Blue' aka Traible Blue */
+    --colorsecondary: #ecf2f8;  /* 'Alice Blue' */
+    --colorbackground: #121212; /* 'Night' */
+    --colorsurface: #0B141E;    /* 'Rich Black' */
+    --textcolor: #aaa;          /* 'Silver' */
     --ff: 'Roboto', sans-serif;
     --tf: 'Myriad Pro', sans-serif;
     --margin-xxs: .25rem;
@@ -26,15 +26,15 @@
 
     --transition: 0.3s ease-in-out;
     --shadow: 0 4px 12px rgba(131, 169, 210, 0.1);
-    --darkshadow: 0px 5px 10px 5px var(--colorprimary);
+    --darkshadow: 0px 5px 10px 5px var(--colorbackground);
 }
 
 .light-mode {
-    --colorprimary: #ffffff;     /* Light background */
-    --colorsecondary: #ECF2F8;   /* Slightly off-white for cards/sections */
-    --coloraccent1: #78A2CE;     /* Kept constant for brand identity */
-    --coloraccent2: #1a1a1a;     /* Strong dark text or emphasis */
-    --textcolor: #333333;  
+    --colorprimary: #78A2CE;     /* 'Ruddy Blue' */
+    --colorsecondary: #1a1a1a;   /* 'Eerie Black' */
+    --colorbackground: #f2f3f4;  /* 'anti-flash white' */
+    --colorsurface: #ECF2F8;     /* 'Alice Blue' */
+    --textcolor: #333333;        /* 'Jet' */
 }
 
 @font-face {
@@ -49,7 +49,7 @@ body {
 }
 
 a:focus, button:focus {
-    outline: 2px solid var(--coloraccent1);
+    outline: 2px solid var(--colorprimary);
     outline-offset: 4px;
 }
 
@@ -59,17 +59,17 @@ html {
     /* scroll-snap-type: y mandatory; */
 }
 body {
-    background-color: var(--colorprimary);
+    background-color: var(--colorbackground);
     font-family: var(--ff);
     line-height: 1.6;
-    color: var(--coloraccent2);
+    color: var(--colorsecondary);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 h1, h2, h3, h4, h5 {
-    color: var(--coloraccent1);
+    color: var(--colorprimary);
 }
 /* h3 {
-    color: var(--coloraccent1)!important;
+    color: var(--colorprimary)!important;
 } */
 h1 { font: var(--h1); line-height: 1.2; }
 h2 { font: var(--h2); line-height: 1.3; }
@@ -102,13 +102,13 @@ ul.list-unstyled li h4 {
 
 /* ========== Navbar Styles ========== */
 .navbar {
-    background-color: var(--colorprimary);
+    background-color: var(--colorbackground);
     box-shadow: var(--shadow);
     padding: 1rem 2rem;
     font-size: 1.2rem;
 }
 .sub-navbar {
-    background-color: var(--colorprimary);
+    background-color: var(--colorbackground);
     box-shadow: var(--shadow);
     z-index: 1050; /* Ensures it's above other elements */
 }
@@ -134,14 +134,14 @@ ul.list-unstyled li h4 {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .sub-navbar .nav-link.active {
-    color: var(--coloraccent1);
+    color: var(--colorprimary);
 }
 .nav-link:hover  {
-    color: var(--coloraccent1); 
+    color: var(--colorprimary); 
 }
 .sub-navbar .nav-link.active {
-    color: var(--coloraccent2) !important;
-    border-bottom: 2px solid var(--coloraccent1);
+    color: var(--colorsecondary) !important;
+    border-bottom: 2px solid var(--colorprimary);
 }
 
 #current-section-title {
@@ -161,8 +161,8 @@ ul.list-unstyled li h4 {
 
 /* ========== Cards & Blocks ========== */
 .card {
-    background-color: var(--colorsecondary);
-    border: 2px solid var(--coloraccent1);
+    background-color: var(--colorsurface);
+    border: 2px solid var(--colorprimary);
     border-radius: 12px;
     padding: 30px;
     box-shadow: var(--shadow);
@@ -188,7 +188,7 @@ ul.list-unstyled li h4 {
 }
 .card ul.plans-list li.plans-yes::before {
     content: "✓";
-    color: var(--coloraccent1);
+    color: var(--colorprimary);
     position: absolute;
     left: 0;
 }
@@ -212,7 +212,7 @@ ul.list-unstyled li h4 {
 .scroll-indicator {
     margin-top: 20px;
     font-size: 1.2em;
-    color: var(--coloraccent2);
+    color: var(--colorsecondary);
     opacity: 0.7;
 }
 .slide-in {
@@ -227,15 +227,15 @@ ul.list-unstyled li h4 {
 
 /* ========== Buttons ========== */
 .btn:hover {
-    color: var(--coloraccent1);
+    color: var(--colorprimary);
     transform: scale(1.05);
     text-decoration: none;
 }
 .card .btn {
     margin-top: 20px;
     background-color: transparent;
-    border: 2px solid var(--coloraccent1);
-    color: var(--coloraccent2); /* button text color */
+    border: 2px solid var(--colorprimary);
+    color: var(--colorsecondary); /* button text color */
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
@@ -243,8 +243,8 @@ ul.list-unstyled li h4 {
     text-decoration: none;
 }
 .card .btn:hover {
-    background-color: var(--coloraccent1);
-    color: var(--colorprimary);
+    background-color: var(--colorprimary);
+    color: var(--colorbackground);
 }
 
 /* ========== Responsive Adjustments ========== */
@@ -273,8 +273,8 @@ ul.list-unstyled li h4 {
 
 /* ========== Footer ========== */
 .footer {
-    background-color: var(--colorprimary);
-    color: var(--coloraccent2);
+    background-color: var(--colorbackground);
+    color: var(--colorsecondary);
     padding: 40px 0;
     font-family: var(--ff);
 }
@@ -284,23 +284,23 @@ ul.list-unstyled li h4 {
     margin-bottom: 1rem;
 }
 .footer a {
-    color: var(--coloraccent2);
+    color: var(--colorsecondary);
     text-decoration: none;
     display: inline-block;
     margin: 0.25rem 0;
     transition: color 0.3s ease;
 }
 .footer a:hover {
-    color: var(--coloraccent1);
+    color: var(--colorprimary);
 }
 .footer-divider {
     width: 60%;
     margin: 1.5rem auto;
-    border: 1px solid var(--coloraccent2);
+    border: 1px solid var(--colorsecondary);
     opacity: 0.2;
 }
 a.text-white:hover {
-    color: var(--coloraccent1) !important;
+    color: var(--colorprimary) !important;
     transform: scale(1.1);
 }
 
@@ -314,19 +314,19 @@ a.text-white:hover {
 .social-icons a svg {
     width: 24px;
     height: 24px;
-    fill: var(--coloraccent2);
+    fill: var(--colorsecondary);
     transition: fill 0.3s ease, transform 0.2s ease;
 }
 .social-icons a:hover svg {
-    fill: var(--coloraccent1);
+    fill: var(--colorprimary);
     transform: scale(1.1);
 }
 svg {
-    fill: var(--coloraccent2);
+    fill: var(--colorsecondary);
     width: 20px;
 }
 svg:hover {
-    fill: var(--coloraccent1);
+    fill: var(--colorprimary);
 }
 
 /* ========== Logo ========== */
@@ -353,10 +353,10 @@ svg:hover {
     font-weight: normal;
     margin: 0;
     padding: 0;
-    color: var(--coloraccent2);
+    color: var(--colorsecondary);
 }
 
 /* Style the colored "ai" part */
 .logo .accent {
-    color: var(--coloraccent1);
+    color: var(--colorprimary);
 }
