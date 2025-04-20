@@ -19,6 +19,8 @@
             box-shadow: var(--shadow);
             animation: fadeInSlide 1s ease-out both;
             font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+            border-radius: 16px;
+            border: 2px solid var(--coloraccent1);
         }
         .about-text h2 {
             font-size: 2.8rem;
@@ -68,9 +70,9 @@
             align-items: center;
             background-color: var(--colorsecondary);
             border-radius: 16px;
+            border: 2px solid var(--coloraccent1);
             padding: 20px;
             box-shadow: var(--shadow);
-            border: 2px solid var(--coloraccent1);
             gap: 20px;
             transition: var(--transition);
             /* max-width: 500px; */
@@ -313,7 +315,7 @@
                 <div id="con-section" class="col-md-6 mb-4">
                     <p class="links" style=" color: var(--coloraccent1)">Company</p>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('about') }}" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="{{ url_for('about') }}" class=" text-decoration-none">About Us</a></li>
                     </ul>
                 </div>
         
