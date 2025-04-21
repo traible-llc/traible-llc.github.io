@@ -35,6 +35,7 @@
     --colorbackground: #f2f3f4;  /* 'anti-flash white' */
     --colorsurface: #ECF2F8;     /* 'Alice Blue' */
     --textcolor: #333333;        /* 'Jet' */
+    --shadow: 0 4px 12px rgba(131, 169, 210, 0.388);
 }
 
 @font-face {
