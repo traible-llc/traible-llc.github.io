@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <title>About Us - Traible</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico')}}">
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
     <!-- Bootstrap 4.5.2 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="static/css/styles.css">
     <!--Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -163,10 +163,10 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- Brand Area: logo + traible.webp -->
             <div class="d-flex align-items-center">
-                <a class="navbar-brand" href="{{ url_for('index') }}">
-                    <img src="{{ url_for('static', filename='img/logo-nb.webp')}}" alt="Logo" style="height: 40px;">
+                <a class="navbar-brand" href="index.html">
+                    <img src="static/img/logo-nb.webp" alt="Logo" style="height: 40px;">
                 </a>
-                <a href="{{ url_for('index') }}" class="logo-link">
+                <a href="index.html" class="logo-link">
                     <h2 class="logo">tr<span class="accent">ai</span>ble.</h2>
                 </a>                
             </div>
@@ -175,7 +175,7 @@
             <div id="navbarNav" class="justify-content-end d-flex align-items-center">
                 <ul class="navbar-nav d-flex flex-row align-items-center">
                     <li class="nav-item me-2">
-                        <a class="nav-link" href="{{ url_for('index') }}">Overview</a>
+                        <a class="nav-link" href="index.html">Overview</a>
                     </li>
                     <li class="nav-item">
                         <button id="theme-toggle" class="btn btn-sm btn-outline-secondary ms-3" aria-label="Toggle theme">
@@ -221,7 +221,7 @@
                 <!-- Card 1 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="{{ url_for('static', filename='img/sam.webp')}}" alt="Samuel Anyakwu" class="team-image">
+                        <img src="static/img/sam.webp" alt="Samuel Anyakwu" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">CEO</h6>
@@ -235,7 +235,7 @@
                 <!-- Card 2 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="{{ url_for('static', filename='img/michael.webp')}}" alt="Michael Gruver" class="team-image">
+                        <img src="static/img/michael.webp" alt="Michael Gruver" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">COO & ML Engineer</h6>
@@ -247,7 +247,7 @@
                 <!-- Card 3 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="{{ url_for('static', filename='img/brian.webp')}}" alt="Brian Paniagua" class="team-image">
+                        <img src="static/img/brian.webp" alt="Brian Paniagua" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Lead Software Engineer</h6>
@@ -259,7 +259,7 @@
                 <!-- Card 4 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="{{ url_for('static', filename='img/sammy.webp')}}" alt="Samuel Vasquez" class="team-image">
+                        <img src="static/img/sammy.webp" alt="Samuel Vasquez" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Full-Stack Developer</h6>
@@ -271,7 +271,7 @@
                 <!-- Card 5 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="{{ url_for('static', filename='img/logan.webp')}}" alt="Logan O'Neil" class="team-image">
+                        <img src="static/img/logan.webp" alt="Logan O'Neil" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">CSO</h6>
@@ -283,7 +283,7 @@
                 <!-- Card 6 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="{{ url_for('static', filename='img/nathaniel.webp')}}" alt="Nathaniel Candelaria" class="team-image">
+                        <img src="static/img/nathaniel.webp" alt="Nathaniel Candelaria" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Administrator</h6>
@@ -295,7 +295,7 @@
                 <!-- Card 7 -->
                 <div class="team-card-horizontal">
                     <div class="team-card-img">
-                        <img src="{{ url_for('static', filename='img/miguel.webp')}}" alt="Miguel Avilés" class="team-image">
+                        <img src="static/img/miguel.webp" alt="Miguel Avilés" class="team-image">
                     </div>
                     <div class="team-card-info">
                         <h6 class="team-role">Marketing Lead</h6>
@@ -315,7 +315,7 @@
                 <div id="con-section" class="col-md-6 mb-4">
                     <p class="links" style=" color: var(--colorprimary)">Company</p>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('about') }}" class=" text-decoration-none">About Us</a></li>
+                        <li><a href="about.html" class=" text-decoration-none">About Us</a></li>
                     </ul>
                 </div>
         
@@ -334,7 +334,7 @@
     </footer>
 
     <!-- Link to External JavaScript File -->
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="static/js/app.js"></script>
     <!-- Bootstrap JS and dependencies -->
     <!-- jQuery (required) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

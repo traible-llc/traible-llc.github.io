@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traible - Know Your Tribe</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
     <meta name="description" content="Meet the team behind Traible, don’t let your brilliant experiential knowledge fade away. Embrace the future of innovation with us!">
     <meta name="keywords" content="Traible, ai, team, co-founders, technology, data science, computer science, engineering">
 
@@ -18,7 +18,7 @@
     <!-- Bootstrap 4.5.2 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="static/css/styles.css">
 
     <!-- Paypal -->
     <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&components=buttons"></script>
@@ -233,10 +233,10 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <!-- Brand Area: logo + traible -->
             <div class="d-flex align-items-center">
-                <a class="navbar-brand" href="{{ url_for('index') }}">
-                    <img src="{{ url_for('static', filename='img/logo-nb.webp') }}" alt="Logo" style="height: 40px;">
+                <a class="navbar-brand" href="index.html">
+                    <img src="static/img/logo-nb.webp" alt="Logo" style="height: 40px;">
                 </a>
-                <a href="{{ url_for('index') }}" class="logo-link">
+                <a href="index.html" class="logo-link">
                     <h2 class="logo">tr<span class="accent">ai</span>ble.</h2>
                 </a>                
             </div>
@@ -245,7 +245,7 @@
             <div id="navbarNav" class="justify-content-end d-flex align-items-center">
                 <ul class="navbar-nav d-flex flex-row align-items-center">
                     <li class="nav-item me-2">
-                        <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <button id="theme-toggle" class="btn btn-sm btn-outline-secondary ms-3" aria-label="Toggle theme">
@@ -281,7 +281,7 @@
                 <div class="col-md-6 pe-lg-5">
                     <div class="w-100" style="aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
                         <video
-                            src="{{ url_for('static', filename='vid/TraibleDraft4.0.mp4') }}"
+                            src="static/vid/TraibleDraft4.0.mp4"
                             autoplay
                             muted
                             loop
@@ -320,7 +320,7 @@
                     href="#plans-section">Plans</a></li>
                     -->
                     <li class="nav-item"><a class="nav-link" 
-                    href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About Us</a></li>
+                    href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 </ul>
             </div>
         </div>
@@ -332,7 +332,7 @@
             <div class="row align-items-center">
                 <!-- Graphic -->
                 <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <img src="{{ url_for('static', filename='img/benefitsRe.webp')}}" alt="Benefits Graphic" class="img-fluid rounded" style="max-width: 90%;">
+                    <img src="static/img/benefitsRe.webp" alt="Benefits Graphic" class="img-fluid rounded" style="max-width: 90%;">
                 </div>
                 <!-- Text -->
                 <div class="col-md-6">
@@ -373,7 +373,7 @@
                 <div class="col-12 col-lg-4">
                     <div class="card h-100">
                         <div class="card-body text-start">
-                            <img src="{{ url_for('static', filename='img/idea.webp')}}" alt="Function Graphic" class="img-fluid mb-3 fou-img">
+                            <img src="static/img/idea.webp" alt="Function Graphic" class="img-fluid mb-3 fou-img">
                             <h3 class="card-title">Blank Slate Model</h3>
                             <ul class="feature-list lightbulb-list">
                                 <li>Traible starts with a blank slate—meaning your organization’s documents shape the knowledge, not internet fluff.</li>
@@ -387,7 +387,7 @@
                 <div class="col-12 col-lg-4">
                     <div class="card h-100">
                         <div class="card-body text-start">
-                            <img src="{{ url_for('static', filename='img/security.webp')}}" alt="Function Graphic" class="img-fluid mb-3 fou-img">
+                            <img src="static/img/security.webp" alt="Function Graphic" class="img-fluid mb-3 fou-img">
                             <h3 class="card-title">Privacy and Security</h3>
                             <ul class="feature-list lock-list">
                                 <li>Traible keeps your tribal knowledge safe and secure.</li>
@@ -402,7 +402,7 @@
                 <div class="col-12 col-lg-4">
                     <div class="card h-100">
                         <div class="card-body text-start">
-                            <img src="{{ url_for('static', filename='img/select.webp')}}" alt="Function Graphic" class="img-fluid mb-3 fou-img">
+                            <img src="static/img/select.webp" alt="Function Graphic" class="img-fluid mb-3 fou-img">
                             <h3 class="card-title">Fine-Tuning</h3>
                             <ul class="feature-list check-list">
                                 <li>Traible fine-tunes the model for your business, ensuring expert-level responses.</li>
@@ -430,7 +430,7 @@
                                 <li>Makes essential know-how accessible to new hires and pros.</li>
                             </ul>
                         </div>
-                        <img src="{{ url_for('static', filename='img/function.webp')}}" alt="Function Graphic" class="img-fluid fou-img p-3">
+                        <img src="static/img/function.webp" alt="Function Graphic" class="img-fluid fou-img p-3">
                     </div>
                 </div>
 
@@ -444,7 +444,7 @@
                                 <li>Transforms complex problems into actionable solutions.</li>
                             </ul>
                         </div>
-                        <img src="{{ url_for('static', filename='img/operation.webp')}}" alt="Operation Graphic" class="img-fluid fou-img p-3">
+                        <img src="static/img/operation.webp" alt="Operation Graphic" class="img-fluid fou-img p-3">
                     </div>
                 </div>
 
@@ -458,7 +458,7 @@
                                 <li>Empowers all roles with relevant historical insights.</li>
                             </ul>
                         </div>
-                        <img src="{{ url_for('static', filename='img/use.webp')}}" alt="Use Graphic" class="img-fluid fou-img p-3">
+                        <img src="static/img/use.webp" alt="Use Graphic" class="img-fluid fou-img p-3">
                     </div>
                 </div>
             </div>
@@ -610,7 +610,7 @@
                 <div id="con-section" class="col-md-6 mb-4">
                     <p class="links" style=" color: var(--colorprimary)">Company</p>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('about') }}" class=" text-decoration-none">About Us</a></li>
+                        <li><a href="about.html" class=" text-decoration-none">About Us</a></li>
                     </ul>
                 </div>
         
@@ -643,7 +643,7 @@
     -->
 
     <!-- External JS: Slide-In annimation -->
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="static/js/app.js"></script>
 
     <!-- Sub Nav Script -->
     <script>
