@@ -20,9 +20,6 @@
 
     <link rel="stylesheet" href="static/css/styles.css">
 
-    <!-- Paypal -->
-    <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&components=buttons"></script>
-
     <!-- Roboto Font-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--Social Icons -->
@@ -244,8 +241,10 @@
             <!-- Brand Area -->
             <div class="d-flex align-items-center">
                 <a class="navbar-brand" href="index.html">
-                    <img src="static/img/logo-nb.webp" alt="Logo" style="height: 40px;">
-                </a>
+                    <div style="background-color: #121212; border-radius: 50%; padding: 1px; display: inline-block; border: 2px solid var(--colorprimary);">
+                        <img src="static/img/logo-nb.webp" alt="Logo" style="height: 50px; border-radius: 50%;">
+                    </div>
+                </a>                
                 <a href="index.html" class="logo-link">
                     <h1 class="logo">tr<span class="accent">ai</span>ble.</h1>
                 </a>
@@ -273,7 +272,6 @@
             </div>
         </div>
     </nav>
-
 
     <!-- Hero -->
     <section id="hero" class="container-fluid section col slide-in">

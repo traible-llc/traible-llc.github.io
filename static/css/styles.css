@@ -127,11 +127,12 @@ ul.list-unstyled li h4 {
     background-color: var(--colorbackground);
     box-shadow: var(--shadow);
     z-index: 1050; /* Ensures it's above other elements */
-    min-height: 11vh;
+    min-height: 13vh;
 }
 .navbar-brand img {
     width: 50px;
     height: 50px;
+    
 }
 .navbar-dark .navbar-nav .nav-link,
 .sub-navbar .nav-link {
