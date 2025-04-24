@@ -315,10 +315,6 @@
                     <li class="nav-item"><a class="nav-link" href="#hero">Overview</a></li>
                     <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
                     <li class="nav-item"><a class="nav-link" href="#feat-section">Features</a></li>
-                    <!--
-                    <li class="nav-item"><a class="nav-link" 
-                    href="#plans-section">Plans</a></li>
-                    -->
                     <li class="nav-item"><a class="nav-link" 
                     href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 </ul>
@@ -465,86 +461,6 @@
         </div>
     </section>
 
-    <!-- Plans --> <!--
-    <section id="plans-section" class="container-fluid section">
-        <div class="container">
-            <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
-            <div class="row">
-
-                <!-- Standard Plan 
-                <div class="col-12 col-lg-4 mb-4 d-flex">
-                    <div class="card flex-fill">
-                        <h3>Standard</h3>
-                        <p class="price">$499.99/month</p>
-                        <ul class="plans-list">
-                            <li class="plans-yes">AI Platform Access</li>
-                            <li class="plans-yes">Customer Support: Zoom + Email</li>
-                            <li class="plans-yes">Document Upload: 100 Docs</li>
-                            <li class="plans-yes">Add-ons</li>
-                            <li class="plans-no">Wearable Kit</li>
-                            <li class="plans-no">AI Transcription</li>
-                            <li class="plans-no">Workflow Integration</li>
-                            <li class="plans-no">Account Manager</li>
-                            <li class="plans-no">On-site Support</li>
-                            <li class="plans-no">SME Interview</li>
-                            <li class="plans-no">24/6 Support</li>
-                        </ul>
-                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> 
-                        <div id="paypal-button-container-standard" class="mt-auto"></div>
-                    </div>
-                </div>
-
-                <!-- Premium Plan 
-                <div class="col-12 col-lg-4 mb-4 d-flex">
-                    <div class="card flex-fill">
-                        <h3>Premium</h3>
-                        <p class="price">$999.99/month</p>
-                        <ul class="plans-list">
-                            <li class="plans-yes">AI Platform Access</li>
-                            <li class="plans-yes">Customer Support: Calls + Zoom</li>
-                            <li class="plans-yes">Document Upload: 500 Docs</li>
-                            <li class="plans-yes">Add-ons</li>
-                            <li class="plans-yes">Wearable Kit</li>
-                            <li class="plans-yes">AI Transcription</li>
-                            <li class="plans-yes">Workflow Integration</li>
-                            <li class="plans-no">Account Manager</li>
-                            <li class="plans-no">On-site Support</li>
-                            <li class="plans-no">SME Interview</li>
-                            <li class="plans-no">24/6 Support</li>
-                        </ul>
-                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> 
-                        <div id="paypal-button-container-premium" class="mt-auto"></div>
-                    </div>
-                </div>
-
-                <!-- Business Plan 
-                <div class="col-12 col-lg-4 mb-4 d-flex mx-md-auto">
-                    <div class="card flex-fill">
-                        <h3>Business</h3>
-                        <p class="price">$1999.99/month</p>
-                        <ul class="plans-list">
-                            <li class="plans-yes">AI Platform Access</li>
-                            <li class="plans-yes">Customer Support: 24/7 + Onsite</li>
-                            <li class="plans-yes">Document Upload: Unlimited</li>
-                            <li class="plans-yes">Add-ons</li>
-                            <li class="plans-yes">Wearable Kit</li>
-                            <li class="plans-yes">AI Transcription</li>
-                            <li class="plans-yes">Workflow Integration</li>
-                            <li class="plans-yes">Account Manager</li>
-                            <li class="plans-yes">On-site Support</li>
-                            <li class="plans-yes">SME Interview</li>
-                            <li class="plans-yes">24/6 Support</li>
-                        </ul>
-                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> 
-                        <div id="paypal-button-container-business" class="mt-auto"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p class="text-center mt-4">Need help deciding? <a href="#faq-section" class="links">Check our FAQ</a> or <a href="mailto:info@traible.com" class="links">talk to us</a>.</p>
-    </section> 
-    -->
-
     <!-- FAQ -->
     <section id="faq-section" class="container-fluid section slide-in">
         <div class="container">
@@ -638,10 +554,6 @@
     <!-- Popper.js (required for dropdowns/tooltips/navbar toggler) -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
-    <!-- PayPal SDK script 
-    <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&components=buttons"></script>
-    -->
-
     <!-- External JS: Slide-In annimation -->
     <script src="static/js/app.js"></script>
 
@@ -657,7 +569,6 @@
             "benefits": "Benefits",
             "feat-section": "Features",
             "fou-section": "Features",
-            "plans-section": "Plans",
             "faq-section": "FAQ",
         };
 
@@ -782,31 +693,6 @@
             });
         }); 
     </script>
-
-    <!-- Plan Pricing 
-    <script>
-        function renderPayPalButton(plan, containerId) {
-            paypal.Buttons({
-                createOrder: () => fetch('/create_order', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ plan })
-                }).then(res => res.json()).then(order => order.id),
-                onApprove: (data, actions) => actions.order.capture().then(details => {
-                    alert(`Thank you, ${details.payer.name.given_name}! Your ${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan payment was successful.`);
-                }),
-                onError: err => {
-                    console.error(err);
-                    alert(`An error occurred during the payment process (${plan.charAt(0).toUpperCase() + plan.slice(1)}).`);
-                }
-            }).render(containerId);
-        }
-        
-        renderPayPalButton("standard", "#paypal-button-container-standard");
-        renderPayPalButton("premium", "#paypal-button-container-premium");
-        renderPayPalButton("business", "#paypal-button-container-business");
-        
-    </script>
-    -->
+    
 </body>
 </html>
