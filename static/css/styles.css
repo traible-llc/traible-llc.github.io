@@ -5,6 +5,7 @@
     --colorbackground: #121212; /* 'Night' */
     --colorsurface: #0B141E;    /* 'Rich Black' */
     --textcolor: #aaa;          /* 'Silver' */
+    --togglercolor: #f2f3f4;
     --ff: 'Roboto', sans-serif;
     --tf: 'Myriad Pro', sans-serif;
     --margin-xxs: .25rem;
@@ -35,6 +36,7 @@
     --colorbackground: #f2f3f4;  /* 'anti-flash white' */
     --colorsurface: #ECF2F8;     /* 'Alice Blue' */
     --textcolor: #333333;        /* 'Jet' */
+    --togglercolor: #121212;
     --shadow: 0 4px 12px rgba(131, 169, 210, 0.388);
 }
 
@@ -104,13 +106,17 @@ ul.list-unstyled li h4 {
 /* ========== Navbar Styles ========== */
 /* Default Bootstrap styles use a background-image for the toggler icon.
    We're overriding this based on light/dark mode */
-.light-mode .navbar-toggler-icon {
-background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51,51,51,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+/* Color theming for the Font Awesome hamburger icon */
+.light-mode .theme-toggler-icon {
+    color: var(--togglercolor);  /* Jet or dark gray */
 }
-.dark-mode .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.dark-mode .theme-toggler-icon {
+    color: var(--togglercolor);  /* White */
 }
-
+/* Optional: smoother transitions */
+.theme-toggler-icon {
+    transition: var(--transition);
+}
 .navbar {
     background-color: var(--colorbackground);
     box-shadow: var(--shadow);
