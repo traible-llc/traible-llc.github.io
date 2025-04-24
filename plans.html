@@ -138,72 +138,256 @@
       </ul>
     </div>
   </nav>
-  
 
-  <div class="container">
-    <h1>Choose Your Traible Plan</h1>
-
-    <div class="pricing-row">
-      
-      <!-- Standard Plan -->
-      <div class="plan-card">
-        <h2>Standard</h2>
-        <ul class="features-list">
-          <li>AI Platform Access</li>
-          <li>Customer Support: Zoom + Email</li>
-          <li>Document Upload: 100 Docs</li>
-          <li>Wearable Kit: ✗</li>
-          <li>AI Transcription: ✗</li>
-          <li>Workflow Integration: ✗</li>
-          <li>Account Manager: ✗</li>
-          <li>On-site Support: ✗</li>
-          <li>SME Interview: ✗</li>
-          <li>24/6 Support: ✗</li>
-          <li>Add-ons: Available</li>
-        </ul>
-        <a href="#" class="btn">Buy Now</a>
+  <!-- Sticky Sub-Navbar -->
+  <nav id="sub-navbar" class="navbar navbar-expand-lg navbar-dark sub-navbar sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Current Section Display -->
+      <div id="current-section-title" class="fw-medium d-lg-none" style="color: var(--colorprimary);"> <ul><li><strong>Overview</strong></li></ul>
       </div>
 
-      <!-- Premium Plan -->
-      <div class="plan-card">
-        <h2>Premium</h2>
-        <ul class="features-list">
-          <li>AI Platform Access</li>
-          <li>Customer Support: Calls + Zoom</li>
-          <li>Document Upload: 500 Docs</li>
-          <li>Wearable Kit: ✓</li>
-          <li>AI Transcription: ✓</li>
-          <li>Workflow Integration: ✓</li>
-          <li>Account Manager: ✗</li>
-          <li>On-site Support: ✗</li>
-          <li>SME Interview: ✗</li>
-          <li>24/6 Support: ✗</li>
-          <li>Add-ons: Available</li>
-        </ul>
-        <a href="#" class="btn">Buy Now</a>
-      </div>
+        <!-- Hamburger button -->
+        <button class="navbar-toggler" type="button"
+        data-toggle="collapse" data-target="#subNavbarNav"
+        aria-controls="subNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Business Plan -->
-      <div class="plan-card">
-        <h2>Business</h2>
-        <ul class="features-list">
-          <li>AI Platform Access</li>
-          <li>Customer Support: 24/7 + Onsite</li>
-          <li>Document Upload: Unlimited</li>
-          <li>Wearable Kit: ✓</li>
-          <li>AI Transcription: ✓</li>
-          <li>Workflow Integration: ✓</li>
-          <li>Account Manager: ✓</li>
-          <li>On-site Support: ✓</li>
-          <li>SME Interview: ✓</li>
-          <li>24/6 Support: ✓</li>
-          <li>Add-ons: Available</li>
-        </ul>
-        <a href="#" class="btn">Buy Now</a>
-      </div>
-
+        <!-- Collapsible nav links -->
+        <div class="collapse navbar-collapse justify-content-center" id="subNavbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#hero">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                <li class="nav-item"><a class="nav-link" href="#feat-section">Features</a></li>
+                <!--
+                <li class="nav-item"><a class="nav-link" 
+                href="#plans-section">Plans</a></li>
+                -->
+                <li class="nav-item"><a class="nav-link" 
+                href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
+</nav>  
+
+    <!-- Plans --> 
+    <section id="plans-section" class="container-fluid section">
+      <div class="container">
+          <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
+          <div class="row">
+
+              <!-- Standard Plan -->
+              <div class="col-12 col-lg-4 mb-4 d-flex">
+                  <div class="card flex-fill">
+                      <h3>Standard</h3>
+                      <p class="price">$499.99/month</p>
+                      <ul class="plans-list">
+                          <li class="plans-yes">AI Platform Access</li>
+                          <li class="plans-yes">Customer Support: Zoom + Email</li>
+                          <li class="plans-yes">Document Upload: 100 Docs</li>
+                          <li class="plans-yes">Add-ons</li>
+                          <li class="plans-no">Wearable Kit</li>
+                          <li class="plans-no">AI Transcription</li>
+                          <li class="plans-no">Workflow Integration</li>
+                          <li class="plans-no">Account Manager</li>
+                          <li class="plans-no">On-site Support</li>
+                          <li class="plans-no">SME Interview</li>
+                          <li class="plans-no">24/6 Support</li>
+                      </ul>
+                      <!-- <a href="#" class="btn mt-auto">Buy Now</a> -->
+                      <div id="paypal-button-container-standard" class="mt-auto"></div>
+                  </div>
+              </div>
+
+              <!-- Premium Plan -->
+              <div class="col-12 col-lg-4 mb-4 d-flex">
+                  <div class="card flex-fill">
+                      <h3>Premium</h3>
+                      <p class="price">$999.99/month</p>
+                      <ul class="plans-list">
+                          <li class="plans-yes">AI Platform Access</li>
+                          <li class="plans-yes">Customer Support: Calls + Zoom</li>
+                          <li class="plans-yes">Document Upload: 500 Docs</li>
+                          <li class="plans-yes">Add-ons</li>
+                          <li class="plans-yes">Wearable Kit</li>
+                          <li class="plans-yes">AI Transcription</li>
+                          <li class="plans-yes">Workflow Integration</li>
+                          <li class="plans-no">Account Manager</li>
+                          <li class="plans-no">On-site Support</li>
+                          <li class="plans-no">SME Interview</li>
+                          <li class="plans-no">24/6 Support</li>
+                      </ul>
+                      <!-- <a href="#" class="btn mt-auto">Buy Now</a> -->
+                      <div id="paypal-button-container-premium" class="mt-auto"></div>
+                  </div>
+              </div>
+
+              <!-- Business Plan -->
+              <div class="col-12 col-lg-4 mb-4 d-flex mx-md-auto">
+                  <div class="card flex-fill">
+                      <h3>Business</h3>
+                      <p class="price">$1999.99/month</p>
+                      <ul class="plans-list">
+                          <li class="plans-yes">AI Platform Access</li>
+                          <li class="plans-yes">Customer Support: 24/7 + Onsite</li>
+                          <li class="plans-yes">Document Upload: Unlimited</li>
+                          <li class="plans-yes">Add-ons</li>
+                          <li class="plans-yes">Wearable Kit</li>
+                          <li class="plans-yes">AI Transcription</li>
+                          <li class="plans-yes">Workflow Integration</li>
+                          <li class="plans-yes">Account Manager</li>
+                          <li class="plans-yes">On-site Support</li>
+                          <li class="plans-yes">SME Interview</li>
+                          <li class="plans-yes">24/6 Support</li>
+                      </ul>
+                      <!-- <a href="#" class="btn mt-auto">Buy Now</a> -->
+                      <div id="paypal-button-container-business" class="mt-auto"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <p class="text-center mt-4">Need help deciding? <a href="#faq-section" class="links">Check our FAQ</a> or <a href="mailto:info@traible.com" class="links">talk to us</a>.</p>
+  </section> 
+
+  <!-- PayPal SDK script 
+    <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&components=buttons"></script>
+    -->
+
+    <!-- Sub Nav Script -->
+    <script>
+      // Scroll jump on click with sub nav bar
+      const navLinks = document.querySelectorAll("#sub-navbar .nav-link");
+      const currentSectionTitle = document.getElementById("current-section-title");
+      const dropdownLinks = document.querySelectorAll(".dropdown-item.nav-link");
+  
+      const sectionMap = {
+          "hero": "Overview",
+          "benefits": "Benefits",
+          "feat-section": "Features",
+          "fou-section": "Features",
+          "plans-section": "Plans",
+          "faq-section": "FAQ",
+      };
+
+      // Function to get the combined height of the main navbar and sub navbar
+      function getNavHeight() {
+          const navbar = document.querySelector(".navbar");
+          const subNavbar = document.querySelector(".sub-navbar");
+          return navbar.offsetHeight + subNavbar.offsetHeight; // Combined height
+      }
+
+      // Smooth scroll with offset for navbar height
+      navLinks.forEach(link => {
+          link.addEventListener("click", function (e) {
+              const targetId = this.getAttribute("href").slice(1); // Get target section ID from href (e.g., "#hero" → "hero")
+              const targetEl = document.getElementById(targetId);
+
+              if (targetEl) {
+                  e.preventDefault(); // Prevent the default anchor behavior
+
+                  // Get the current navbar height dynamically
+                  const offset = getNavHeight();
+
+                  // Get the position of the target element relative to the viewport
+                  const elementPosition = targetEl.getBoundingClientRect().top;
+
+                  // Calculate the scroll position to move the page, adjusting for the navbar height
+                  const offsetPosition = elementPosition + window.scrollY - offset;
+
+                  // Adjust the scroll position by a small correction to ensure full visibility
+                  const correctedPosition = offsetPosition + 100; // 10px correction to fix the slight undershoot
+
+                  // Scroll to the target position with smooth animation
+                  window.scrollTo({
+                      top: correctedPosition,
+                      behavior: "smooth"
+                  });
+              }
+          });
+      });  
+      function getTargetSections() {
+          return Array.from(navLinks)
+              .map(link => {
+                  const id = link.getAttribute("href").slice(1);
+                  return document.getElementById(id);
+              })
+              .filter(section => section !== null);
+      }
+      // Update label on scroll
+      function getCurrentSection() {
+          let current = "hero";
+          Object.keys(sectionMap).forEach(id => {
+              const el = document.getElementById(id);
+              if (el) {
+                  const rect = el.getBoundingClientRect();
+                  if (rect.top <= 120 && rect.bottom >= 120) {
+                      current = id;
+                  }
+              }
+          });
+          currentSectionTitle.textContent = sectionMap[current];
+      }
+      window.addEventListener("scroll", getCurrentSection);
+          getCurrentSection(); // run on load
+      window.addEventListener("scroll", () => {
+          const sections = getTargetSections();
+          let currentSectionId = null;
+  
+          for (const section of sections) {
+              const rect = section.getBoundingClientRect();
+              if (rect.top <= 120 && rect.bottom >= 120) {
+                  currentSectionId = section.id;
+                  break;
+              }
+          }
+          // Only update nav if we have a matched section
+          if (currentSectionId) {
+              navLinks.forEach(link => {
+                  link.classList.remove("active");
+                  if (link.getAttribute("href").slice(1) === currentSectionId) {
+                      link.classList.add("active");
+                  }
+              });
+          }
+      });
+      // Close the sub-navbar with a smooth transition when a link is clicked
+      const subNavLinks = document.querySelectorAll("#sub-navbar .nav-link");
+      const subNavbarCollapse = document.getElementById("subNavbarNav");
+
+      subNavLinks.forEach(link => {
+          link.addEventListener("click", function () {
+              // Check if the sub-navbar is expanded
+              if (subNavbarCollapse.classList.contains("show")) {
+                  // Start the collapsing transition
+                  $(subNavbarCollapse).collapse('hide');
+              }
+          });
+      });
+  </script>
+  <!-- Plan Pricing -->
+  <script>
+    function renderPayPalButton(plan, containerId) {
+        paypal.Buttons({
+            createOrder: () => fetch('/create_order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ plan })
+            }).then(res => res.json()).then(order => order.id),
+            onApprove: (data, actions) => actions.order.capture().then(details => {
+                alert(`Thank you, ${details.payer.name.given_name}! Your ${plan.charAt(0).toUpperCase() + plan.slice(1)} Plan payment was successful.`);
+            }),
+            onError: err => {
+                console.error(err);
+                alert(`An error occurred during the payment process (${plan.charAt(0).toUpperCase() + plan.slice(1)}).`);
+            }
+        }).render(containerId);
+    }
+    
+    renderPayPalButton("standard", "#paypal-button-container-standard");
+    renderPayPalButton("premium", "#paypal-button-container-premium");
+    renderPayPalButton("business", "#paypal-button-container-business");
+    
+</script>
 
 </body>
 </html>
