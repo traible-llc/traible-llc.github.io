@@ -254,7 +254,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars theme-toggler-icon" style="color: var(--togglercolor);"></i>
+                <i class="fa-solid fa-bars theme-toggler-icon"></i>
             </button>
 
             <!-- Navbar Links -->
@@ -297,14 +297,15 @@
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <div class="embed-responsive embed-responsive-16by9 rounded" style="box-shadow: 0 8px 24px rgba(0,0,0,0.15); overflow: hidden;">
                       <video
-                        class="embed-responsive-item"
-                        src="static/vid/TraibleDraft4.0.mp4"
-                        autoplay
-                        muted
-                        loop
-                        controls
-                        style="object-fit: cover; border-radius: 20px;">
-                        Your browser does not support the video tag.
+                      id="traibleVideo"
+                      class="embed-responsive-item"
+                      src="static/vid/TraibleDraft4.0.mp4"
+                      autoplay
+                      muted
+                      loop
+                      controls
+                      style="object-fit: cover; border-radius: 20px;">
+                      Your browser does not support the video tag.
                       </video>
                     </div>
                   </div>                  
@@ -323,7 +324,7 @@
             <button class="navbar-toggler" type="button"
             data-toggle="collapse" data-target="#subNavbarNav"
             aria-controls="subNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars theme-toggler-icon" style="color: var(--togglercolor);"></i>
+            <i class="fa-solid fa-bars theme-toggler-icon"></i>
             </button>
     
             <!-- Collapsible nav links -->
@@ -684,6 +685,19 @@
             });
         });
     </script>
+
+    <!-- Off auto play for mobile -->
+    <script>
+        // Check for mobile devices
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      
+        if (isMobile) {
+          const video = document.getElementById('traibleVideo');
+          video.removeAttribute('autoplay');
+          // Optional: Pause if it's already started due to fast autoplay
+          video.pause();
+        }
+      </script>
 
     <!-- FAQ Arrow Script -->
     <script>

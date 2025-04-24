@@ -107,6 +107,11 @@ ul.list-unstyled li h4 {
 /* Default Bootstrap styles use a background-image for the toggler icon.
    We're overriding this based on light/dark mode */
 .theme-toggler-icon {
+    color: var(--togglercolor);
+    transition: var(--transition);
+}
+
+.theme-toggler-icon {
     transition: var(--transition);
 }
 .navbar {
