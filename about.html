@@ -147,7 +147,7 @@
                 grid-template-columns: 1fr;
             }
         }
-        @media (min-width: 769px) {
+        @media (min-width: 1000px) {
             .team-grid > *:nth-last-child(1):nth-child(odd) {
                 grid-column: 1 / -1;
                 justify-self: center;
@@ -161,19 +161,26 @@
     <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid d-flex align-items-center justify-content-between">
-            <!-- Brand Area: logo + traible.webp -->
+            <!-- Brand Area: logo + traible -->
             <div class="d-flex align-items-center">
                 <a class="navbar-brand" href="index.html">
                     <img src="static/img/logo-nb.webp" alt="Logo" style="height: 40px;">
                 </a>
                 <a href="index.html" class="logo-link">
-                    <h2 class="logo">tr<span class="accent">ai</span>ble.</h2>
+                    <h1 class="logo">tr<span class="accent">ai</span>ble.</h1>
                 </a>                
             </div>
+            
+            <!-- Toggler for small screens -->
+            <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <!-- Navbar Links -->
-            <div id="navbarNav" class="justify-content-end d-flex align-items-center">
-                <ul class="navbar-nav d-flex flex-row align-items-center">
+            <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav d-flex flex-row align-items-center justify-content-end">
                     <li class="nav-item me-2">
                         <a class="nav-link" href="index.html">Overview</a>
                     </li>
@@ -298,7 +305,7 @@
                         <img src="static/img/miguel.webp" alt="Miguel Avilés" class="team-image">
                     </div>
                     <div class="team-card-info">
-                        <h6 class="team-role">Marketing Lead</h6>
+                        <h6 class="team-role">Cloud Engineer</h6>
                         <h4 class="team-name">Miguel Avilés</h4>
                         <p class="team-bio">Miguel is a co-founder of Traible and serves as the head of marketing. He also works as a data analyst. In his downtime, he enjoys salsa dancing, hiking, and challenging Sam, our CEO, to intense ping pong matches.</p>
                     </div>
