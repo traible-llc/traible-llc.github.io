@@ -106,14 +106,6 @@ ul.list-unstyled li h4 {
 /* ========== Navbar Styles ========== */
 /* Default Bootstrap styles use a background-image for the toggler icon.
    We're overriding this based on light/dark mode */
-/* Color theming for the Font Awesome hamburger icon */
-.light-mode .theme-toggler-icon {
-    color: var(--togglercolor);  /* Jet or dark gray */
-}
-.dark-mode .theme-toggler-icon {
-    color: var(--togglercolor);  /* White */
-}
-/* Optional: smoother transitions */
 .theme-toggler-icon {
     transition: var(--transition);
 }
@@ -127,7 +119,6 @@ ul.list-unstyled li h4 {
     background-color: var(--colorbackground);
     box-shadow: var(--shadow);
     z-index: 1050; /* Ensures it's above other elements */
-    min-height: 13vh;
 }
 .navbar-brand img {
     width: 50px;
