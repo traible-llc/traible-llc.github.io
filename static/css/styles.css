@@ -42,14 +42,12 @@
 
 @font-face {
     font-family: 'Myriad Pro';
-    src: url("{{ url_for('static', filename='fonts/myriadproregular.OTF') }}");
+    src: url("../fonts/MyriadProRegular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
-body {
-    font-family: 'Myriad Pro', sans-serif;
-}
 
 a:focus, button:focus {
     outline: 2px solid var(--colorprimary);
@@ -362,7 +360,7 @@ svg:hover {
 
 /* Style the logo text */
 .logo {
-    font-family: var(--tf); /* This uses 'Myriad Pro' */
+    font-family: var(--tf); /* or directly: 'Myriad Pro', sans-serif */
     font-size: 2.25rem; /* Adjust as needed */
     font-weight: normal;
     margin: 0;
