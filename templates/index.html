@@ -315,8 +315,12 @@
                     <li class="nav-item"><a class="nav-link" href="#hero">Overview</a></li>
                     <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
                     <li class="nav-item"><a class="nav-link" href="#feat-section">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#plans-section">Plans</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About Us</a></li>
+                    <!--
+                    <li class="nav-item"><a class="nav-link" 
+                    href="#plans-section">Plans</a></li>
+                    -->
+                    <li class="nav-item"><a class="nav-link" 
+                    href="#faq-section">FAQ</a></li><li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About Us</a></li>
                 </ul>
             </div>
         </div>
@@ -461,13 +465,13 @@
         </div>
     </section>
 
-    <!-- Plans -->
+    <!-- Plans --> <!--
     <section id="plans-section" class="container-fluid section">
         <div class="container">
             <h2 class="text-center display-4 mb-5">Choose Your Traible Plan</h2>
             <div class="row">
 
-                <!-- Standard Plan -->
+                <!-- Standard Plan 
                 <div class="col-12 col-lg-4 mb-4 d-flex">
                     <div class="card flex-fill">
                         <h3>Standard</h3>
@@ -485,12 +489,12 @@
                             <li class="plans-no">SME Interview</li>
                             <li class="plans-no">24/6 Support</li>
                         </ul>
-                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> -->
+                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> 
                         <div id="paypal-button-container-standard" class="mt-auto"></div>
                     </div>
                 </div>
 
-                <!-- Premium Plan -->
+                <!-- Premium Plan 
                 <div class="col-12 col-lg-4 mb-4 d-flex">
                     <div class="card flex-fill">
                         <h3>Premium</h3>
@@ -508,12 +512,12 @@
                             <li class="plans-no">SME Interview</li>
                             <li class="plans-no">24/6 Support</li>
                         </ul>
-                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> -->
+                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> 
                         <div id="paypal-button-container-premium" class="mt-auto"></div>
                     </div>
                 </div>
 
-                <!-- Business Plan -->
+                <!-- Business Plan 
                 <div class="col-12 col-lg-4 mb-4 d-flex mx-md-auto">
                     <div class="card flex-fill">
                         <h3>Business</h3>
@@ -531,14 +535,15 @@
                             <li class="plans-yes">SME Interview</li>
                             <li class="plans-yes">24/6 Support</li>
                         </ul>
-                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> -->
+                        <!-- <a href="#" class="btn mt-auto">Buy Now</a> 
                         <div id="paypal-button-container-business" class="mt-auto"></div>
                     </div>
                 </div>
             </div>
         </div>
         <p class="text-center mt-4">Need help deciding? <a href="#faq-section" class="links">Check our FAQ</a> or <a href="mailto:info@traible.com" class="links">talk to us</a>.</p>
-    </section>
+    </section> 
+    -->
 
     <!-- FAQ -->
     <section id="faq-section" class="container-fluid section slide-in">
@@ -633,8 +638,9 @@
     <!-- Popper.js (required for dropdowns/tooltips/navbar toggler) -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
-    <!-- PayPal SDK script -->
+    <!-- PayPal SDK script 
     <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&components=buttons"></script>
+    -->
 
     <!-- External JS: Slide-In annimation -->
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
@@ -777,7 +783,7 @@
         }); 
     </script>
 
-    <!-- Plan Pricing -->
+    <!-- Plan Pricing 
     <script>
         function renderPayPalButton(plan, containerId) {
             paypal.Buttons({
@@ -801,5 +807,6 @@
         renderPayPalButton("business", "#paypal-button-container-business");
         
     </script>
+    -->
 </body>
 </html>
