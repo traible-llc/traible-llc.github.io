@@ -98,8 +98,20 @@
             width: 120px;
             height: 120px;
             object-fit: cover;
+            border-radius: 50%; /* Match shape */
+        }
+        .team-card-img {
+            width: 135px; /* 120px + 2 * 3px border */
+            height: 135px;
+            background-color: var(--headshotBackground);;
+            border: 3px solid var(--colorprimary); /* Keep the original border */
             border-radius: 50%;
-            border: 3px solid var(--colorprimary);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0; /* ensure padding doesn't affect size */
+            box-sizing: border-box;
         }
         .team-image {
             width: 100%;

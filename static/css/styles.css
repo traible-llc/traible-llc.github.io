@@ -5,6 +5,7 @@
     --colorbackground: #121212; /* 'Night' */
     --colorsurface: #0B141E;    /* 'Rich Black' */
     --textcolor: #aaa;          /* 'Silver' */
+    --headshotBackground: #ecf2f8;
     --togglercolor: #f2f3f4;
     --ff: 'Roboto', sans-serif;
     --tf: 'Myriad Pro', sans-serif;
@@ -36,7 +37,8 @@
     --colorbackground: #f2f3f4;  /* 'anti-flash white' */
     --colorsurface: #ECF2F8;     /* 'Alice Blue' */
     --textcolor: #333333;        /* 'Jet' */
-    --togglercolor: #121212;
+    --togglercolor: #1a1a1a;
+    --headshotBackground: #f2f3f4;
     --shadow: 0 4px 12px rgba(131, 169, 210, 0.388);
 }
 
