@@ -260,6 +260,13 @@ ul.list-unstyled li h4 {
     background-color: var(--colorprimary);
     color: var(--colorbackground);
 }
+.nav-link:focus,
+.nav-link:active,
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 /* ========== Responsive Adjustments ========== */
 @media (max-width: 768px) {

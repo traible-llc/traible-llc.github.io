@@ -1,13 +1,17 @@
 RewriteEngine On
 
-# Convert URL folders to .html files
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/$ $1.html
+# Redirect /index.html or /index to root /
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
 
-RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{THE_REQUEST} /index [NC]
+RewriteRule ^index$ / [R=301,L]
 
-# Redirect non-file/dir URLs to include trailing slash
-RewriteCond %{REQUEST_FILENAME} !-f
+# Redirect *.html URLs to clean URLs (e.g., about.html → /about)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+)\.html\ HTTP/
+RewriteRule ^([^/]+)\.html$ /$1 [R=301,L]
+
+# Internally rewrite clean URLs to .html files (e.g., /about → about.html)
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
-RewriteRule (.*)$ /$1/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
