@@ -277,7 +277,6 @@ button:focus-visible {
     box-shadow: none !important;
 }
 
-
 /* ========== Responsive Adjustments ========== */
 @media (max-width: 768px) {
     .navbar-nav {
